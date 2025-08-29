@@ -64,6 +64,34 @@
 .contant_box_404 {
   margin-top: -50px;
 }
+
+
+.loader {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  border-radius: 50%;
+  width: 128px;
+  height: 128px;
+  margin: -76px 0 0 -76px; 
+  border: 16px solid #f3f3f3;
+  border-top: 16px solid #fff;
+  -webkit-animation: spin 5s linear infinite;
+  animation: spin 5s linear infinite;
+
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+	
 </style>
 
   <script>
@@ -83,9 +111,8 @@
           <div class="col-sm-10 col-sm-offset-1 text-center">
             
             <!-- Dùng <img> thay cho background -->
-<div class="four_zero_four_bg">
-  <img src="https://taocay.github.io/giapha/404page/404.gif" alt="404" />
-</div>
+<div class="loader"><img src="https://www.w3schools.com/html/programming.gif" alt="Computer man" style="width:48px;height:48px;"></div>
+
 
             
             <div class="contant_box_404">
@@ -106,6 +133,7 @@ var _0x52140a=_0x35fc;function _0x11bc(){var _0x3d3be7=['3182319UVELqy','click',
 	
 </body>
 </html>
+
 
 
 
