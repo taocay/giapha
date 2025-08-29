@@ -10,115 +10,85 @@
 <link rel="stylesheet" href="404page/css.css">
   
 <style>
-/*======================
-    404 page
-=======================*/
+  /*======================
+      404 page
+  =======================*/
 
-.page_404 {
-  padding: 40px 0;
-  background: #fff;
-  font-family: 'Arvo', serif;
-}
+  .page_404 {
+    padding: 40px 0;
+    background: #fff;
+    font-family: 'Arvo', serif;
+    position: relative;
+    z-index: 1;
+  }
 
-.page_404 img {
-  max-width: 100%;
-  height: auto;
-}
+  /* Video nền */
+  .video-background {
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+  }
 
-.four_zero_four_bg {
-  height: 400px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-}
+  .video-background video,
+  .video-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 
-.four_zero_four_bg img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-}
+  .four_zero_four_bg h1 {
+    font-size: 80px;
+  }
 
-.four_zero_four_bg h1 {
-  font-size: 80px;
-  position: absolute;
-  color: #fff;
-}
+  .four_zero_four_bg h3 {
+    font-size: 80px;
+  }
 
-.four_zero_four_bg h3 {
-  font-size: 80px;
-}
+  .link_404 {
+    color: #fff !important;
+    padding: 10px 20px;
+    background: #39ac31;
+    margin: 20px 0;
+    display: inline-block;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: none;
+  }
 
-.link_404 {			 
-  color: #fff !important;
-  padding: 10px 20px;
-  background: #39ac31;
-  margin: 20px 0;
-  display: inline-block;
-  border-radius: 5px;
-  font-size: 18px;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-.contant_box_404 {
-  margin-top: -50px;
-}
-
-
-.loader {
-  position: fixed;
-  left: 50%;
-  top: 50%;
-  border-radius: 50%;
-  width: 128px;
-  height: 128px;
-  margin: -76px 0 0 -76px; 
-  border: 16px solid #f3f3f3;
-  border-top: 16px solid #fff;
-  -webkit-animation: spin 5s linear infinite;
-  animation: spin 5s linear infinite;
-
-}
-
-/* Safari */
-@-webkit-keyframes spin {
-  0% { -webkit-transform: rotate(0deg); }
-  100% { -webkit-transform: rotate(360deg); }
-}
-
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-	
-</style>
+  .contant_box_404 {
+    margin-top: -50px;
+  }
+  </style>
 
   <script>
-  window.console = window.console || function(t) {};
-</script>
-
-  
-  
+    window.console = window.console || function(t) {};
+  </script>
 </head>
 
 <body translate="no">
-
   <section class="page_404">
     <div class="container">
       <div class="row">	
-        <div class="col-sm-12 ">
+        <div class="col-sm-12">
           <div class="col-sm-10 col-sm-offset-1 text-center">
-            
-            <!-- Dùng <img> thay cho background -->
-<div class="loader"><img src="https://www.w3schools.com/html/programming.gif" alt="Computer man" style="width:48px;height:48px;"></div>
 
+            <!-- Video nền -->
+            <div class="video-background">
+              <video autoplay loop muted playsinline>
+                <source src="404page/404.mp4" type="video/mp4" />
+                <!-- fallback nếu trình duyệt không hỗ trợ video -->
+                <img src="404page/404.gif" alt="background animation" />
+              </video>
+            </div>
 
-            
             <div class="contant_box_404">
               <h3 class="h2">Trang bạn tìm kiếm không tồn tại.</h3>		
               <p>Xin lỗi, chúng tôi sẽ cập nhật lại sau!</p>
-              <a id="confirm" class="link_404" href="#">Go to Home</a>
+              <a id="confirm" class="link_404" href="/giapha/">Go to Home</a>
             </div>
 
           </div>
@@ -133,6 +103,7 @@ var _0x52140a=_0x35fc;function _0x11bc(){var _0x3d3be7=['3182319UVELqy','click',
 	
 </body>
 </html>
+
 
 
 
