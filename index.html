@@ -658,7 +658,74 @@ height: 30px;
 		background: linear-gradient(to right,#e6faff,#00cccc);
        }  
   
-  
+@media (orientation: landscape) {
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    html, body {
+        width: 100%;
+        overflow-x: hidden; /* Ngăn chặn tràn ngang */
+    }
+
+    .main-wrapper #app {
+        width: 100%;
+        max-width: 100vw; /* Đảm bảo không vượt quá màn hình */
+        overflow-x: hidden;
+    }
+
+    .main-wrapper #app .products {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Cột linh hoạt */
+        gap: 10px;
+        justify-content: center;
+        width: 100%;
+        padding: 0 10px; /* Tránh tràn lề */
+    }
+
+    .main-wrapper #app .products .product .image {
+        width: 13em;
+        height: 13em;
+        margin-bottom: 0.5em;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+        transition: box-shadow 0.25s;
+        border-radius: 5px;
+    }
+
+    .main-wrapper #app .products .product .name,
+    .main-wrapper #app .products .product .description,
+    .main-wrapper #app .products .product .price,
+    .main-wrapper #app .products .product .warranty,
+    .main-wrapper #app .products .product .madein {
+        width: 100%; /* Đảm bảo không tràn */
+        max-width: 200px;
+        text-align: left;
+    }
+
+    .main-wrapper #app .cart {
+        position: absolute;
+        right: 0;
+        top: 0;
+        text-align: right;
+        color: black;
+        width: auto;
+        border-radius: 5px;
+        z-index: 6;
+        overflow-y: scroll;
+        background: linear-gradient(to right, #e6faff, #00cccc);
+    }
+
+    .main-wrapper #app .modalWrapper .modal {
+        width: auto;
+        max-width: 100vw;
+        z-index: 20;
+        overflow-y: scroll;
+    }
+}  
 
 	.share-btn {
 	right: 3%;
@@ -761,6 +828,7 @@ function _0x34af(){var _0x4d5da9=['<input\x20type=\x27text\x27\x20id=\x27','arra
 
 </body>
 </html>
+
 
 
 
