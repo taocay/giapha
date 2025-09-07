@@ -1093,6 +1093,21 @@ font-size: 15px;
   cursor: pointer;
 }	
 
+/* Hiệu ứng lắc */
+@keyframes shake {
+  0%   { transform: translateX(0); }
+  20%  { transform: translateX(-6px); }
+  40%  { transform: translateX(6px); }
+  60%  { transform: translateX(-6px); }
+  80%  { transform: translateX(6px); }
+  100% { transform: translateX(0); }
+}
+
+.shake {
+  animation: shake 0.3s;
+
+  background-color: #fff5f5;          /* Nền hơi hồng báo lỗi */
+}
 
 
 /* Banner Khi màn hình nhỏ hơn hoặc bằng 768px (tablet + điện thoại) */
@@ -1355,6 +1370,60 @@ function open_modalMess() {
 
 
 <script>
+// Ham lam input bi lac khi sai
+function shakeInput(input) {
+    const wrap = input.closest(".field-wrap");
+    wrap.classList.add("shake");
+    setTimeout(() => wrap.classList.remove("shake"), 400);
+}
+
+// Ham kiem tra form login
+function validateLoginForm() {
+    const loginForm = document.querySelector("#login");
+    const inputs = loginForm.querySelectorAll("input[required]");
+    let isValid = true;
+
+    inputs.forEach(input => {
+        if (input.value.trim() === "") {
+            shakeInput(input);
+            isValid = false;
+        }
+    });
+
+    return isValid;
+}
+
+// Ham kiem tra form change pass
+function validateChangePassForm() {
+    const changeForm = document.querySelector("#changepass");
+    const inputs = changeForm.querySelectorAll("input[required]");
+    let isValid = true;
+
+    inputs.forEach(input => {
+        if (input.value.trim() === "") {
+            shakeInput(input);
+            isValid = false;
+        }
+    });
+
+    return isValid;
+}
+
+// Xu ly nut dang nhap
+document.getElementById("dangnhap").addEventListener("click", function () {
+    if (validateLoginForm()) {
+        // Neu hop le goi ham dang nhap
+        LoginQL_value();
+    }
+});
+
+// Xu ly nut doi mat khau
+document.getElementById("doipass").addEventListener("click", function () {
+    if (validateChangePassForm()) {
+        // Neu hop le goi ham doi pass
+        Changepassword_value();
+    }
+});
 
 //==========Hàm này check Input Form (Phải có)==============
 (function () {
@@ -1396,7 +1465,7 @@ var modal01 = document.getElementById("id01");
 
 
 var url = location.protocol;
-if (url == "file:KHANH") {
+if (url == "file:") {
 	var element = document.getElementById("login");
 	element.parentNode.removeChild(element);
 	close();
@@ -1478,7 +1547,10 @@ document.addEventListener('contextmenu', event => event.preventDefault());
 
 home = function(){
 //location.href = '' + (location.protocol+'//'+location.hostname+(location.port ? ':'+location.port: ''));
-window.location.href = location.protocol + '//' + location.hostname + (location.port ? ':' + location.port : '');
+//window.location.href = location.protocol + '//' + location.hostname + (location.port ? ':' + location.port : '');
+	truyềndan = location.protocol + '//' + location.hostname + (location.port ? ':' + location.port : '') + '/giapha/' + '.html';
+	// Mở trang nhánh thay thế trang chủ
+	window.location.href = truyềndan;
 }
 
 
@@ -1506,7 +1578,8 @@ test.rn();
 
 
 
-window.history.replaceState('','','/');
+//window.history.replaceState('','','/');
+window.history.replaceState({}, '', '/giapha/');
 
 
 function LoginQL_value() {
@@ -1549,8 +1622,8 @@ function LoginQL_value() {
             method: "GET",
             dataType: "jsonp"
         });
-        document.getElementById('username').value = "";
-        document.getElementById('password').value = "";
+        //document.getElementById('username').value = "";
+        //document.getElementById('password').value = "";
 
         form.classList.remove('was-validated');
     } else {
@@ -1559,6 +1632,7 @@ function LoginQL_value() {
 }
 
 function Changepassword_value() {
+
     var form = document.querySelector('.needs-validation');
     var inputs = form.querySelectorAll('input[name="oldusername"], input[name="oldpassword"], input[name="newpassword"], input[name="cfpassword"]');
 
@@ -1628,8 +1702,8 @@ function Changepassword_value() {
             dataType: "jsonp"
         });
 
-        document.getElementById('username').value = "";
-        document.getElementById('password').value = "";
+        //document.getElementById('username').value = "";
+        //document.getElementById('password').value = "";
 
         form.classList.remove('was-validated');
     } else {
@@ -1651,8 +1725,6 @@ function Changepassword_value() {
        if (part1 === "SaiPassword!") {
 			$('.modalMess-wrapper').toggleClass('open'); // Moi them	
 			document.getElementById("alert").innerHTML = "Đăng nhập sai UserName hoặc Password !";
-			document.getElementById("captcha").value = "";
-			document.getElementById("capalert").innerHTML = '<span style="color: #FF2525;">Nhập mã dưới vào.</span>';
 			document.getElementById("confirm_Login").style.display = "none";
 			return false;
 		
