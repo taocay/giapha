@@ -45,7 +45,7 @@ body {
   width: 100%;
   background-image: linear-gradient(to bottom, #fcf3cf, #D0872E, #fcf3cf, #D0872E, #fcf3cf);
  
-  padding-bottom: 200px; /* Chừa khoảng trống bằng chiều cao footer */
+  /* padding-bottom: 200px;  Chừa khoảng trống bằng chiều cao footer */
   box-sizing: border-box;
 }
 
@@ -391,14 +391,24 @@ body {
   padding: 25px;
   max-width: 670px;
   width: 650px;
-  margin: 0px auto;
   font-family: times new roman;
   border-radius: 5px;
   text-align: center;
-  margin-top:2px;
-  margin-bottom:20px;
-  
+
+  /* Thêm các thuộc tính này để căn giữa form */
+  position: fixed;            /* Cố định form trong màn hình */
+  top: 50%;                   /* Căn giữa theo chiều dọc */
+  left: 50%;                  /* Căn giữa theo chiều ngang */
+  transform: translate(-50%, -50%); /* Dịch form vào đúng tâm */
+  z-index: 999;               /* Đảm bảo nổi trên banner & footer */
+
+  /* Xóa margin-top và margin-bottom cũ */
+  margin: 0;
+
+  /* Hiệu ứng đẹp hơn */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
+
     .tab-group {
         list-style: none;
         padding: 0;
@@ -1821,4 +1831,3 @@ $('.tab a').on('click', function(e) {
 
 </body>
 </html>
-
