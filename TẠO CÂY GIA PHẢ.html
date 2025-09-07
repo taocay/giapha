@@ -4,8 +4,8 @@
 
   <meta charset="UTF-8">
 
-  <title>TẠO CÂY GIA PHẢ</title>
-<link rel="stylesheet" href="TruyenDanPicture/css.css">
+  <title>ĐĂNG NHẬP GIA PHẢ</title>
+
 <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css'>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -43,10 +43,115 @@ body {
   font-size: 99%;
   padding: 1px;
   width: 100%;
-  background: linear-gradient(to right, #21618c,#73c6b6);
+  background-image: linear-gradient(to bottom, #fcf3cf, #D0872E, #fcf3cf, #D0872E, #fcf3cf);
   min-height:400px;
   height:auto;
 }
+
+/* Footer */
+
+.footer {
+  width: 100%;
+  font-family: sans-serif;
+  box-sizing: border-box;
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-top {
+  background-color: white;
+  color:#BB4D1A;
+  text-align: center;
+  padding: 5px 10px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.footer-middle {
+  background-color:#BB4D1A;
+  padding: 5px 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-align: left;
+  gap: 5px;
+  color: white;
+}
+
+.footer-col {
+  flex: 1 1 30%;
+  min-width: 200px;
+  margin: 0;
+}
+
+.footer-col.first {
+  flex: 2 1 35%;
+}
+
+.footer-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 14px;
+  color: white;
+  padding: 2px 0;
+}
+
+.footer-item i {
+  color: #66ccff;
+  font-size: 16px;
+  min-width: 18px;
+  margin-top: 2px;
+}
+
+.footer-item a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-bottom {
+  background-color:#7E2A0C;
+  padding: 2px 10px;
+  text-align: center;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: bold;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .footer-col,
+  .footer-col first {
+    width: 100%;
+    text-align: left;
+    margin: 2px 0;
+    display: block;
+  }
+
+}
+
+/* End Footer */
+
+
+
+@media (max-width: 767px) {
+  .footer {
+    font-size: 14px;
+  }
+  .footer .footer-left,
+  .footer .footer-center,
+  .footer .footer-right {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 10px;
+    text-align: left;
+  }
+  .footer .footer-center i {
+    margin-left: 3px;
+  }
+}
+
 
 /* Popup */
 
@@ -251,156 +356,6 @@ body {
 }
 
 /* End Nút Home */
-
-
-.footer {
-  background-image: linear-gradient(to bottom right, #5dade2 ,#ffffb3, #5dade2 ,#ffffb3 ,#ffffb3);
-  width: 100%;
-  height: auto;
-  text-align: left;
-  font-family: sans-serif;
-  font-weight: bold;
-  font-size: 16px;
-  padding: 5px;
-  margin-top: 5px;
-  bottom: 0;
-  position: fixed;
-  left: 0;
-  width: 100%;
-  z-index: 10010;
-}
-
-
-.footer .footer-left,
-.footer .footer-center,
-.footer .footer-right {
-  display: inline-block;
-  vertical-align: top;
-}
-
-.footer .footer-left p {
-  display: inline-block;
-  color:black;
-  vertical-align: middle;
-  margin: 0;
-}
-
-.footer .footer-center p {
-  display: inline-block;
-  color:black;
-  vertical-align: middle;
-  margin: 0;
-}
-
-.footer .footer-right p {
-  display: inline-block;
-  color:black;
-  vertical-align: middle;
-  margin: 0;
-}
-
-
-
-
-.footer .footer-left {
-  width: 33%;
-  padding-right: 5px;
-}
-
-.footer .about {
-  line-height: 20px;
-  color:black;
-  font-size: 16px;
-  font-weight: bold;
-  margin: 0;
-}
-
-.footer .about span {
-  display: block;
-  color:black;
-  font-size: 14px;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
-.footer .footer-left i {
-  background-color:#0099ff;
-  color: #ffffff;
-  font-size: 25px;
-  width: 38px;
-  height: 20px;
-  border-radius: 50%;
-  text-align: center;
-  line-height: 10px;
-  margin: 10px 3px;
-  vertical-align: middle;
-}
-
-
-
-.footer .icons a {
-  display: inline-block;
-  width: 25px;
-  height: 25px;
-  cursor: pointer;
-  background-color:#0099ff;
-  border-radius: 2px;
-  font-size: 20px;
-  color: #ffffff;
-  text-align: center;
-  line-height: 10px;
-  margin-right: 3px;
-
-}
-
-
-.footer .footer-center {
-  width: 25%;
-}
-
-.footer .footer-center i {
-  background-color:#0099ff;
-  color: #ffffff;
-  font-size: 25px;
-  width: 38px;
-  height: 20px;
-  border-radius: 50%;
-  text-align: center;
-  line-height: 10px;
-  margin: 10px 3px;
-  vertical-align: middle;
-}
-
-.footer .footer-center i.fa-envelope {
-  display: inline-block;
-  font-size: 17px;
-  line-height: 25px;
-  color: #ffffff;
-}
-
-
-.footer .footer-right {
-  width: 35%;
-}
-
-
-
-@media (max-width: 767px) {
-  .footer {
-    font-size: 14px;
-  }
-  .footer .footer-left,
-  .footer .footer-center,
-  .footer .footer-right {
-    display: inline-block;
-    width: 100%;
-    margin-bottom: 10px;
-    text-align: left;
-  }
-  .footer .footer-center i {
-    margin-left: 3px;
-  }
-}
 
 
 
@@ -1122,21 +1077,19 @@ font-size: 15px;
 
 
 
-.header {
-  position: relative;
-  z-index: 1000;
-  width: 100%;
-  /* max-height: 150px; Hoặc giá trị phù hợp */
-  overflow: hidden;
+/* Banner Khi màn hình nhỏ hơn hoặc bằng 768px (tablet + điện thoại) */
+@media (max-width: 600px) {
+  .banner {
+    height: 50px; /* Tăng chiều cao banner *
+  }
 }
 
-.header img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
+/* Banner Khi màn hình nhỏ hơn hoặc bằng 480px (điện thoại nhỏ) */
+@media (max-width: 480px) {
+  .banner {
+    height: 50px; /* Banner cao hơn nữa */
+  }
 }
-
-
 
 </style>
 
@@ -1157,11 +1110,9 @@ font-size: 15px;
 
 <body onload="adjustBodyHeight();">
 
-<div class="header";>
-<!--   <img style=" width: 100%;" src="/Banner DHA New.png" /> -->
-<img style=" width: 100%;" src=  "https://www.dropbox.com/s/5yhuhsz9q5g18s1/Banner%20DHA%20New.png?raw=1" />
-</p>
-</div>
+	<div align="center" style="margin-top: 5px;">
+	  <img src="D3-JS/Banner.png" class="banner", style="width: 100%;  background-image: linear-gradient(to bottom right, #D0872E, #fcf3cf,#A65F1B, #fcf3cf,#A65F1B);" />
+	</div>
   <!-- Modal -->
 
 
@@ -1225,23 +1176,6 @@ font-size: 15px;
 						</div> 
 					</div>				
 				 </div>
-
-					<!-- <div  class="field captch_input">
-					  <div class="input_field captch_input">
-						<input id="captcha" type="text" style="height: 33px;" placeholder="Nhập mã dưới" class="form-control" required>				
-					  </div>
-					  <div id="capalert" class="message" style="text-align: left; color: #FF2525;">Nhập mã dưới vào.</div>
-					</div>
-					
-					<div  class="field captch_box">
-					  <div class="input_field captch_box">
-						<input  type="text" value="" disabled />
-						<button hidden class="refresh_button">
-						  <i  class="fa-solid fa-rotate-right"></i>
-						</button>
-					  </div>
-					</div> -->
-
 
 
 				 <input class="button button-block" type = "button" id="dangnhap" onClick="LoginQL_value(); " value = "Đăng Nhập" style="width: 210px;"></input>
@@ -1367,12 +1301,8 @@ font-size: 15px;
   </div>	
  </div>
 
-
-
-<script src="TruyenDanPicture/Droplist.min.js"></script>
-<script src="CapQuangPicture/Login.min.js"></script>
 <script src="LinkGG.js"></script>
-
+<script src="DangNhap/Login.min.js"></script>
 <script src="DangNhap/bootstrap.bundle.min.js"></script>
 
 <script src="CryptoJS/Crypto-js.4.1.1.min.js"></script>
@@ -1862,7 +1792,28 @@ $('.tab a').on('click', function(e) {
 </script>
 
 
+<div class="footer">
+<div class="footer-middle">
+  <div class="footer-col first">
+    <div class="footer-item">
+      <i class="fa fa-map-marker"></i>
+      <span>Website: Cây gia phả: Họ Lê - Phái 3 - Chi 1, Thôn An lợi, Triệu Độ, Triệu Phong, Quảng Trị.</span>
+    </div>
+  </div>
 
+  <div class="footer-col">
+    <div class="footer-item">
+      <i class="fa fa-envelope"></i>
+      <a href="mailto:khanhvtn@gmail.com">khanhvtn@gmail.com</a>
+    </div>
+  </div>
+</div>
+
+  <div class="footer-bottom">
+    <p class="copyright">Copyright © 2025 By: Lê Văn Khanh. All rights reserved.</p>
+  </div>
+  
+</div>
 
 </body>
 </html>
