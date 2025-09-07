@@ -389,8 +389,8 @@ body {
 .form {
   background: white;
   padding: 15px;
-  max-width: 670px;
-  width: 650px;
+  max-width: 550px;
+  width: 500px;
   font-family: times new roman;
   border-radius: 5px;
   text-align: center;
@@ -413,7 +413,7 @@ body {
         list-style: none;
         padding: 0;
         margin: 0 0 0px 0;
-		border-radius: 16px 16px 16px 16px;
+		border-radius: 26px 26px 26px 26px;
 		background:white;	
 		width:100%;
 		display:flex;
@@ -429,7 +429,7 @@ body {
         clear: both;
 		background: #21618c;
         color:black;
-		border-radius: 16px 16px 16px 16px;
+		border-radius: 26px 26px 26px 26px;
     }
 
     .tab-group li a {
@@ -443,7 +443,7 @@ body {
         text-align: center;
         cursor: pointer;
         transition: .5s ease;
-		border-radius: 16px 16px 16px 16px;
+		border-radius: 26px 26px 26px 26px;
 		width:130px;
 		height: 28px;
 		line-height: 25px;
@@ -452,14 +452,14 @@ body {
     .tab-group li a:hover {
         background: #3498db;
         color:white;
-		border-radius: 16px 16px 16px 16px;
+		border-radius: 26px 26px 26px 26px;
 
     }
 
     .tab-group .active a {
         background:#006699;
         color:white;
-		border-radius: 16px 16px 16px 16px;
+		border-radius: 26px 26px 26px 26px;
 		width:130px;
 		height: 28px;
 		line-height: 25px;
@@ -573,9 +573,9 @@ body {
     }
 
     .button-block {
-        display: block;
-        width:250px;
-	height:35px;		
+    display: block;
+    width:10px;
+	height:30px;		
 	border-radius: 16px 16px 16px 16px;
 		
     }
@@ -586,7 +586,7 @@ body {
 
 form .field{
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 form .field.shake{
   animation: shake 0.3s ease-in-out;
@@ -602,22 +602,26 @@ form .field.shake{
     margin-left: 12px;
   }
 }
-form .field .field-wrap{
-  height: 40px;
-  width: 100%;
+form .field .field-wrap {
+  height: 35px;           /* Giữ nguyên chiều cao input */
+  width: 70%;             /* Input rộng 70% form */
+  margin: 0 auto;         /* Căn giữa theo chiều ngang */
+  justify-content: center; /* Căn giữa nội dung input */
+  align-items: center;    /* Căn giữa theo chiều dọc */
   position: relative;
 }
+
 form input{
   width: 100%;
   height: 90%;
   outline: none;
-  padding: 0 45px;
-  font-size: 15px;
+  padding: 0 30px;
+  font-size: 14px;
   background: white;
   caret-color: #5372F0;
-  border-radius: 5px;
+  border-radius: 3px;
   border: 1px solid #bfbfbf;
-  border-bottom-width: 2px;
+  border-bottom-width: 1px;
   transition: all 0.2s ease;
 }
 form .field input:focus,
@@ -631,7 +635,7 @@ form .field.error input{
 .field .field-wrap i{
   position: absolute;
   top: 50%;
-  font-size: 18px;
+  font-size: 15px;
   pointer-events: none;
   transform: translateY(-50%);
 }
@@ -641,7 +645,7 @@ form .field.error input{
   transition: color 0.2s ease;
 }
 .field-wrap .error-icon{
-  right: 15px;
+  right: 25px;
   color: #dc3545;
 }
 form input:focus ~ .icon,
@@ -654,7 +658,7 @@ form .field.error input:focus ~ .icon{
 }
 form input::placeholder{
   color: #bfbfbf;
-  font-size: 17px;
+  font-size: 14px;
 }
 
 form .pass-txt{
