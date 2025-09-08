@@ -436,33 +436,33 @@ body {
         display: block;
         text-decoration: none;
         padding: 1px;
-        background: #bfc9ca;
-        color:black;
+        background:#7E2A0C;
+        color:white;
         font-size: 16px;
         float: left;
         text-align: center;
         cursor: pointer;
         transition: .5s ease;
 		border-radius: 26px 26px 26px 26px;
-		width:130px;
+		width:100px;
 		height: 28px;
 		line-height: 25px;
      }
 
     .tab-group li a:hover {
-        background: #3498db;
+        background:#BB4D1A;
         color:white;
 		border-radius: 26px 26px 26px 26px;
 
     }
 
     .tab-group .active a {
-        background:#006699;
         color:white;
 		border-radius: 26px 26px 26px 26px;
-		width:130px;
+		width:100px;
 		height: 28px;
 		line-height: 25px;
+		background:#7E2A0C;
     }
 
 	
@@ -580,7 +580,12 @@ body {
 		
     }
 
-
+#dangnhap:hover {
+  background-color: #BB4D1A !important; /* Màu nền khi hover */
+}
+#doipass:hover {
+  background-color: #BB4D1A !important; /* Màu nền khi hover */
+}
 
 /* formLogin LOGIN Mới */
 
@@ -731,6 +736,7 @@ button:hover {
 .modalMess-wrapper {
   width: 100%;
   top:40%;
+
 }
 .good-job h1 {
   font-size: 10px;
@@ -1211,7 +1217,7 @@ font-size: 15px;
 				 </div>
 
 
-				 <input class="button button-block" type = "button" id="dangnhap" onClick="LoginQL_value(); " value = "Đăng Nhập" style="width: 210px;"></input>
+				 <input class="button button-block" type = "button" id="dangnhap" onClick="LoginQL_value(); " value = "Đăng Nhập" style="width: 140px; background:#7E2A0C;"></input>
                 </form>
 
 				
@@ -1267,7 +1273,7 @@ font-size: 15px;
                     </div>
 					</div>					
 				 
-				<input class="button button-block" type = "button" id="doipass" onClick="Changepassword_value(); " value = "Đổi Password" style="width: 210px;"></input>
+				<input class="button button-block" type = "button" id="doipass" onClick="Changepassword_value(); " value = "Đổi Password" style="width: 160px; background:#7E2A0C;"></input>
 
                 </form>
 
@@ -1465,7 +1471,7 @@ var modal01 = document.getElementById("id01");
 
 
 var url = location.protocol;
-if (url == "file:") {
+if (url == "file:KHANH") {
 	var element = document.getElementById("login");
 	element.parentNode.removeChild(element);
 	close();
@@ -1644,7 +1650,8 @@ function Changepassword_value() {
     }
 
     if (isValid) {
-        var olduser = $("#oldusername").val();
+
+	var olduser = $("#oldusername").val();
         var oldpass = $("#oldpassword").val();
         var newpass = $("#newpassword").val();
         var cfpass = $("#cfpassword").val();
