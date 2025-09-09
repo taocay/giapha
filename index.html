@@ -54,7 +54,7 @@ body > .main-content {
   width: 100%;
   font-family: sans-serif;
   box-sizing: border-box;
-  margin-top: 15px;
+  margin-top: auto;
   display: flex;
   flex-direction: column;
 }
@@ -120,25 +120,24 @@ body > .main-content {
   color: white;
 }
 
+/* Footer trên mobile <= 768px */
 @media (max-width: 768px) {
   .footer-col,
-  .footer-col first {
+  .footer-col.first {
     width: 100%;
     text-align: left;
-    margin: 2px 0;
+    margin: 15px 0; /* Đặt margin-top tại đây */
     display: block;
   }
-
 }
 
-/* End Footer */
-
-
-
+/* Footer trên mobile <= 767px */
 @media (max-width: 767px) {
   .footer {
     font-size: 14px;
+    margin-top: 15px; /* Đặt ở đây để toàn bộ footer có khoảng cách */
   }
+
   .footer .footer-left,
   .footer .footer-center,
   .footer .footer-right {
@@ -147,11 +146,11 @@ body > .main-content {
     margin-bottom: 10px;
     text-align: left;
   }
+
   .footer .footer-center i {
     margin-left: 3px;
   }
 }
-
 
 
 @font-face {
@@ -899,6 +898,7 @@ function _0x34af(){var _0x4d5da9=['<input\x20type=\x27text\x27\x20id=\x27','arra
 
 </body>
 </html>
+
 
 
 
