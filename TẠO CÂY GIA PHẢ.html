@@ -398,7 +398,9 @@ body {
   font-family: "Times New Roman", serif;
   border-radius: 10px;
   text-align: center;
-  overflow-y: auto;
+  /* Cho phép cuộn nội dung trong form */
+  overflow-y: auto;   /* Dùng auto để chỉ hiện thanh cuộn khi cần */
+  overflow-x: hidden;
   /* Đường viền vàng sang trọng */
   border: 3px solid #fb8c00;
 
@@ -1592,6 +1594,7 @@ $('.tab a').on('click', function(e) {
 
 </body>
 </html>
+
 
 
 
