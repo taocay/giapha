@@ -561,7 +561,14 @@ height: 30px;
 
 .main-wrapper #app .modalWrapper .modal .name {
   font-weight: bold;
-  font-size: 1.4em;
+  font-size: 1.2em;
+  text-shadow:
+    1px 1px 0px #ffffff,      /* viền sáng */
+    2px 2px 2px #ffeb3b,      /* cam đậm */
+    3px 3px 4px #a84300,      /* đỏ cam sẫm */
+    4px 4px 5px #fbc02d,      /* nâu đỏ */
+    5px 5px 7px rgba(0, 0, 0, 0.7); /* bóng tối sâu */
+  transition: transform 0.25s ease-in-out, filter 0.25s ease-in-out;   
 }
 .main-wrapper #app .modalWrapper .modal .description {
   font-style: italic;
@@ -892,6 +899,7 @@ function _0x34af(){var _0x4d5da9=['<input\x20type=\x27text\x27\x20id=\x27','arra
 
 </body>
 </html>
+
 
 
 
