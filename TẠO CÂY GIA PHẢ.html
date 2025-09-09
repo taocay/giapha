@@ -395,22 +395,38 @@ body {
   padding: 15px;
   max-width: 550px;
   width: 500px;
-  font-family: times new roman;
-  border-radius: 5px;
+  font-family: "Times New Roman", serif;
+  border-radius: 10px;
   text-align: center;
 
-  /* Thêm các thuộc tính này để căn giữa form */
-  position: fixed;            /* Cố định form trong màn hình */
-  top: 53%;                   /* Căn giữa theo chiều dọc */
-  left: 50%;                  /* Căn giữa theo chiều ngang */
-  transform: translate(-50%, -50%); /* Dịch form vào đúng tâm */
-  z-index: 999;               /* Đảm bảo nổi trên banner & footer */
+  /* Đường viền vàng sang trọng */
+  border: 3px solid #fb8c00;
 
-  /* Xóa margin-top và margin-bottom cũ */
+  /* Hiệu ứng viền phát sáng nhẹ */
+  box-shadow:
+    0 0 10px rgba(255, 215, 0, 0.6),   /* vàng sáng nhẹ */
+    0 0 20px rgba(255, 215, 0, 0.4),   /* vàng mờ */
+    0 0 30px rgba(0, 0, 0, 0.2);       /* đổ bóng nền */
+
+  /* Căn giữa form */
+  position: fixed;
+  top: 53%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+
   margin: 0;
 
-  /* Hiệu ứng đẹp hơn */
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  /* Hiệu ứng hover viền vàng lung linh */
+  transition: box-shadow 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.form:hover {
+  box-shadow:
+    0 0 12px rgba(255, 223, 80, 0.9),
+    0 0 25px rgba(255, 223, 80, 0.7),
+    0 0 35px rgba(255, 223, 80, 0.5);
+  transform: translate(-50%, -50%) scale(1.02);
 }
 
     .tab-group {
@@ -1572,4 +1588,5 @@ $('.tab a').on('click', function(e) {
 
 </body>
 </html>
+
 
