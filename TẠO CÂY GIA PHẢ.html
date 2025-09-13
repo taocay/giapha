@@ -398,9 +398,7 @@ body {
   font-family: "Times New Roman", serif;
   border-radius: 10px;
   text-align: center;
-  /* Cho phép cuộn nội dung trong form */
-  overflow-y: auto;   /* Dùng auto để chỉ hiện thanh cuộn khi cần */
-  overflow-x: hidden;
+  overflow-y: auto
   /* Đường viền vàng sang trọng */
   border: 3px solid #fb8c00;
 
@@ -412,7 +410,7 @@ body {
 
   /* Căn giữa form */
   position: fixed;
-  top: 53%;
+  top: 54%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 999;
@@ -431,6 +429,7 @@ body {
   transform: translate(-50%, -50%) scale(1.02);
 }
 
+
     .tab-group {
         list-style: none;
         padding: 0;
@@ -441,7 +440,8 @@ body {
 		display:flex;
 		justify-content:center;
 		position: relative;
-		top: -10px; /* Dịch cả nhóm nút lên 10px */			
+		top: -10px; /* Dịch cả nhóm nút lên 10px */
+			
     }
 
 	
@@ -458,18 +458,18 @@ body {
     .tab-group li a {
         display: block;
         text-decoration: none;
-        padding: 1px;
+        padding: 2px;
         background:#7E2A0C;
         color:white;
-        font-size: 16px;
+        font-size: 14px;
         float: left;
         text-align: center;
         cursor: pointer;
         transition: .5s ease;
 		border-radius: 26px 26px 26px 26px;
-		width:100px;
-		height: 28px;
-		line-height: 25px;
+		width:85px;
+		height: 24px;
+		line-height: 20px;
      }
 
     .tab-group li a:hover {
@@ -482,9 +482,9 @@ body {
     .tab-group .active a {
         color:white;
 		border-radius: 26px 26px 26px 26px;
-		width:100px;
-		height: 28px;
-		line-height: 25px;
+		width:85px;
+		height: 24px;
+		line-height: 20px;
 		background:#7E2A0C;
     }
 
@@ -1594,6 +1594,7 @@ $('.tab a').on('click', function(e) {
 
 </body>
 </html>
+
 
 
 
