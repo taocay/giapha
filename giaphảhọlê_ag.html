@@ -2627,15 +2627,19 @@ textarea#Colum_6 {
     display: flex;
     flex-wrap: wrap;
     /* justify-content: space-between; */
-    justify-content: left;                 /* ⭐ Căn giữa các cột */
+    justify-content: center;                 /* ⭐ Căn giữa các cột */
   }
 
   form .nhaplieu {
     width: 48%; /* chia đôi, chừa khoảng cách */
     margin-bottom: 8px;
-    position: relative;
+    text-align: left; /* ⭐ Input canh trái */
   }
-
+/* Input cuối cùng nếu lẻ thì nằm bên trái */
+#nhaplieu .nhaplieu:last-child {
+  margin-left: 0; 
+  margin-right: auto; 
+}
   form .nhaplieu textarea {
     width: 100%; /* chiếm trọn khối .nhaplieu */
   }
@@ -2721,15 +2725,19 @@ textarea#Colum_6 {
     width: 88%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: left; /* ✅ Căn giữa các cột */
+    justify-content: center; /* ✅ Căn giữa các cột */
   }
 
   form .nhaplieu {
     width: 40%;              /* ✅ Chia 2 cột đẹp khi ngang */
     margin-bottom: 8px;
-    position: relative;
+    text-align: left; /* ⭐ Input canh trái */
   }
-
+/* Input cuối cùng nếu lẻ thì nằm bên trái */
+#nhaplieu .nhaplieu:last-child {
+  margin-left: 0; 
+  margin-right: auto; 
+}
   form .nhaplieu textarea,
   form .nhaplieu input {
     width: 100%;
@@ -2861,6 +2869,7 @@ const _0x3659a0=_0x18da;(function(_0xaffd43,_0x878ad){const _0x7da68e=_0x18da,_0
 
 </body>
 </html>
+
 
 
 
