@@ -2623,11 +2623,11 @@ textarea#Colum_6 {
 
 @media (max-width: 768px) and (orientation: portrait) {
   #nhaplieu {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    /* justify-content: space-between; */
-    justify-content: center;                 /* ⭐ Căn giữa các cột */
+	  width: 80%;
+	  display: flex;
+	  flex-wrap: wrap;
+	  justify-content: flex-start; /* canh trái tất cả */
+	  gap: 5px; /* tạo khoảng cách đều, nhìn vẫn cân */
   }
 
   form .nhaplieu {
@@ -2635,11 +2635,7 @@ textarea#Colum_6 {
     margin-bottom: 8px;
     text-align: left; /* ⭐ Input canh trái */
   }
-/* Input cuối cùng nếu lẻ thì nằm bên trái */
-#nhaplieu .nhaplieu:last-child {
-  margin-left: 0; 
-  margin-right: auto; 
-}
+
   form .nhaplieu textarea {
     width: 100%; /* chiếm trọn khối .nhaplieu */
   }
@@ -2722,10 +2718,11 @@ textarea#Colum_6 {
 /*  điện thoại xoay ngang  */
 @media (max-width: 980px) and (orientation: landscape) {
   #nhaplieu {
-    width: 88%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center; /* ✅ Căn giữa các cột */
+	  width: 80%;
+	  display: flex;
+	  flex-wrap: wrap;
+	  justify-content: flex-start; /* canh trái tất cả */
+	  gap: 5px; /* tạo khoảng cách đều, nhìn vẫn cân */
   }
 
   form .nhaplieu {
@@ -2733,11 +2730,7 @@ textarea#Colum_6 {
     margin-bottom: 8px;
     text-align: left; /* ⭐ Input canh trái */
   }
-/* Input cuối cùng nếu lẻ thì nằm bên trái */
-#nhaplieu .nhaplieu:last-child {
-  margin-left: 0; 
-  margin-right: auto; 
-}
+
   form .nhaplieu textarea,
   form .nhaplieu input {
     width: 100%;
@@ -2869,6 +2862,7 @@ const _0x3659a0=_0x18da;(function(_0xaffd43,_0x878ad){const _0x7da68e=_0x18da,_0
 
 </body>
 </html>
+
 
 
 
