@@ -685,43 +685,60 @@ form .question label {
   text-align: center;
 }
 
+.popup {
+  width: 55%;                 /* hẹp hơn một chút */
+  max-width: 280px;           /* gọn đẹp trên PC */
+  padding: 8px 12px 12px;     /* giảm padding cho cân đối */
+  border: 1px solid #b22222;
+  border-radius: 6px;
+  color: #b22222;
+  background: white;
+  position: absolute;
+  top: 50%;                  
+  left: 50%;
+  transform: translate(-50%, -50%); 
+  box-shadow: 2px 2px 6px rgba(178, 34, 34, 0.4);
+  z-index: 10001;
+  font-weight: 600;
+  text-align: center;
+}
+
+.popup p {
+  margin-top: 4px;            /* gần mép trên hơn */
+  margin-bottom: 8px;         /* gọn lại ở dưới */
+}
+
 .Thoat {
   position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  inset: 0;
   background-color: transparent;
   z-index: 10000;
   display: none;
 }
 
 @media (min-width: 768px) {
-  .popup { width: 66.6667%; }
+  .popup { width: 60%; max-width: 450px; }
 }
 @media (min-width: 992px) {
-  .popup { width: 50%; }
+  .popup { width: 50%; max-width: 420px; }
 }
 @media (min-width: 1200px) {
-  .popup { width: 33.3333%; }
+  .popup { width: 35%; max-width: 400px; }
 }
 
-	
 .dialog-btn {
   background-color:#fad7a0; /* #808b96; */
   color:#b22222;
   font-weight: 700;
   border: 1px solid #b22222;
-  border-radius: 10px;
-  height: 30px;
-  width: 30%;
+  border-radius: 3px;
+  height: 28px;
+  width: 25%;
 }
 .dialog-btn:hover {
   background-color:#f39c12; /* #566573; */
   cursor: pointer;
 }
-
 
 
 #btn-show-dialog {
@@ -2865,6 +2882,7 @@ const _0x3ab679=_0x5c86;(function(_0x38765c,_0x4ac58b){const _0x26ea67=_0x5c86,_
 
 </body>
 </html>
+
 
 
 
