@@ -671,14 +671,14 @@ form .question label {
 .popup {
   width: 80%;
   padding: 15px;
-  left: 0;
-  margin-left: 5%;
   border: 1px solid #b22222;
   border-radius: 10px;
   color: #b22222;
   background: white;
   position: absolute;
   top: 25%;
+  left: 50%;
+  transform: translateX(-50%);
   box-shadow: 5px 5px 5px #000;
   z-index: 10001;
   font-weight: 700;
@@ -694,28 +694,20 @@ form .question label {
   bottom: 0;
   background-color: transparent;
   z-index: 10000;
-  display :none;
+  display: none;
 }
 
 @media (min-width: 768px) {
-  .popup {
-    width: 66.66666666%;
-    margin-left: 16.666666%;
-  }
+  .popup { width: 66.6667%; }
 }
 @media (min-width: 992px) {
-  .popup {
-    width: 80%;
-    margin-left: 25%;
-  }
+  .popup { width: 50%; }
 }
 @media (min-width: 1200px) {
-  .popup {
-    width: 33.33333%;
-    margin-left: 33.33333%;
-  }
+  .popup { width: 33.3333%; }
 }
 
+	
 .dialog-btn {
   background-color:#fad7a0; /* #808b96; */
   color:#b22222;
@@ -2873,6 +2865,7 @@ const _0x3ab679=_0x5c86;(function(_0x38765c,_0x4ac58b){const _0x26ea67=_0x5c86,_
 
 </body>
 </html>
+
 
 
 
