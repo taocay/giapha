@@ -700,14 +700,28 @@ form .question label {
   display: none;
 }
 
+/* Tablet / điện thoại xoay ngang */
 @media (min-width: 768px) {
-  .popup { width: 80%;}
+  .popup { 
+    width: 70%;     /* hẹp hơn một chút khi xoay ngang */
+    max-width: 350px;
+  }
 }
+
+/* Laptop nhỏ / PC vừa */
 @media (min-width: 992px) {
-  .popup { width: 50%; max-width: 420px; }
+  .popup { 
+    width: 45%;     /* giảm nữa cho gọn */
+    max-width: 350px;
+  }
 }
+
+/* PC lớn */
 @media (min-width: 1200px) {
-  .popup { width: 35%; max-width: 400px; }
+  .popup { 
+    width: 30%;     /* gọn đẹp */
+    max-width: 350px;
+  }
 }
 
 .dialog-btn {
@@ -2866,6 +2880,7 @@ const _0x3ab679=_0x5c86;(function(_0x38765c,_0x4ac58b){const _0x26ea67=_0x5c86,_
 
 </body>
 </html>
+
 
 
 
