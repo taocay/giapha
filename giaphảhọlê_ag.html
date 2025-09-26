@@ -667,20 +667,19 @@ form .question label {
 	
 }
 
-
-
+/* mặc định cho mobile dọc (nhỏ hơn 768px) */
 .popup {
-  width: 80%;                 /* hẹp hơn một chút */
-  max-width: 400px;           /* gọn đẹp trên PC */
-  padding: 8px 12px 12px;     /* giảm padding cho cân đối */
+  width: 80%;                 /* chiếm 80% màn hình */
+  max-width: 400px;           /* không vượt quá 400px */
+  padding: 8px 12px 12px;
   border: 1px solid #b22222;
   border-radius: 6px;
   color: #b22222;
   background: white;
   position: absolute;
-  top: 25%;                  
+  top: 25%;
   left: 50%;
-  transform: translate(-50%, -50%); 
+  transform: translate(-50%, -50%);
   box-shadow: 2px 2px 6px rgba(178, 34, 34, 0.4);
   z-index: 10001;
   font-weight: 600;
@@ -688,8 +687,8 @@ form .question label {
 }
 
 .popup p {
-  margin-top: 4px;            /* gần mép trên hơn */
-  margin-bottom: 8px;         /* gọn lại ở dưới */
+  margin-top: 4px;
+  margin-bottom: 8px;
 }
 
 .Thoat {
@@ -724,6 +723,7 @@ form .question label {
   }
 }
 
+
 .dialog-btn {
   background-color:#fad7a0; /* #808b96; */
   color:#b22222;
@@ -737,6 +737,7 @@ form .question label {
   background-color:#f39c12; /* #566573; */
   cursor: pointer;
 }
+
 
 
 #btn-show-dialog {
@@ -755,111 +756,71 @@ form .question label {
   font-weight: bold;
 }
 
-#btn-show-dialog {border-radius: 12px;}
+#btn-show-dialog {
+  border-radius: 12px;
+}
 
 
-
-
+/* === POPUP TIME === */
 .popup_time {
   width: 80%;
-  padding: 15px;
-  left: 0;
-  margin-left: 5%;
+  max-width: 400px;
+  padding: 8px 12px 12px;
   border: 1px solid #b22222;
-  border-radius: 10px;
+  border-radius: 6px;
   color: #b22222;
   background: white;
   position: absolute;
   top: 25%;
-  box-shadow: 5px 5px 5px #000;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 2px 2px 6px rgba(178, 34, 34, 0.4);
   z-index: 10001;
-  font-weight: 700;
+  font-weight: 600;
   text-align: center;
 }
-
 .Thoat_time {
   position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  inset: 0;
   background-color: transparent;
   z-index: 10000;
-  display :none;
+  display: none;
 }
+@media (min-width: 768px) { .popup_time { width: 70%; max-width: 350px; } }
+@media (min-width: 992px) { .popup_time { width: 45%; max-width: 350px; } }
+@media (min-width: 1200px){ .popup_time { width: 30%; max-width: 350px; } }
 
-@media (min-width: 768px) {
-  .popup_time {
-    width: 66.66666666%;
-    margin-left: 16.666666%;
-  }
-}
-@media (min-width: 992px) {
-  .popup_time {
-    width: 80%;
-    margin-left: 25%;
-  }
-}
-@media (min-width: 1200px) {
-  .popup_time {
-    width: 33.33333%;
-    margin-left: 33.33333%;
-  }
-}
-
-
-
+/* === POPUP UPDATE === */
 .popup_update {
   width: 80%;
-  padding: 15px;
-  left: 0;
-  margin-left: 5%;
+  max-width: 400px;
+  padding: 8px 12px 12px;
   border: 1px solid #b22222;
-  border-radius: 10px;
+  border-radius: 6px;
   color: #b22222;
   background: white;
   position: absolute;
   top: 15%;
-  box-shadow: 5px 5px 5px #000;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 2px 2px 6px rgba(178, 34, 34, 0.4);
   z-index: 10001;
-  font-weight: 700;
+  font-weight: 600;
   text-align: center;
 }
-
 .Thoat_update {
   position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  inset: 0;
   background-color: transparent;
   z-index: 10000;
-  display :none;
+  display: none;
 }
-
-@media (min-width: 768px) {
-  .popup_update {
-    width: 66.66666666%;
-    margin-left: 16.666666%;
-  }
-}
-@media (min-width: 992px) {
-  .popup_update {
-    width: 80%;
-    margin-left: 25%;
-  }
-}
-@media (min-width: 1200px) {
-  .popup_update {
-    width: 33.33333%;
-    margin-left: 33.33333%;
-  }
-}
+@media (min-width: 768px) { .popup_update { width: 70%; max-width: 350px; } }
+@media (min-width: 992px) { .popup_update { width: 45%; max-width: 350px; } }
+@media (min-width: 1200px){ .popup_update { width: 30%; max-width: 350px; } }
 
 .update-btn {
-  background-color:#fad7a0; /* #808b96; */
+  background-color:#fad7a0;
   color: #b22222;
   font-weight: 700;
   border: 1px solid #b22222;
@@ -867,151 +828,105 @@ form .question label {
   height: 30px;
   width: 30%;
 }
-.update-btn:hover {
-  background-color: #f39c12; /* #566573; */
-  cursor: pointer;
-}
+.update-btn:hover { background-color: #f39c12; cursor: pointer; }
 
-
+/* === POPUP UPDATE EXCEL === */
 .popup_updateExcel {
   width: 80%;
-  padding: 15px;
-  left: 0;
-  margin-left: 5%;
+  max-width: 400px;
+  padding: 8px 12px 12px;
   border: 1px solid #b22222;
-  border-radius: 10px;
+  border-radius: 6px;
   color: #b22222;
   background: white;
   position: absolute;
   top: 15%;
-  box-shadow: 5px 5px 5px #000;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 2px 2px 6px rgba(178, 34, 34, 0.4);
   z-index: 10001;
-  font-weight: 700;
+  font-weight: 600;
   text-align: center;
 }
-
 .Thoat_updateExcel {
   position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  inset: 0;
   background-color: transparent;
   z-index: 10000;
-  display :none;
+  display: none;
 }
-
-@media (min-width: 768px) {
-  .popup_updateExcel {
-    width: 66.66666666%;
-    margin-left: 16.666666%;
-  }
-}
-@media (min-width: 992px) {
-  .popup_updateExcel {
-    width: 80%;
-    margin-left: 25%;
-  }
-}
-@media (min-width: 1200px) {
-  .popup_updateExcel {
-    width: 33.33333%;
-    margin-left: 33.33333%;
-  }
-}
+@media (min-width: 768px) { .popup_updateExcel { width: 70%; max-width: 350px; } }
+@media (min-width: 992px) { .popup_updateExcel { width: 45%; max-width: 350px; } }
+@media (min-width: 1200px){ .popup_updateExcel { width: 30%; max-width: 350px; } }
 
 .updateExcel-btn {
   background-color:#808b96;
   color: white;
   font-weight: 700;
   border: 1px solid #44B78B;
-  border-radius: 10px;
+  border-radius: 6px;
   height: 30px;
   width: 30%;
 }
-.updateExcel-btn:hover {
-  background-color: #566573;
-  cursor: pointer;
-}
+.updateExcel-btn:hover { background-color:#566573; cursor: pointer; }
 
+/* === POPUP RESULT EXCEL === */
 .popup_resultExcel {
   width: 80%;
-  padding: 15px;
-  left: 0;
-  margin-left: 5%;
+  max-width: 400px;
+  padding: 8px 12px 12px;
   border: 1px solid #b22222;
-  border-radius: 10px;
+  border-radius: 6px;
   color: #b22222;
   background: white;
   position: absolute;
   top: 25%;
-  box-shadow: 5px 5px 5px #000;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 2px 2px 6px rgba(178, 34, 34, 0.4);
   z-index: 10001;
-  font-weight: 700;
+  font-weight: 600;
   text-align: center;
 }
-
 .Thoat_resultExcel {
   position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  inset: 0;
   background-color: transparent;
   z-index: 10000;
-  display :none;
+  display: none;
 }
+@media (min-width: 768px) { .popup_resultExcel { width: 70%; max-width: 350px; } }
+@media (min-width: 992px) { .popup_resultExcel { width: 45%; max-width: 350px; } }
+@media (min-width: 1200px){ .popup_resultExcel { width: 30%; max-width: 350px; } }
 
-@media (min-width: 768px) {
-  .popup_resultExcel {
-    width: 66.66666666%;
-    margin-left: 16.666666%;
-  }
-}
-@media (min-width: 992px) {
-  .popup_resultExcel {
-    width: 80%;
-    margin-left: 25%;
-  }
-}
-@media (min-width: 1200px) {
-  .popup_resultExcel {
-    width: 33.33333%;
-    margin-left: 33.33333%;
-  }
-}
-
-
+/* === POPUP KET NOI === */
 .popup_ketnoi {
   width: 80%;
-  padding: 15px;
-  left: 0;
-  margin-left: 5%;
+  max-width: 400px;
+  padding: 8px 12px 12px;
   border: 1px solid #b22222;
-  border-radius: 10px;
+  border-radius: 6px;
   color: #b22222;
   background: white;
-  position: relative;
+  position: absolute;
   top: 15%;
-  box-shadow: 5px 5px 5px #000;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 2px 2px 6px rgba(178, 34, 34, 0.4);
   z-index: 10001;
-  font-weight: 700;
+  font-weight: 600;
   text-align: center;
 }
-
 .Thoat_ketnoi {
   position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  inset: 0;
   background-color: transparent;
   z-index: 10000;
-  display :none;
+  display: none;
 }
+@media (min-width: 768px) { .popup_ketnoi { width: 70%; max-width: 350px; } }
+@media (min-width: 992px) { .popup_ketnoi { width: 45%; max-width: 350px; } }
+@media (min-width: 1200px){ .popup_ketnoi { width: 30%; max-width: 350px; } }
 
 #confirm_ketnoi {
   position: absolute;
@@ -1021,349 +936,201 @@ form .question label {
   color: #b22222;
   font-weight: 600;
   border: 1px solid #b22222;
-  border-radius: 10px;
-  height: 20px;
-  width: 20px;
-  cursor: pointer;
-}
-
-@media (min-width: 768px) {
-  .popup_ketnoi {
-    width: 66.66666666%;
-    margin-left: 16.666666%;
-  }
-}
-@media (min-width: 992px) {
-  .popup_ketnoi {
-    width: 80%;
-    margin-left: 25%;
-  }
-}
-@media (min-width: 1200px) {
-  .popup_ketnoi {
-    width: 33.33333%;
-    margin-left: 33.33333%;
-  }
-}
-
-.ketnoi-btn {
-  background-color:#808b96;
-  color: white;
-  font-weight: 700;
-  border: 1px solid #b22222;
-  border-radius: 10px;
-  height: 30px;
-  width: 30%;
-}
-.ketnoi-btn:hover {
-  background-color: #566573;
+  border-radius: 50%;
+  height: 22px;
+  width: 22px;
   cursor: pointer;
 }
 
 
-/* TRANS */
-
+/* === POPUP TRANS === */
 .popup_trans {
   width: 80%;
-  padding: 15px;
-  left: 0;
-  margin-left: 5%;
+  max-width: 400px;
+  padding: 8px 12px 12px;
   border: 1px solid #b22222;
-  border-radius: 10px;
+  border-radius: 6px;
   color: #b22222;
   background: white;
   position: absolute;
   top: 15%;
-  box-shadow: 5px 5px 5px #000;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.4);
   z-index: 10001;
-  font-weight: 700;
+  font-weight: 600;
   text-align: center;
 }
-
 .Thoat_trans {
   position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  inset: 0;
   background-color: transparent;
   z-index: 10000;
-  display :none;
+  display: none;
 }
-
-@media (min-width: 768px) {
-  .popup_trans {
-    width: 66.66666666%;
-    margin-left: 16.666666%;
-  }
-}
-@media (min-width: 992px) {
-  .popup_trans {
-    width: 80%;
-    margin-left: 25%;
-  }
-}
-@media (min-width: 1200px) {
-  .popup_trans {
-    width: 33.33333%;
-    margin-left: 33.33333%;
-  }
-}
+@media (min-width: 768px) { .popup_trans { width: 70%; max-width: 350px; } }
+@media (min-width: 992px) { .popup_trans { width: 45%; max-width: 350px; } }
+@media (min-width: 1200px){ .popup_trans { width: 30%; max-width: 350px; } }
 
 .trans-btn {
   background-color:#808b96;
   color: white;
   font-weight: 700;
   border: 1px solid #44B78B;
-  border-radius: 10px;
+  border-radius: 6px;
   height: 30px;
   width: 30%;
 }
-.trans-btn:hover {
-  background-color:#566573;
-  cursor: pointer;
-}
+.trans-btn:hover { background-color:#566573; cursor: pointer; }
 
-/*END TRANS */
-
-
+/* === POPUP INSERT === */
 .popup_insert {
   width: 80%;
-  padding: 15px;
-  left: 0;
-  margin-left: 5%;
+  max-width: 400px;
+  padding: 8px 12px 12px;
   border: 1px solid #b22222;
-  border-radius: 10px;
+  border-radius: 6px;
   color: #b22222;
   background: white;
   position: absolute;
   top: 15%;
-  box-shadow: 5px 5px 5px #000;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.4);
   z-index: 10001;
-  font-weight: 700;
+  font-weight: 600;
   text-align: center;
 }
-
 .Thoat_insert {
   position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  inset: 0;
   background-color: transparent;
   z-index: 10000;
-  display :none;
+  display: none;
 }
-
-@media (min-width: 768px) {
-  .popup_insert {
-    width: 66.66666666%;
-    margin-left: 16.666666%;
-  }
-}
-@media (min-width: 992px) {
-  .popup_insert {
-    width: 80%;
-    margin-left: 25%;
-  }
-}
-@media (min-width: 1200px) {
-  .popup_insert {
-    width: 33.33333%;
-    margin-left: 33.33333%;
-  }
-}
+@media (min-width: 768px) { .popup_insert { width: 70%; max-width: 350px; } }
+@media (min-width: 992px) { .popup_insert { width: 45%; max-width: 350px; } }
+@media (min-width: 1200px){ .popup_insert { width: 30%; max-width: 350px; } }
 
 .insert-btn {
-  background-color:#fad7a0; /* #808b96; */
+  background-color:#fad7a0;
   color: #b22222;
   font-weight: 700;
   border: 1px solid #b22222;
-  border-radius: 10px;
+  border-radius: 6px;
   height: 30px;
   width: 30%;
 }
-.insert-btn:hover {
-  background-color:#f39c12; /* #566573; */
-  cursor: pointer;
-}
+.insert-btn:hover { background-color:#f39c12; cursor: pointer; }
 
+/* === POPUP DELETE === */
 .popup_delete {
   width: 80%;
-  padding: 15px;
-  left: 0;
-  margin-left: 5%;
+  max-width: 400px;
+  padding: 8px 12px 12px;
   border: 1px solid #b22222;
-  border-radius: 10px;
+  border-radius: 6px;
   color: #b22222;
   background: white;
   position: absolute;
   top: 15%;
-  box-shadow: 5px 5px 5px #000;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.4);
   z-index: 10001;
-  font-weight: 700;
+  font-weight: 600;
   text-align: center;
 }
-
 .Thoat_delete {
   position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  inset: 0;
   background-color: transparent;
   z-index: 10000;
-  display :none;
+  display: none;
 }
-
-@media (min-width: 768px) {
-  .popup_delete {
-    width: 66.66666666%;
-    margin-left: 16.666666%;
-  }
-}
-@media (min-width: 992px) {
-  .popup_delete {
-    width: 80%;
-    margin-left: 25%;
-  }
-}
-@media (min-width: 1200px) {
-  .popup_delete {
-    width: 33.33333%;
-    margin-left: 33.33333%;
-  }
-}
+@media (min-width: 768px) { .popup_delete { width: 70%; max-width: 350px; } }
+@media (min-width: 992px) { .popup_delete { width: 45%; max-width: 350px; } }
+@media (min-width: 1200px){ .popup_delete { width: 30%; max-width: 350px; } }
 
 .delete-btn {
-  background-color:#fad7a0; /* #808b96; */
+  background-color:#fad7a0;
   color: #b22222;
   font-weight: 700;
   border: 1px solid #b22222;
-  border-radius: 10px;
+  border-radius: 6px;
   height: 30px;
   width: 30%;
 }
-.delete-btn:hover {
-  background-color:#f39c12; /* #566573; */
-  cursor: pointer;
-}
+.delete-btn:hover { background-color:#f39c12; cursor: pointer; }
 
-
+/* === POPUP ID === */
 .popup_id {
   width: 80%;
-  padding: 15px;
-  left: 0;
-  margin-left: 5%;
+  max-width: 400px;
+  padding: 8px 12px 12px;
   border: 1px solid #b22222;
-  border-radius: 10px;
+  border-radius: 6px;
   color: #b22222;
   background: white;
   position: absolute;
   top: 15%;
-  box-shadow: 5px 5px 5px #000;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.4);
   z-index: 10001;
-  font-weight: 700;
+  font-weight: 600;
   text-align: center;
 }
-
 .Thoat_id {
   position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  inset: 0;
   background-color: transparent;
   z-index: 10000;
-  display :none;
+  display: none;
 }
+@media (min-width: 768px) { .popup_id { width: 70%; max-width: 350px; } }
+@media (min-width: 992px) { .popup_id { width: 45%; max-width: 350px; } }
+@media (min-width: 1200px){ .popup_id { width: 30%; max-width: 350px; } }
 
-@media (min-width: 768px) {
-  .popup_id {
-    width: 66.66666666%;
-    margin-left: 16.666666%;
-  }
+.id-btn {
+  background-color:#fad7a0;
+  color: #b22222;
+  font-weight: 700;
+  border: 1px solid #b22222;
+  border-radius: 6px;
+  height: 30px;
+  width: 30%;
 }
-@media (min-width: 992px) {
-  .popup_id {
-    width: 80%;
-    margin-left: 25%;
-  }
-}
-@media (min-width: 1200px) {
-  .popup_id {
-    width: 33.33333%;
-    margin-left: 33.33333%;
-  }
-}
+.id-btn:hover { background-color:#f39c12; cursor: pointer; }
 
-
+/* === POPUP RESULT === */
 .popup_result {
   width: 80%;
-  padding: 15px;
-  left: 0;
-  margin-left: 5%;
+  max-width: 400px;
+  padding: 8px 12px 12px;
   border: 1px solid #b22222;
-  border-radius: 10px;
+  border-radius: 6px;
   color: #b22222;
   background: white;
   position: absolute;
   top: 25%;
-  box-shadow: 5px 5px 5px #000;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.4);
   z-index: 10001;
-  font-weight: 700;
+  font-weight: 600;
   text-align: center;
 }
-
 .Thoat_result {
   position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  inset: 0;
   background-color: transparent;
   z-index: 10000;
-  display :none;
+  display: none;
 }
-
-@media (min-width: 768px) {
-  .popup_result {
-    width: 66.66666666%;
-    margin-left: 16.666666%;
-  }
-}
-@media (min-width: 992px) {
-  .popup_result {
-    width: 80%;
-    margin-left: 25%;
-  }
-}
-@media (min-width: 1200px) {
-  .popup_result {
-    width: 33.33333%;
-    margin-left: 33.33333%;
-  }
-}
-
-.id-btn {
-  background-color:#fad7a0; /* #808b96; */
-  color: #b22222;
-  font-weight: 700;
-  border: 1px solid #b22222;
-  border-radius: 10px;
-  height: 30px;
-  width: 30%;
-}
-.id-btn:hover {
-  background-color: #f39c12; /*#566573; */
-  cursor: pointer;
-}
-
+@media (min-width: 768px) { .popup_result { width: 70%; max-width: 350px; } }
+@media (min-width: 992px) { .popup_result { width: 45%; max-width: 350px; } }
+@media (min-width: 1200px){ .popup_result { width: 30%; max-width: 350px; } }
 
 /* Lịch */
 
@@ -2880,6 +2647,7 @@ const _0x3ab679=_0x5c86;(function(_0x38765c,_0x4ac58b){const _0x26ea67=_0x5c86,_
 
 </body>
 </html>
+
 
 
 
