@@ -1399,7 +1399,41 @@ font-weight: bold;
     padding: 2px 5px !important; /* Giảm padding trong ô */
 }
 
-		
+/* Màu nền và chữ cho header Ag */
+.ag-theme-alpine .ag-header {
+    background-color:#a9cce3; /* Màu nền cho header */
+    font-weight: bold;
+}
+
+/* Màu nền và chữ cho floating filter (ô tìm kiếm) */
+.ag-theme-alpine .ag-floating-filter {
+    background-color: #d5d8dc; /* Màu nền cho ô tìm kiếm */
+    color: black; /* Màu chữ cho ô tìm kiếm */
+}
+
+/* Màu nền cho các cột pinned với 20% vàng nhạt ở phía trên */
+.ag-theme-alpine .ag-row-pinned .ag-cell {
+    background: linear-gradient(180deg, #fbeee6,#d6eaf8, #ffffff 100%) !important; /* Xanh nhạt chiếm 20% phía trên, phần còn lại là màu trắng */
+}
+
+/* Loại bỏ hover cho pinned rows */
+.ag-theme-alpine .ag-row-pinned:hover .ag-cell {
+    background: linear-gradient(180deg, #fbeee6, #ffffff, #ffffff 100%) !important; /* Duy trì màu nền khi hover */
+}
+
+/* Loại bỏ hiệu ứng hover hoàn toàn trên pinned rows */
+/* .ag-theme-alpine .ag-row-hover.ag-row-pinned { */
+/*     pointer-events: none !important; */
+/* } */
+
+/* End Màu nền và chữ cho header Ag */
+
+/* Luôn hiển thị Munu trên header */
+.ag-header-cell-menu-button {
+    opacity: 1 !important;  /* Luôn hiển thị icon */
+    visibility: visible !important;
+    display: flex !important;
+}		
 /* End wrap text row pin */
 
 /* Canh Icon Home, Tiêu đề, Edit */
@@ -1519,7 +1553,7 @@ font-weight: bold;
   align-items: center;            /* canh giữa theo chiều dọc */
   height: 50px;                   /* tăng chiều cao khung */
   padding: 0 15px;                /* khoảng cách trái/phải */
-  border: 1px solid #ccc;
+  border: 1px solid red;
   border-radius: 3px;
   background-color: #fff;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
@@ -1528,46 +1562,6 @@ font-weight: bold;
 /*  END Viền cho khối HEADER BAR  */
 	
 /* End Canh Icon Home, Tiêu đề, Edit */
-
-
-
-/* Màu nền và chữ cho header */
-.ag-theme-alpine .ag-header {
-    background-color:#a9cce3; /* Màu nền cho header */
-    font-weight: bold;
-}
-
-/* Màu nền và chữ cho floating filter (ô tìm kiếm) */
-.ag-theme-alpine .ag-floating-filter {
-    background-color: #d5d8dc; /* Màu nền cho ô tìm kiếm */
-    color: black; /* Màu chữ cho ô tìm kiếm */
-}
-
-/* Màu nền cho các cột pinned với 20% vàng nhạt ở phía trên */
-.ag-theme-alpine .ag-row-pinned .ag-cell {
-    background: linear-gradient(180deg, #fbeee6,#d6eaf8, #ffffff 100%) !important; /* Xanh nhạt chiếm 20% phía trên, phần còn lại là màu trắng */
-}
-
-/* Loại bỏ hover cho pinned rows */
-.ag-theme-alpine .ag-row-pinned:hover .ag-cell {
-    background: linear-gradient(180deg, #fbeee6, #ffffff, #ffffff 100%) !important; /* Duy trì màu nền khi hover */
-}
-
-/* Loại bỏ hiệu ứng hover hoàn toàn trên pinned rows */
-/* .ag-theme-alpine .ag-row-hover.ag-row-pinned { */
-/*     pointer-events: none !important; */
-/* } */
-
-
-
-/* End Màu nền và chữ cho header */
-
-/* Luôn hiển thị Munu trên header */
-.ag-header-cell-menu-button {
-    opacity: 1 !important;  /* Luôn hiển thị icon */
-    visibility: visible !important;
-    display: flex !important;
-}
 
 
 /* Thay đổi */
@@ -2661,6 +2655,7 @@ const _0x3ab679=_0x5c86;(function(_0x38765c,_0x4ac58b){const _0x26ea67=_0x5c86,_
 
 </body>
 </html>
+
 
 
 
