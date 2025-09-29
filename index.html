@@ -777,7 +777,6 @@ height: 30px;
 
 
 /* Tiêu đề TẠO CÂY GIA PHẢ */
-
 .header {
   font-size: 24px; /* Kích thước chữ */
   font-weight: bold;
@@ -786,30 +785,29 @@ height: 30px;
   letter-spacing: 2px;
 }
 
-/* Áp dụng cho tất cả các span chữ */
 .header span {
   display: inline-block;
   text-transform: uppercase;
+  position: relative;
+  top: -3px; /* 👈 dịch chữ lên 3px, có thể chỉnh -2 / -4 tùy mắt nhìn */
 
-  /* Màu gradient vàng-nâu giống ảnh */
   background: linear-gradient(
     to bottom,
-    #fff8d6 0%,   /* vàng sáng trên đỉnh */
-    #ffd700 25%,  /* vàng đậm */
-    #d4a017 50%,  /* vàng nâu */
-    #b8860b 75%,  /* nâu vàng */
-    #6b3e00 100%  /* nâu sẫm ở đáy */
+    #fff8d6 0%,
+    #ffd700 25%,
+    #d4a017 50%,
+    #b8860b 75%,
+    #6b3e00 100%
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 
-  /* Bóng đổ nhiều lớp tạo 3D */
   text-shadow:
-    1px 1px 0px #ffffff,  /* viền sáng trên cùng */
-    2px 2px 1px #9F2D01,  /* vàng đậm */
-    3px 3px 2px #b37700,  /* nâu vàng */
-    4px 4px 3px #9F2D01,  /* nâu sẫm */
-    5px 5px 4px rgba(0, 0, 0, 0.6); /* bóng tối sâu */
+    1px 1px 0px #ffffff,
+    2px 2px 1px #9F2D01,
+    3px 3px 2px #b37700,
+    4px 4px 3px #9F2D01,
+    5px 5px 4px rgba(0, 0, 0, 0.6);
 
   transition: transform 0.2s ease-in-out;
 }
@@ -820,6 +818,20 @@ height: 30px;
   filter: brightness(1.1);
 }
 
+/*  Viền cho khối HEADER BAR  */
+.header {
+  display: flex;
+  justify-content: center;   /* chữ nằm giữa, không bị kéo giãn */
+  align-items: center;       /* canh giữa theo chiều dọc */
+  height: 40px;             
+  padding: 0 10px;          
+  border: 1px solid rgba(255, 223, 0, 0.6); /* viền vàng nhạt trong suốt */
+  border-radius: 3px;
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  margin: 5px;
+  font-weight: bold;
+}
 
 /* Banner Khi màn hình nhỏ hơn hoặc bằng 768px (tablet + điện thoại) */
 @media (max-width: 600px) {
@@ -895,6 +907,7 @@ function _0x34af(){var _0x4d5da9=['<input\x20type=\x27text\x27\x20id=\x27','arra
 
 </body>
 </html>
+
 
 
 
