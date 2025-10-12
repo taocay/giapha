@@ -796,11 +796,7 @@ font-size: 15px;
     font-size: 15px;
     width: 100%;
   }
-.form {
-    font-size: 15px;
-    width: 90%;
-	top: 50%;
-  }
+
 }
 @media only screen and (max-width: 767px) {
 .modalMess-wrapper {
@@ -855,15 +851,68 @@ font-size: 15px;
    font-size: 15px;
     width: 100%;
   }
+
+}
+
+}
+
 .form {
-   font-size: 15px;
-    width: 90%;
-	top: 50%;
+  background: white;
+  padding: 15px;
+  max-width: 650px;
+  width: 30%;
+  font-family: "Times New Roman", serif;
+  border-radius: 10px;
+  text-align: center;
+  overflow-y: auto;
+
+  /* Viền */
+  border: 1px solid #7E2A0C;
+  outline: 1px solid #ccc;
+  outline-offset: 3px;
+
+  /* Hiệu ứng đổ bóng */
+  box-shadow:
+    0 0 10px rgba(255, 215, 0, 0.6),
+    0 0 20px rgba(255, 215, 0, 0.4),
+    0 0 30px rgba(0, 0, 0, 0.2);
+
+  position: fixed;
+  top: 32%; /* Vị trí đẹp cho PC */
+  left: 50%;
+  transform: translateX(-50%);
+  transform-origin: top center;
+  z-index: 999;
+  margin: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+/* ==================== TABLET ==================== */
+@media only screen and (min-width: 768px) and (max-width: 1099px) {
+  .form {
+    width: 80%;
+    font-size: 15px;
+    top: 20%; /* dịch xuống nhẹ vì màn hình thấp hơn */
   }
 }
 
+/* ==================== MOBILE ==================== */
+@media only screen and (max-width: 767px) {
+  .form {
+    width: 90%;
+    font-size: 15px;
+    top: 20%; /* giữ mép trên giữa màn hình nhưng thấp hơn chút cho dễ nhìn */
+  }
 }
 
+/* ==================== SMALL MOBILE (nhỏ hơn 480px) ==================== */
+@media only screen and (max-width: 479px) {
+  .form {
+    width: 94%;
+    font-size: 14px;
+    top: 20%; /* hơi thấp nữa để có khoảng nhìn thoáng hơn */
+  }
+}
 
 @media (max-width: 600px) {
 .modalMess-wrapper {
@@ -1253,6 +1302,7 @@ var _0x22e8b8=_0x3c17;function _0x3c17(_0x152f92,_0x2c02f3){var _0x5a96ee=_0x5a9
 
 </body>
 </html>
+
 
 
 
