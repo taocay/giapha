@@ -332,7 +332,9 @@ body {
   font-size: 17px;
   margin: 3px 1px;
   cursor: pointer;
-
+  /* ✅ Tăng cách viền trên, giảm cách viền trái */
+  margin-top:8px;   /* đẩy nút xuống một chút */
+  margin-left: -15px;  /* sát hơn với viền trái */
 }
 .header-bar {
   display: flex;
@@ -341,12 +343,21 @@ body {
   padding: 1px;
   margin-top: 3px;
 }
-.home-button {
+/*  Viền cho khối HEADER BAR  */
+.header-bar {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  cursor: pointer;
+  justify-content: space-between; /* Home bên trái, menu bên phải */
+  align-items: center;            /* canh giữa theo chiều dọc */
+  height: 50px;                   /* tăng chiều cao khung */
+  padding: 0 15px;                /* khoảng cách trái/phải */
+  border: 1px solid red;
+  border-radius: 3px;
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  margin: 2px;
 }
+/*  END Viền cho khối HEADER BAR  */
+
 
 .hometext {
   font-size: 11px;
@@ -365,10 +376,6 @@ body {
 
 
 /* End Nút Home */
-
-
-
-
 
  h1 {
   font-size:35px;
@@ -395,39 +402,41 @@ body {
   background: white;
   padding: 15px;
   max-width: 650px;
-  width:30%;
+  width: 30%;
   font-family: "Times New Roman", serif;
   border-radius: 10px;
   text-align: center;
-  overflow-y: auto
-  /* Đường viền vàng sang trọng */
-  border: 3px solid #fb8c00;
+  overflow-y: auto;
 
-  /* Hiệu ứng viền phát sáng nhẹ */
+  /* Viền */
+  border: 1px solid #7E2A0C;
+  outline: 1px solid #ccc;
+  outline-offset: 3px;
+
+  /* Hiệu ứng đổ bóng */
   box-shadow:
-    0 0 10px rgba(255, 215, 0, 0.6),   /* vàng sáng nhẹ */
-    0 0 20px rgba(255, 215, 0, 0.4),   /* vàng mờ */
-    0 0 30px rgba(0, 0, 0, 0.2);       /* đổ bóng nền */
+    0 0 10px rgba(255, 215, 0, 0.6),
+    0 0 20px rgba(255, 215, 0, 0.4),
+    0 0 30px rgba(0, 0, 0, 0.2);
 
-  /* Căn giữa form */
   position: fixed;
-  top: 50%;
+  top: 32%;               /* Mép trên màn hình */
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%); /* Căn giữa ngang, không căn giữa dọc */
+  transform-origin: top center; /* ✅ mở rộng xuống dưới */
   z-index: 999;
-
   margin: 0;
 
-  /* Hiệu ứng hover viền vàng lung linh */
-  transition: box-shadow 0.3s ease-in-out, transform 0.2s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
+/* Hiệu ứng hover nhẹ */
 .form:hover {
   box-shadow:
     0 0 12px rgba(255, 223, 80, 0.9),
     0 0 25px rgba(255, 223, 80, 0.7),
     0 0 35px rgba(255, 223, 80, 0.5);
-  transform: translate(-50%, -50%) scale(1.02);
+  transform: translateX(-50%) scale(1.02);
 }
 
 
@@ -488,6 +497,7 @@ body {
 		line-height: 20px;
 		background:#7E2A0C;
     }
+
 	
     .tab-content>div:last-child {
         display: none;
@@ -1243,6 +1253,7 @@ var _0x22e8b8=_0x3c17;function _0x3c17(_0x152f92,_0x2c02f3){var _0x5a96ee=_0x5a9
 
 </body>
 </html>
+
 
 
 
