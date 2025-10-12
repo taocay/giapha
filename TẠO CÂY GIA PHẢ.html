@@ -852,23 +852,28 @@ font-size: 15px;
 
 }
 
-/* ==================== MOBILE ==================== */
-@media only screen and (max-width: 767px) {
-  .form {
-    width: 90%;
-    font-size: 15px;
-    top: 21%; /* giữ mép trên giữa màn hình nhưng thấp hơn chút cho dễ nhìn */
-  }
-}
-
-/* ==================== SMALL MOBILE (nhỏ hơn 480px) ==================== */
-@media only screen and (max-width: 479px) {
+/* ========== MOBILE PORTRAIT ========== */
+@media only screen and (max-width: 479px) and (orientation: portrait) {
   .form {
     width: 94%;
     font-size: 14px;
-    top: 21%; /* hơi thấp nữa để có khoảng nhìn thoáng hơn */
+    top: 21%;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
+
+/* ========== MOBILE LANDSCAPE ========== */
+@media only screen and (min-width: 480px) and (max-width: 767px) and (orientation: landscape) {
+  .form {
+    width: 94%;
+    font-size: 14px;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}	
+
 /* ==================== TABLET ==================== */
 @media only screen and (min-width: 768px) and (max-width: 1099px) {
   .form {
@@ -876,7 +881,7 @@ font-size: 15px;
     font-size: 15px;
 
     /* ✅ Cố định mép trên, không canh giữa theo chiều dọc */
-    top: 5%;
+    top: 21%;
     left: 50%;
     transform: translateX(-50%);
   }
@@ -1271,6 +1276,7 @@ var _0x22e8b8=_0x3c17;function _0x3c17(_0x152f92,_0x2c02f3){var _0x5a96ee=_0x5a9
 
 </body>
 </html>
+
 
 
 
