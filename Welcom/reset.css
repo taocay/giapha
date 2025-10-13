@@ -1,12 +1,17 @@
 
 
 .text {
-  position: absolute;
-  width: 28px;  /* Khoảng cách giữa các chử */
-  line-height: 27px;
-  opacity: 0;
-  overflow: hidden;
+  display: inline-block;
+  margin: 0 1px;  /* chỉnh nhẹ khoảng cách giữa các chữ */
+  position: relative;
+  text-shadow:
+    1px 1px 0px #ffffff,
+    2px 2px 1px #9F2D01,
+    3px 3px 2px #b37700,
+    4px 4px 3px #9F2D01,
+    5px 5px 4px rgba(0, 0, 0, 0.6);
 }
+
 .text::after {
   z-index: -1;
   content: '';
@@ -5383,4 +5388,5 @@
     opacity: 1;
     transform: scale(0, 0);
   }
+
 }
