@@ -781,33 +781,35 @@ height: 30px;
 
 	
 /* Tiêu đề TẠO CÂY GIA PHẢ */
+/* 🟡 Thanh tiêu đề chính */
 .header-bar {
   display: flex;
   align-items: center;
   justify-content: space-between; /* chia 3 phần: trái - giữa - phải */
   position: relative;
-  height: 40px;
-  border: 1px solid red;
-  border-radius: 3px;
+  height: 50px; /* tăng nhẹ cho chữ cân đẹp hơn */
+  border: 1px solid #7E2A0C;
+  border-radius: 4px;
   background-color: #fff;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  padding: 0 10px; /* 🟢 sửa lại đúng cú pháp */
+  padding: 0 10px; /* chừa lề trái phải */
 }
 
-/* Hai cột trái và phải có cùng chiều rộng để giữa thật sự cân đối */
+/* 🟢 Hai cột trái/phải giữ cùng chiều rộng để phần giữa thật sự ở giữa */
 .left, .right {
-  width: 120px;
+  width: 90px; /* ⚖️ vừa đủ cho nút Home, hai bên cân nhau */
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/* --- Nút Home --- */
+/* 🏠 Nút Home */
 .home-button {
   display: flex;
   flex-direction: column;
   align-items: center;
   cursor: pointer;
+  text-align: center;
 }
 
 .home-button i {
@@ -823,7 +825,7 @@ height: 30px;
   font-family: 'Times New Roman', Times, serif;
 }
 
-/* --- Cột giữa chứa tiêu đề --- */
+/* 🔸 Khu vực giữa chứa tiêu đề */
 .center {
   flex-grow: 1;
   display: flex;
@@ -832,13 +834,14 @@ height: 30px;
   text-align: center;
 }
 
-/* --- Hiệu ứng chữ vàng ánh kim --- */
+/* 🌟 Hiệu ứng chữ vàng ánh kim */
 .header span {
   display: inline-block;
   text-transform: uppercase;
   font-size: 24px;
   font-weight: bold;
   font-family: 'Times New Roman', Times, serif;
+  line-height: 1; /* đảm bảo chữ nằm giữa chiều cao header */
   background: linear-gradient(
     to bottom,
     #fff8d6 0%,
@@ -931,6 +934,7 @@ function _0x34af(){var _0x4d5da9=['<input\x20type=\x27text\x27\x20id=\x27','arra
 
 </body>
 </html>
+
 
 
 
