@@ -781,27 +781,29 @@ height: 30px;
 
 	
 /* Tiêu đề TẠO CÂY GIA PHẢ */
+/* Thanh header tổng */
 .header-bar {
+  position: relative;
   display: flex;
   align-items: center;
-  justify-content: space-between; /* chia 3 phần: trái - giữa - phải */
-  position: relative;
   height: 40px;
   border: 1px solid red;
   border-radius: 3px;
   background-color: #fff;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  padding: 0 5px; /* --- Chèn bên trái nút Home 5px --- */
+  padding: 0 5px;
 }
 
-/* Cột trái và phải cố định chiều rộng để phần giữa thật sự ở giữa */
-.left, .right {
+/* Cột trái: nút Home */
+.left {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
   display: flex;
-  justify-content: center;
   align-items: center;
 }
 
-/* --- Nút Home --- */
 .home-button {
   display: flex;
   flex-direction: column;
@@ -816,22 +818,23 @@ height: 30px;
 
 .hometext {
   font-size: 9px;
-  color:#BB4D1A;
+  color: #BB4D1A;
   font-weight: bold;
   margin-top: 2px;
   font-family: 'Times New Roman', Times, serif;
 }
 
-/* --- Cột giữa chứa tiêu đề --- */
+/* Giữa: chữ TẠO CÂY GIA PHẢ */
 .center {
-  flex-grow: 1;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
-  justify-content: center; /* 🟡 canh giữa tuyệt đối theo chiều ngang */
+  justify-content: center;
   align-items: center;
-  text-align: center;
 }
 
-/* --- Hiệu ứng chữ vàng ánh kim --- */
+/* Chữ vàng ánh kim */
 .header span {
   display: inline-block;
   text-transform: uppercase;
@@ -861,16 +864,12 @@ height: 30px;
 
   transition: transform 0.2s ease-in-out;
 }
-.header {
-  display: flex;
-  justify-content: center; /* canh giữa toàn khối */
-  align-items: center;
-  position: relative;
-}
+
 .header span:hover {
   transform: scale(1.08);
   filter: brightness(1.1);
 }
+
 /* End Tiêu đề TẠO CÂY GIA PHẢ */
 
 /* BANNER */
@@ -944,6 +943,7 @@ function _0x34af(){var _0x4d5da9=['<input\x20type=\x27text\x27\x20id=\x27','arra
 
 </body>
 </html>
+
 
 
 
