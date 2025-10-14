@@ -775,13 +775,67 @@ height: 30px;
 
 }
 
-
+	
 /* Tiêu đề TẠO CÂY GIA PHẢ */
+.header-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* chia 3 phần: trái - giữa - phải */
+  position: relative;
+  height: 40px;
+  border: 1px solid red;
+  border-radius: 3px;
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 0 5px; /* --- Chèn bên trái nút Home 5px --- */
+}
+
+/* Cột trái và phải cố định chiều rộng để phần giữa thật sự ở giữa */
+.left, .right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* --- Nút Home --- */
+.home-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.home-button i {
+  font-size: 20px;
+  color: #BB4D1A;
+}
+
+.hometext {
+  font-size: 9px;
+  color:#BB4D1A;
+  font-weight: bold;
+  margin-top: 2px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+/* --- Cột giữa chứa tiêu đề --- */
+.center {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center; /* 🟡 canh giữa tuyệt đối theo chiều ngang */
+  align-items: center;
+  text-align: center;
+}
+
+/* --- Hiệu ứng chữ vàng ánh kim --- */
 .header span {
   display: inline-block;
   text-transform: uppercase;
   position: relative;
-  top: -3px; /* 👈 dịch chữ lên 3px, có thể chỉnh -2 / -4 tùy mắt nhìn */
+  top: -3px;
+  font-size: 24px;
+  font-weight: bold;
+  font-family: 'Times New Roman', Times, serif;
 
   background: linear-gradient(
     to bottom,
@@ -804,29 +858,13 @@ height: 30px;
   transition: transform 0.2s ease-in-out;
 }
 
-/* Hiệu ứng hover cho sinh động */
 .header span:hover {
   transform: scale(1.08);
   filter: brightness(1.1);
 }
+/* End Tiêu đề TẠO CÂY GIA PHẢ */
 
-/*  Viền cho khối HEADER BAR  */
-.header {
-  display: flex;
-  justify-content: center;   /* chữ nằm giữa, không bị kéo giãn */
-  align-items: center;       /* canh giữa theo chiều dọc */
-  height: 40px;             
-  width: auto;
-  padding: 0 10px;          
-  border: 1px solid rgba(255, 223, 0, 0.6); /* viền vàng nhạt trong suốt */
-  border-radius: 3px;
-  background-color: #fff;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  font-size: 24px; /* Đảm bảo kích thước chữ lớn */
-  font-weight: bold;
-  text-align: center;
-  border: 1px solid #7E2A0C;
-}
+/* BANNER */
 
 /* Banner Khi màn hình nhỏ hơn hoặc bằng 768px (tablet + điện thoại) */
 @media (max-width: 600px) {
@@ -842,7 +880,7 @@ height: 30px;
   }
 }
 
-
+/* END BANNER */
 	  
 </style>
 <script>
@@ -862,7 +900,7 @@ var _0x23a9e3=_0x27b6;(function(_0x454241,_0xc7ddf1){var _0x4fad72=_0x27b6,_0x48
 <script src='https://taocay.github.io/giapha/D3-JS/CayGiaPha.js'></script>
 
 <script id="rendered-js" >
-var _0x571b8a=_0x1b97;function _0x1b97(_0x48d2ac,_0x41a378){var _0x505813=_0x5058();return _0x1b97=function(_0x1b97c6,_0x56db87){_0x1b97c6=_0x1b97c6-0x163;var _0x35be99=_0x505813[_0x1b97c6];return _0x35be99;},_0x1b97(_0x48d2ac,_0x41a378);}(function(_0x349627,_0x43ac1b){var _0x3577b4=_0x1b97,_0x176d5a=_0x349627();while(!![]){try{var _0x47134e=-parseInt(_0x3577b4(0x19a))/0x1*(parseInt(_0x3577b4(0x1a1))/0x2)+-parseInt(_0x3577b4(0x18b))/0x3*(-parseInt(_0x3577b4(0x1b1))/0x4)+parseInt(_0x3577b4(0x196))/0x5*(-parseInt(_0x3577b4(0x17a))/0x6)+-parseInt(_0x3577b4(0x175))/0x7+parseInt(_0x3577b4(0x18e))/0x8*(parseInt(_0x3577b4(0x16e))/0x9)+-parseInt(_0x3577b4(0x1ae))/0xa*(-parseInt(_0x3577b4(0x18f))/0xb)+parseInt(_0x3577b4(0x173))/0xc;if(_0x47134e===_0x43ac1b)break;else _0x176d5a['push'](_0x176d5a['shift']());}catch(_0x19dbc3){_0x176d5a['push'](_0x176d5a['shift']());}}}(_0x5058,0xb31f1),document[_0x571b8a(0x19c)](_0x571b8a(0x190),_0x1ce5bb=>_0x1ce5bb[_0x571b8a(0x181)]()),app[_0x571b8a(0x17c)]('products',{'template':_0x571b8a(0x1a2)+_0x571b8a(0x1b0)+_0x571b8a(0x1a8)+'<span\x20class=\x27text\x20text2\x27>O</span>'+_0x571b8a(0x17b)+_0x571b8a(0x16f)+_0x571b8a(0x17d)+_0x571b8a(0x1a4)+'<span\x20>&nbsp;</span>'+'<span\x20class=\x27text\x20text6\x27>G</span>'+_0x571b8a(0x1a5)+_0x571b8a(0x19f)+'<span\x20>&nbsp;</span>'+_0x571b8a(0x186)+_0x571b8a(0x1ab)+'<span\x20class=\x27text\x20text11\x27>Ả</span>'+_0x571b8a(0x17f)+_0x571b8a(0x18c)+_0x571b8a(0x197)+_0x571b8a(0x1b3)+'<div\x20v-for=\x27product\x20in\x20productsData\x27\x20track-by=\x27$index\x27\x20class=\x27product\x20{{\x20product.product\x20|\x20lowercase\x20}}\x27>'+'<div\x20class=\x27image\x27\x20@click=\x27viewproduct(product)\x27\x20v-bind:style=\x27{\x20backgroundImage:\x20\x22url(\x22\x20+\x20product.image\x20+\x20\x22)\x22\x20}\x27\x20style=\x27background-size:\x20cover;\x20background-position:\x20center;\x27><image\x20src=\x27{{\x20product.image\x20}}\x27\x20></div>'+_0x571b8a(0x180)+_0x571b8a(0x17f)+_0x571b8a(0x19e)+'<div\x20class=\x27overlay\x27\x20@click=\x27hideModal()\x27></div>'+'<div\x20class=\x27modal\x27>'+_0x571b8a(0x16b)+_0x571b8a(0x179)+_0x571b8a(0x17f)+_0x571b8a(0x16a)+_0x571b8a(0x18d)+_0x571b8a(0x17f)+_0x571b8a(0x174)+_0x571b8a(0x170)+_0x571b8a(0x191)+_0x571b8a(0x167)+_0x571b8a(0x183)+'</div></div>','props':['productsData'],'data':function(){return{'showModal':![],'modalData':{},'currentIndex':0x1,'timeout':'','mousestop':''};},'methods':{'addToCart':function(_0x14bce2){var _0x14d2b8=![];},'modalAddToCart':function(_0x3e92ec){var _0x1cc55f=this;},'viewproduct':function(_0x239678){var _0x175f0a=_0x571b8a,_0x2b44af=this;_0x2b44af[_0x175f0a(0x17e)]=JSON[_0x175f0a(0x1a3)](JSON[_0x175f0a(0x1b2)](_0x239678));if(_0x239678[_0x175f0a(0x1a6)]==_0x175f0a(0x194)){_0x2b44af['modalData']['details']=_0x2b44af[_0x175f0a(0x17e)][_0x175f0a(0x18a)][_0x175f0a(0x198)](_0x175f0a(0x1af),_0x175f0a(0x176)+_0x2b44af[_0x175f0a(0x166)]+'.png'),_0x2b44af[_0x175f0a(0x166)]++;if(_0x2b44af[_0x175f0a(0x166)]>0x7)_0x2b44af[_0x175f0a(0x166)]=0x1;_0x2b44af[_0x175f0a(0x184)]=!![];}else{_0x2b44af[_0x175f0a(0x184)]=![];let _0x37127b=location[_0x175f0a(0x189)]+'//'+location[_0x175f0a(0x168)]+(location[_0x175f0a(0x1a9)]?':'+location[_0x175f0a(0x1a9)]:'')+_0x175f0a(0x195)+_0x239678[_0x175f0a(0x1a6)]+_0x175f0a(0x193);window[_0x175f0a(0x163)][_0x175f0a(0x19d)]=_0x37127b;}},'Toshare':function(_0x598fa7){var _0xa94886=_0x571b8a,_0x592e00,_0x443695,_0x11b3ef,_0x306ed3='?fbclid';str=_0xa94886(0x1aa)+(location[_0xa94886(0x189)]+'//'+location[_0xa94886(0x168)]+(location[_0xa94886(0x1a9)]?':'+location[_0xa94886(0x1a9)]:'')+'/'+_0x598fa7[_0xa94886(0x1a6)]+'.html'),_0x592e00=str[_0xa94886(0x16d)](0x0,str[_0xa94886(0x1ad)](_0x306ed3))[_0xa94886(0x178)],_0x592e00>0x0?(_0x443695=str['substring'](0x0,str[_0xa94886(0x1ad)](_0x306ed3)),_0x11b3ef=_0x443695[_0xa94886(0x198)](/%20/g,'\x20')):_0x11b3ef=str,options=_0xa94886(0x164),window[_0xa94886(0x1a7)](_0x11b3ef,_0xa94886(0x19b),options);},'hideModal':function(){var _0x2d5815=_0x571b8a,_0x1a97fa=this;_0x1a97fa[_0x2d5815(0x17e)]={},_0x1a97fa[_0x2d5815(0x184)]=![];},'changeImage':function(_0x5953b2){var _0x49cd34=_0x571b8a,_0x7f3bd3=this;_0x7f3bd3[_0x49cd34(0x17e)][_0x49cd34(0x188)]=_0x5953b2;}}}),Login=function(){var _0x3d6e83=_0x571b8a,_0x3543a3;khánh1=''+(location[_0x3d6e83(0x189)]+'//'+location[_0x3d6e83(0x168)]+(location[_0x3d6e83(0x1a9)]?':'+location['port']:'')),khánh2='.html',_0x3543a3=khánh1+_0x3d6e83(0x1a0)+khánh2,window[_0x3d6e83(0x1a7)](_0x3543a3,target=_0x3d6e83(0x177));},shareface=function(){var _0x2bd907=_0x571b8a;url=_0x2bd907(0x1aa)+(location['protocol']+'//'+location[_0x2bd907(0x168)]+(location[_0x2bd907(0x1a9)]?':'+location[_0x2bd907(0x1a9)]:'')),options=_0x2bd907(0x164),window[_0x2bd907(0x1a7)](url,'sharer',options);},$(document)[_0x571b8a(0x185)](function(){var _0x6d3534=_0x571b8a,_0x5447ca=location[_0x6d3534(0x189)];if(_0x5447ca==_0x6d3534(0x171)){var _0x1f9f0b=document[_0x6d3534(0x187)](_0x6d3534(0x182));_0x1f9f0b[_0x6d3534(0x165)][_0x6d3534(0x172)](_0x1f9f0b),close();}else{}window['history']['replaceState']({},'',_0x6d3534(0x195)),console[_0x6d3534(0x169)](_0x6d3534(0x192));var _0x4f30e5=location[_0x6d3534(0x19d)]['split']('/')['slice'](-0x1)[_0x6d3534(0x199)]()[_0x6d3534(0x198)](_0x6d3534(0x193),'')[_0x6d3534(0x16c)]('?')[0x0];namefile=decodeURIComponent(_0x4f30e5),window[_0x6d3534(0x1ac)](namefile);}));function _0x5058(){var _0x228aae=['length','<span\x20style=\x27font-size:\x201.2rem;\x20text-align:\x20right;\x20float:\x20right;\x20font-weight:\x20bold;\x20color:\x20red;\x20filter:\x20hue-rotate(277deg)\x20brightness(0.96);\x20cursor:pointer;\x27\x20@click=\x27showCart\x20=\x20!showCart\x27>❎</span>','6ehODmN','<span\x20>&nbsp;</span>','component','<span\x20class=\x27text\x20text4\x27>Â</span>','modalData','</div>','<div\x20class=\x27name\x27\x20@click=\x27viewproduct(product)\x27>{{\x20product.product\x20}}</div>\x20','preventDefault','app','<label\x20for=\x27modalAmount\x27></label>','showModal','ready','<span\x20class=\x27text\x20text9\x27>P</span>','getElementById','image','protocol','details','488175kXWpIs','<p\x20id=\x27testText\x27></p>','<div\x20class=\x27imageWrapper\x27\x20v-bind:style=\x22{\x20backgroundImage:\x20\x27url(D3-JS/OGTag.png)\x27\x20}\x22\x20style=\x27background-size:\x20cover;\x20background-position:\x20center;\x27></div>','5216yoEQiy','22OgeThX','contextmenu','<div\x20class=\x27description\x27>{{\x20modalData.description\x20}}</div>','document\x20loaded','.html','THÔNG\x20TIN','/giapha/','4493765ctdsog','<p\x20id=\x27state\x27></p>','replace','toString','1ShpaZf','sharer','addEventListener','href','<div\x20class=\x27modalWrapper\x27\x20v-show=\x27showModal\x27>','<span\x20class=\x27text\x20text8\x27>A</span>','/dangnhap','1411948NwDAAz','<div\x20id=\x27header\x27\x20class=\x27header\x27>','parse','<span\x20class=\x27text\x20text5\x27>Y</span>','<span\x20class=\x27text\x20text7\x27>I</span>','product','open','<span\x20class=\x27text\x20text1\x27>Ạ</span>','port','https://www.facebook.com/sharer/sharer.php?u=','<span\x20class=\x27text\x20text10\x27>H</span>','find','indexOf','3589280CeAcLT','ChuKy_PLACEHOLDER.png','<span\x20class=\x27text\x20text0\x27>T</span>','20KUlYjS','stringify','<div\x20class=\x27products\x27>','location','toolbar=0,status=0,resizable=1,width=626,height=436','parentNode','currentIndex','<div\x20class=\x27details\x27\x20v-html=\x27modalData.details\x27></div>','hostname','log','<div\x20class=\x27imageWrapper\x27>','<div\x20class=\x27close\x27\x20@click=\x27hideModal()\x27>','split','substring','18567ZbjLnd','<span\x20class=\x27text\x20text3\x27>C</span>','</br>','file:','removeChild','1634496KSHltq','<div\x20class=\x27name\x27>LỜI\x20TỰA</div>','4720499qXHsiQ','ChuKy_','_blank'];_0x5058=function(){return _0x228aae;};return _0x5058();}
+var _0x38d5e7=_0x1209;(function(_0x5245ac,_0x38b9d4){var _0x15e392=_0x1209,_0x460932=_0x5245ac();while(!![]){try{var _0x489d01=-parseInt(_0x15e392(0x132))/0x1*(parseInt(_0x15e392(0x140))/0x2)+-parseInt(_0x15e392(0x123))/0x3*(parseInt(_0x15e392(0x117))/0x4)+parseInt(_0x15e392(0x136))/0x5+parseInt(_0x15e392(0x11f))/0x6+parseInt(_0x15e392(0x13f))/0x7*(-parseInt(_0x15e392(0x13a))/0x8)+parseInt(_0x15e392(0x131))/0x9+parseInt(_0x15e392(0x14c))/0xa;if(_0x489d01===_0x38b9d4)break;else _0x460932['push'](_0x460932['shift']());}catch(_0x497c8f){_0x460932['push'](_0x460932['shift']());}}}(_0x5260,0x5e326),document[_0x38d5e7(0x129)](_0x38d5e7(0x113),_0x3f1bd8=>_0x3f1bd8['preventDefault']()),app[_0x38d5e7(0x149)](_0x38d5e7(0x11e),{'template':_0x38d5e7(0x130)+_0x38d5e7(0x14d)+'<div\x20id=\x27btn-show-dialog\x27\x20class=\x27home-button\x27>'+_0x38d5e7(0x11c)+_0x38d5e7(0x12e)+_0x38d5e7(0x143)+_0x38d5e7(0x143)+_0x38d5e7(0x155)+_0x38d5e7(0x10d)+_0x38d5e7(0x11a)+'<span\x20class=\x27text\x20text1\x27>Ạ</span>'+'<span\x20class=\x27text\x20text2\x27>O</span>'+_0x38d5e7(0x14b)+_0x38d5e7(0x13b)+_0x38d5e7(0x114)+_0x38d5e7(0x152)+_0x38d5e7(0x14b)+'<span\x20class=\x27text\x20text6\x27>G</span>'+_0x38d5e7(0x14e)+_0x38d5e7(0x153)+_0x38d5e7(0x14b)+'<span\x20class=\x27text\x20text9\x27>P</span>'+'<span\x20class=\x27text\x20text10\x27>H</span>'+'<span\x20class=\x27text\x20text11\x27>Ả</span>'+'</div>'+_0x38d5e7(0x143)+_0x38d5e7(0x143)+_0x38d5e7(0x143)+_0x38d5e7(0x124)+_0x38d5e7(0x14f)+_0x38d5e7(0x125)+_0x38d5e7(0x156)+_0x38d5e7(0x135)+_0x38d5e7(0x112)+'</div>'+_0x38d5e7(0x116)+'<div\x20class=\x27overlay\x27\x20@click=\x27hideModal()\x27></div>'+'<div\x20class=\x27modal\x27>'+_0x38d5e7(0x151)+'<span\x20style=\x27font-size:\x201.2rem;\x20text-align:\x20right;\x20float:\x20right;\x20font-weight:\x20bold;\x20color:\x20red;\x20filter:\x20hue-rotate(277deg)\x20brightness(0.96);\x20cursor:pointer;\x27\x20@click=\x27showCart\x20=\x20!showCart\x27>❎</span>'+'</div>'+_0x38d5e7(0x11d)+_0x38d5e7(0x133)+_0x38d5e7(0x143)+_0x38d5e7(0x118)+'</br>'+_0x38d5e7(0x14a)+_0x38d5e7(0x110)+_0x38d5e7(0x122)+_0x38d5e7(0x11b),'props':['productsData'],'data':function(){return{'showModal':![],'modalData':{},'currentIndex':0x1,'timeout':'','mousestop':''};},'methods':{'addToCart':function(_0x428faf){var _0x53b776=![];},'modalAddToCart':function(_0x1ad5e2){var _0x17595f=this;},'viewproduct':function(_0x34ae57){var _0x44aee2=_0x38d5e7,_0x221772=this;_0x221772[_0x44aee2(0x119)]=JSON[_0x44aee2(0x142)](JSON[_0x44aee2(0x10c)](_0x34ae57));if(_0x34ae57[_0x44aee2(0x12a)]==_0x44aee2(0x13e)){_0x221772[_0x44aee2(0x119)][_0x44aee2(0x126)]=_0x221772['modalData'][_0x44aee2(0x126)]['replace']('ChuKy_PLACEHOLDER.png','ChuKy_'+_0x221772[_0x44aee2(0x148)]+_0x44aee2(0x154)),_0x221772[_0x44aee2(0x148)]++;if(_0x221772['currentIndex']>0x7)_0x221772['currentIndex']=0x1;_0x221772[_0x44aee2(0x12f)]=!![];}else{_0x221772[_0x44aee2(0x12f)]=![];let _0x5fb2d=location[_0x44aee2(0x128)]+'//'+location['hostname']+(location['port']?':'+location[_0x44aee2(0x127)]:'')+_0x44aee2(0x147)+_0x34ae57['product']+_0x44aee2(0x134);window['location'][_0x44aee2(0x12d)]=_0x5fb2d;}},'Toshare':function(_0x9ccf60){var _0x1d1acf=_0x38d5e7,_0x2af935,_0x5c4f1a,_0x43dae8,_0x5e42f9=_0x1d1acf(0x139);str=_0x1d1acf(0x144)+(location[_0x1d1acf(0x128)]+'//'+location['hostname']+(location[_0x1d1acf(0x127)]?':'+location[_0x1d1acf(0x127)]:'')+'/'+_0x9ccf60[_0x1d1acf(0x12a)]+'.html'),_0x2af935=str['substring'](0x0,str['indexOf'](_0x5e42f9))['length'],_0x2af935>0x0?(_0x5c4f1a=str[_0x1d1acf(0x150)](0x0,str['indexOf'](_0x5e42f9)),_0x43dae8=_0x5c4f1a['replace'](/%20/g,'\x20')):_0x43dae8=str,options=_0x1d1acf(0x141),window[_0x1d1acf(0x10e)](_0x43dae8,_0x1d1acf(0x137),options);},'hideModal':function(){var _0x21b1cd=_0x38d5e7,_0x21bc1e=this;_0x21bc1e['modalData']={},_0x21bc1e[_0x21b1cd(0x12f)]=![];},'changeImage':function(_0x3652fc){var _0x257e66=_0x38d5e7,_0x31b20f=this;_0x31b20f[_0x257e66(0x119)][_0x257e66(0x13c)]=_0x3652fc;}}}),Login=function(){var _0x286ce3=_0x38d5e7,_0x3d8a81;khánh1=''+(location[_0x286ce3(0x128)]+'//'+location[_0x286ce3(0x10f)]+(location[_0x286ce3(0x127)]?':'+location[_0x286ce3(0x127)]:'')),khánh2=_0x286ce3(0x134),_0x3d8a81=khánh1+_0x286ce3(0x12b)+khánh2,window[_0x286ce3(0x10e)](_0x3d8a81,target='_blank');},shareface=function(){var _0x331cd3=_0x38d5e7;url=_0x331cd3(0x144)+(location['protocol']+'//'+location[_0x331cd3(0x10f)]+(location[_0x331cd3(0x127)]?':'+location['port']:'')),options='toolbar=0,status=0,resizable=1,width=626,height=436',window['open'](url,_0x331cd3(0x137),options);},$(document)[_0x38d5e7(0x121)](function(){var _0x56e7eb=_0x38d5e7,_0x17b73e=location['protocol'];if(_0x17b73e==_0x56e7eb(0x115)){var _0x58805d=document[_0x56e7eb(0x146)]('app');_0x58805d['parentNode']['removeChild'](_0x58805d),close();}else{}window[_0x56e7eb(0x13d)][_0x56e7eb(0x145)]({},'','/giapha/'),console['log']('document\x20loaded');var _0x555d46=location[_0x56e7eb(0x12d)]['split']('/')[_0x56e7eb(0x12c)](-0x1)[_0x56e7eb(0x138)]()[_0x56e7eb(0x120)]('.html','')[_0x56e7eb(0x111)]('?')[0x0];namefile=decodeURIComponent(_0x555d46),window['find'](namefile);}));function _0x1209(_0x189342,_0x5b775c){var _0x526021=_0x5260();return _0x1209=function(_0x1209ff,_0xab79d4){_0x1209ff=_0x1209ff-0x10c;var _0x2a3495=_0x526021[_0x1209ff];return _0x2a3495;},_0x1209(_0x189342,_0x5b775c);}function _0x5260(){var _0x374189=['<span\x20class=\x27text\x20text8\x27>A</span>','.png','<div\x20class=\x27center\x27>','<div\x20v-for=\x27product\x20in\x20productsData\x27\x20track-by=\x27$index\x27\x20class=\x27product\x20{{\x20product.product\x20|\x20lowercase\x20}}\x27>','stringify','<div\x20id=\x27header\x27\x20class=\x27header\x27>','open','hostname','<div\x20class=\x27details\x27\x20v-html=\x27modalData.details\x27></div>','split','<div\x20class=\x27name\x27\x20@click=\x27viewproduct(product)\x27>{{\x20product.product\x20}}</div>\x20','contextmenu','<span\x20class=\x27text\x20text4\x27>Â</span>','file:','<div\x20class=\x27modalWrapper\x27\x20v-show=\x27showModal\x27>','523348pSAwbn','<div\x20class=\x27name\x27>LỜI\x20TỰA</div>','modalData','<span\x20class=\x27text\x20text0\x27>T</span>','</div></div>','<i\x20class=\x27fas\x20fa-home\x27\x20id=\x27iconHome\x27></i>','<div\x20class=\x27imageWrapper\x27>','products','356346WKHkZK','replace','ready','<label\x20for=\x27modalAmount\x27></label>','15RgJrTK','<p\x20id=\x27testText\x27></p>','<div\x20class=\x27products\x27>','details','port','protocol','addEventListener','product','/dangnhap','slice','href','<span\x20class=\x27hometext\x27>Trang\x20chủ</span>','showModal','<div\x20class=\x27header-bar\x27>','4405545GusevI','138583OxInRy','<div\x20class=\x27imageWrapper\x27\x20v-bind:style=\x22{\x20backgroundImage:\x20\x27url(D3-JS/OGTag.png)\x27\x20}\x22\x20style=\x27background-size:\x20cover;\x20background-position:\x20center;\x27></div>','.html','<div\x20class=\x27image\x27\x20@click=\x27viewproduct(product)\x27\x20v-bind:style=\x27{\x20backgroundImage:\x20\x22url(\x22\x20+\x20product.image\x20+\x20\x22)\x22\x20}\x27\x20style=\x27background-size:\x20cover;\x20background-position:\x20center;\x27><image\x20src=\x27{{\x20product.image\x20}}\x27\x20></div>','3615380YFxxSV','sharer','toString','?fbclid','8sHLouG','<span\x20class=\x27text\x20text3\x27>C</span>','image','history','THÔNG\x20TIN','4870537oTukKV','4BGPXVs','toolbar=0,status=0,resizable=1,width=626,height=436','parse','</div>','https://www.facebook.com/sharer/sharer.php?u=','replaceState','getElementById','/giapha/','currentIndex','component','<div\x20class=\x27description\x27>{{\x20modalData.description\x20}}</div>','<span\x20>&nbsp;</span>','7410000IVjkrk','<div\x20class=\x27left\x27>','<span\x20class=\x27text\x20text7\x27>I</span>','<p\x20id=\x27state\x27></p>','substring','<div\x20class=\x27close\x27\x20@click=\x27hideModal()\x27>','<span\x20class=\x27text\x20text5\x27>Y</span>'];_0x5260=function(){return _0x374189;};return _0x5260();}
 </script>
 
 <script src='https://taocay.github.io/giapha/D3-JS/CayGiaPha_INFO.js'></script>
@@ -897,6 +935,7 @@ function _0x34af(){var _0x4d5da9=['<input\x20type=\x27text\x27\x20id=\x27','arra
 
 </body>
 </html>
+
 
 
 
