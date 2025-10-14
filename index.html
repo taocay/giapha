@@ -796,13 +796,18 @@ height: 30px;
 }
 
 /* 🟢 Hai cột trái/phải giữ cùng chiều rộng để phần giữa thật sự ở giữa */
-.left, .right {
+.left {
   width: 50px; /* ⚖️ vừa đủ cho nút Home, hai bên cân nhau */
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
+.right {
+  width: 0px; /* ⚖️ vừa đủ cho nút Home, hai bên cân nhau */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 /* 🏠 Nút Home */
 .home-button {
   display: flex;
@@ -832,6 +837,7 @@ height: 30px;
   justify-content: center; /* canh giữa theo chiều ngang */
   align-items: center;      /* canh giữa theo chiều dọc */
   text-align: center;
+  top: 50px;
 }
 
 /* 🌟 Hiệu ứng chữ vàng ánh kim */
@@ -866,12 +872,12 @@ height: 30px;
   justify-content: center; /* canh giữa theo chiều ngang */
   align-items: center;      /* canh giữa theo chiều dọc */
   text-align: center;
+  top: 3;
 }
 .header span:hover {
   transform: scale(1.08);
   filter: brightness(1.1);
 }
-
 
 /* Banner Khi màn hình nhỏ hơn hoặc bằng 768px (tablet + điện thoại) */
 @media (max-width: 600px) {
@@ -940,6 +946,7 @@ function _0x34af(){var _0x4d5da9=['<input\x20type=\x27text\x27\x20id=\x27','arra
 
 </body>
 </html>
+
 
 
 
