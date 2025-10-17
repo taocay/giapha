@@ -1,0 +1,967 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+  <meta charset="UTF-8">
+
+  <title>HƯỚNG DẪN GIA PHẢ</title>
+
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link href="DangNhap/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="Welcom/reset.css">
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://mbraak.github.io/jqTree/tree.jquery.js"></script>
+  <link rel="stylesheet" href="https://mbraak.github.io/jqTree/jqtree.css">
+ 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <script>
+  window.console = window.console || function(t) {};
+</script>
+
+  
+  
+  <script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>  
+  
+<style>
+
+
+
+/* Footer */
+
+
+.footer {
+  width: 100%;
+  font-family: sans-serif;
+  box-sizing: border-box;
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  position: fixed;   /* Giữ footer cố định */
+  bottom: 0;         /* Dính sát đáy */
+}
+
+.footer-top {
+  background-color: white;
+  color:#BB4D1A;
+  text-align: center;
+  padding: 5px 10px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.footer-middle {
+  background-color:#BB4D1A;
+  padding: 5px 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-align: left;
+  gap: 5px;
+  color: white;
+}
+
+.footer-col {
+  flex: 1 1 30%;
+  min-width: 200px;
+  margin: 0;
+}
+
+.footer-col.first {
+  flex: 2 1 35%;
+}
+
+.footer-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 14px;
+  color: white;
+  padding: 2px 0;
+}
+
+.footer-item i {
+  color: #66ccff;
+  font-size: 16px;
+  min-width: 18px;
+  margin-top: 2px;
+}
+
+.footer-item a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-bottom {
+  background-color:#7E2A0C;
+  height: 30px;              /* chiều cao footer */
+  line-height: 30px;         /* canh giữa dọc */
+  text-align: center;
+  font-size: 12px;
+  font-weight: bold;
+  color: white;
+}
+
+
+@media (max-width: 768px) {
+  .footer-col,
+  .footer-col first {
+    width: 100%;
+    text-align: left;
+    margin: 2px 0;
+    display: block;
+  }
+
+}
+
+/* End Footer */
+
+
+
+@media (max-width: 767px) {
+  .footer {
+    font-size: 14px;
+  }
+  .footer .footer-left,
+  .footer .footer-center,
+  .footer .footer-right {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 10px;
+    text-align: left;
+  }
+  .footer .footer-center i {
+    margin-left: 3px;
+  }
+}
+
+
+/* Popup */
+
+.popup {
+  width: 85%;
+  padding: 15px;
+  left: 0;
+  margin-left:7%;
+  border: 1px solid rgb(1,82,73);
+  border-radius: 10px;
+  color: rgb(1,82,73);
+  background: white;
+  position: absolute;
+  top: 25%;
+  box-shadow: 5px 5px 5px #000;
+  z-index: 10001;
+  font-weight: 700;
+  font-size: 13px;
+  text-align: center;
+}
+
+.Thoat {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: transparent;
+  z-index: 10000;
+  display :none;
+}
+
+
+.popup_time {
+  width: 85%;
+  padding: 15px;
+  left: 0;
+  margin-left: 7%;
+  border: 1px solid rgb(1,82,73);
+  border-radius: 10px;
+  color: rgb(1,82,73);
+  background: white;
+  position: absolute;
+  top: 25%;
+  box-shadow: 5px 5px 5px #000;
+  z-index: 10001;
+  font-weight: 700;
+  font-size: 13px	
+  text-align: center;
+}
+
+.Thoat_time {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: transparent;
+  z-index: 10000;
+  display :none;
+}
+
+@media (min-width: 768px) {
+  .popup_time {
+    width: 66.66666666%;
+    margin-left: 16.666666%;
+  }
+}
+@media (min-width: 992px) {
+  .popup_time {
+    width: 85%;
+    margin-left: 25%;
+  }
+}
+@media (min-width: 1200px) {
+  .popup_time {
+    width: 33.33333%;
+    margin-left: 33.33333%;
+  }
+}
+
+
+.dialog-btn {
+  background-color:#006699;
+  color: white;
+  font-weight: 700;
+  border: 1px solid #44B78B;
+  border-radius: 1px;
+  height: 30px;
+  width: 20%;
+  border-radius: 5px 5px 5px 5px;
+}
+.dialog-btn:hover {
+  background-color:#015249;
+  cursor: pointer;
+}
+
+/* End Popup */
+
+/* Nút Home */
+#btn-show-dialog {  
+  border: none;
+  color: black;
+  padding: 1px;
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50px;
+  font-size: 1px;
+  cursor: pointer;
+  position: absolute; /* ✅ Không chiếm chỗ trong layout */
+  left: 1px;         /* Cố định ở góc trái */
+  top: 50%;           /* Canh giữa theo chiều dọc */
+  transform: translateY(-50%);
+  background: none;
+}
+
+.hometext {
+  font-size: 9px;
+  color: #BB4D1A;
+  font-weight: bold;
+  margin-top: 2px;
+}
+
+#iconHome {
+  font-size: 20px;
+  color: #BB4D1A;
+}
+
+#iconHome:hover {
+  color: #BB4D1A !important;
+}
+
+/* ✅ Chỉ giữ 1 khối header-bar duy nhất */
+.header-bar {
+  position: relative;
+  display: flex;
+  justify-content: center; /* canh giữa tiêu đề */
+  align-items: center;
+  height: 40px;
+  border: 1px solid red;
+  border-radius: 3px;
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  margin: 2px;
+  padding: 0 15px;
+}
+
+
+/* Hiệu ứng chữ vàng ánh */
+.header span {
+  display: inline-block;
+  text-transform: uppercase;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 30px;
+  position: relative;
+  top: -3px;
+  background: linear-gradient(
+    to bottom,
+    #fff8d6 0%,
+    #ffd700 25%,
+    #d4a017 50%,
+    #b8860b 75%,
+    #6b3e00 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow:
+    1px 1px 0px #ffffff,
+    2px 2px 1px #9F2D01,
+    3px 3px 2px #b37700,
+    4px 4px 3px #9F2D01,
+    5px 5px 4px rgba(0, 0, 0, 0.6);
+  transition: transform 0.2s ease-in-out;
+}
+
+
+.header span:hover {
+  transform: scale(1.08);
+  filter: brightness(1.1);
+}
+
+/* End Nút Home */
+
+
+/* ==== BANNER ==== */
+
+/* Khi màn hình nhỏ hơn 600px */
+@media (max-width: 600px) {
+  .banner {
+    height: 50px; /* Banner thấp hơn trên điện thoại */
+  }
+}
+
+/* HƯỚNG DẪN */
+
+
+
+/* ==== SIDEBAR ==== */
+.sidebar {
+  position: relative;
+  top: -39px; /* Bắt đầu ngay dưới banner */
+  left: 0;
+  width: 220px;
+  height: calc(100% - 60px); /* Trừ chiều cao banner */
+  background: linear-gradient(180deg, #fff6cc, #fff8e1);
+  box-shadow: 2px 0 5px rgba(0,0,0,0.2);
+  overflow-y: auto;
+  transform: translateX(-230px);
+  transition: transform 0.3s ease;
+  z-index: 1000;
+  
+}
+.sidebar.show {
+  transform: translateX(0);
+}
+
+/* Tiêu đề MENU */
+.sidebar-header {
+  position: sticky;
+  left: 0;
+  width: 220px;
+  height: 45px;
+  background-color: #ffeb3b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 16px;
+  color: #444;
+  border-bottom: 1px solid #f0d600;
+  z-index: 1050;
+  letter-spacing: 1px;
+  top: 0; /* luôn dính trên cùng trong sidebar */
+}
+
+/* ==== NÚT MENU ☰ ==== */
+.menu-btn {
+  position: fixed;
+  top: 168px;   /* Hiển thị trong vùng banner */
+  left:5px;
+  background-color: #ffca28;
+  color: #333;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  font-size: 18px;
+  cursor: pointer;
+  z-index: 2000; /* cao hơn sidebar */
+}
+
+/* ==== Ô tìm kiếm ==== */
+.search-container {
+  position: relative;
+  padding: 6px 10px 10px 10px;
+  background-color: #fffde7;
+  border-bottom: 1px solid #f1e58e;
+}
+.search-container input {
+  width: 95%;
+  padding: 6px 28px 6px 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.search-container i {
+  position: absolute;
+  right: 25px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #777;
+}
+
+/* ==== jqTree tùy chỉnh ==== */
+.jqtree-tree {
+  padding: 5px 0 40px 10px;
+}
+.jqtree-title {
+  color: #333;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+  padding-left: 12px;
+}
+li.jqtree-folder > .jqtree-element {
+  background: #fff59d;
+  padding: 6px 10px;
+  border-bottom: 1px solid #f0e68c;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+}
+li.jqtree-folder > ul.jqtree_common {
+  background: #fffde7;
+  border-left: 3px solid #f0e68c;
+  margin-left: 10px;
+  padding-left: 8px;
+  width: 190px;
+}
+li.jqtree-folder li {
+  border-bottom: 1px dashed #ddd;
+  padding: 3px 0;
+}
+
+/* Dấu chấm cho mục chọn */
+.jqtree-selected .jqtree-title::before {
+  content: "•";
+  color: #ff6f00;
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 18px;
+  line-height: 1.1;
+}
+
+/* ==== MAIN CONTENT ==== */
+.main-content {
+  margin-top: -450px; /* Kéo nội dung lên trên gần banner */
+  padding: 10px 20px 30px 70px;
+  text-align: left;
+  max-width:76%;
+  margin-left: auto;
+  margin-right: auto;
+  transition: margin-left 0.3s ease;
+}
+
+
+h1 {
+  text-align: center;
+  border-bottom: 2px solid #ffeb3b;
+  padding-bottom: 10px;
+  color: #444;
+}
+h2 {
+  color: #555;
+  border-left: 4px solid #ffca28;
+  padding-left: 10px;
+  margin-top: 40px;
+}
+p {
+  color: #333;
+  line-height: 1.6;
+}
+
+/* END HƯỚNG DẪN */
+
+</style>
+
+
+
+
+</head>
+
+<body onload="adjustBodyHeight();">
+
+
+  
+	<div align="center" style="margin-top: 5px;">
+	  <img src="D3-JS/Banner.png" class="banner", style="width: 100%;  background-image: linear-gradient(to bottom right, #D0872E, #fcf3cf,#A65F1B, #fcf3cf,#A65F1B);" />
+	</div>
+
+
+<div class="header-bar">
+  <!-- Nút Home (trái) -->
+  <span id="btn-show-dialog" class="home-button">
+    <i class="fas fa-home" id="iconHome" ></i>
+    <span class="hometext">Trang chủ</span>
+  </span>
+
+  <div id="header" class="header">
+	<span class="text text0">T</span>
+	<span class="text text1">Ạ</span>
+	<span class="text text2">O</span><span >&nbsp;</span><span class="text3">C</span>
+	<span class="text text4">Â</span>
+	<span class="text text5">Y</span><span >&nbsp;</span><span class="text6">G</span>
+	<span class="text text7">I</span>
+	<span class="text text8">A</span><span >&nbsp;</span><span class="text9">P</span>
+	<span class="text text10">H</span>
+	<span class="text text11">Ả</span>
+  </div>  
+  
+</div>
+
+
+<div class="Thoat" id="dialog-container">
+  <div class="popup">
+  </br>	
+    <p>Bạn có muốn Thoát không ?</p>	
+    <div class="text-right">
+      <button class="dialog-btn btn-cancel" id="cancel" style="width:100px;">Cancel</button>
+      <button class="dialog-btn btn-primary" id="confirm"style="width:100px;">OK</button>
+    </div>
+  </div>
+</div>
+<p id="testText"></p>
+<div class="Thoat_time" id="dialog_time">
+  <div class="popup">
+    <p>Thời gian lâu không dùng !</p>
+      <button class="dialog-btn btn-primary" id="confirm_time">OK</button>
+  </div> 
+</div> 
+
+<!-- Modal Aleert-->   
+
+  <button class="menu-btn">☰</button>
+
+  <div class="sidebar" id="sidebar">
+    <div class="sidebar-header">📂 MENU</div>
+    <div class="search-container">
+      <input type="text" id="search" placeholder="Tìm kiếm...">
+      <i>🔍</i>
+    </div>
+    <div id="menu-tree"></div>
+  </div>
+
+  <div class="main-content" id="main-content">
+    <h1>Hướng dẫn sử dụng Gia Phả</h1>
+
+    <h2 id="intro">Giới thiệu chung</h2>
+    <p>Ứng dụng Gia Phả giúp bạn tạo, quản lý và hiển thị cây gia đình một cách trực quan...</p>
+
+    <h2 id="structure">Cấu trúc cây gia phả</h2>
+    <p>Mỗi thành viên được biểu diễn dưới dạng một nút (node) trên cây...</p>
+
+    <h2 id="add-member">Thêm thành viên</h2>
+    <p>Để thêm thành viên mới, bạn nhấn vào nút ➕ trong giao diện chính...</p>
+
+    <h2 id="edit-info">Chỉnh sửa thông tin</h2>
+    <p>Bạn có thể cập nhật thông tin, đổi tên, thêm ảnh hoặc xóa thành viên...</p>
+
+    <h2 id="toggle-branch">Ẩn/hiện nhánh</h2>
+    <p>Tính năng này cho phép thu gọn hoặc mở rộng nhánh họ hàng để dễ quan sát...</p>
+
+    <h2 id="relation">Liên kết vợ chồng</h2>
+    <p>Để hiển thị mối quan hệ vợ/chồng, chỉ cần chọn hai người và liên kết...</p>
+
+    <h2 id="export">Xuất dữ liệu</h2>
+    <p>Bạn có thể xuất cây gia phả ra hình ảnh hoặc file Excel để chia sẻ...</p>
+  </div>
+
+<script>
+    const menuData = [
+      {
+        name: "📘 Hướng dẫn cơ bản",
+        children: [
+          { name: "Giới thiệu chung", id: "intro" },
+          { name: "Cấu trúc cây gia phả", id: "structure" },
+          { name: "Thêm thành viên", id: "add-member" },
+          { name: "Chỉnh sửa thông tin", id: "edit-info" }
+        ]
+      },
+      {
+        name: "⚙️ Cài đặt nâng cao",
+        children: [
+          { name: "Ẩn/hiện nhánh", id: "toggle-branch" },
+          { name: "Liên kết vợ chồng", id: "relation" },
+          { name: "Xuất dữ liệu", id: "export" }
+        ]
+      }
+    ];
+
+    $(document).ready(function () {
+      const $sidebar = $("#sidebar");
+      const $menuTree = $("#menu-tree");
+
+      // init tree with original data
+      $menuTree.tree({
+        data: menuData,
+        autoOpen: true,
+        selectable: true
+      });
+
+      // helper: open all top-level nodes (used after load)
+      function openAllTopLevel() {
+        const tr = $menuTree.tree("getTree");
+        if (!tr || !tr.children) return;
+        tr.children.forEach(n => {
+          $menuTree.tree("openNode", n);
+        });
+      }
+
+      // Toggle sidebar
+      $(".menu-btn").click(function (e) {
+        e.stopPropagation();
+        $sidebar.toggleClass("show");
+      });
+
+      $(document).click(function (e) {
+        if (!$(e.target).closest("#sidebar, .menu-btn").length) {
+          $sidebar.removeClass("show");
+        }
+      });
+
+      // Xử lý click chọn menu (thu/mở mẹ)
+      $menuTree.bind("tree.click", function (event) {
+        const node = event.node;
+        if (node && node.hasChildren && node.hasChildren()) {
+          $menuTree.tree("toggle", node);
+          event.preventDefault();
+        }
+      });
+
+      // Khi chọn mục con -> scroll tới section và ẩn sidebar (mobile)
+      $menuTree.bind("tree.select", function (event) {
+        if (event.node && !event.node.hasChildren()) {
+          const id = event.node.id;
+          const target = document.getElementById(id);
+          if (target) {
+            target.scrollIntoView({ behavior: "smooth", block: "start" });
+            $sidebar.removeClass("show");
+          }
+        }
+      });
+
+      // ---------- TÌM KIẾM KHÔNG LÀM HƯ HỎNG menuData gốc ----------
+      // Hàm lọc, trả về bản sao node nếu match (không thay đổi menuData gốc)
+      function filterNode(node, keyword) {
+        const name = (node.name || "").toLowerCase();
+        let anyChild = [];
+        if (node.children && node.children.length) {
+          node.children.forEach(child => {
+            const fc = filterNode(child, keyword);
+            if (fc) anyChild.push(fc);
+          });
+        }
+        const isMatch = name.indexOf(keyword) !== -1;
+        if (isMatch || anyChild.length > 0) {
+          const copy = { name: node.name };
+          if (node.id) copy.id = node.id; // keep id if present
+          if (anyChild.length) copy.children = anyChild;
+          return copy;
+        }
+        return null;
+      }
+
+      // Khi nhập tìm kiếm
+      $("#search").on("input", function () {
+        const keyword = $(this).val().toLowerCase().trim();
+
+        if (keyword === "") {
+          // trả về ban đầu (không thay đổi menuData gốc)
+          $menuTree.tree("loadData", menuData);
+          // mở top-level nodes giống lúc khởi tạo (autoOpen: true ban đầu)
+          openAllTopLevel();
+          return;
+        }
+
+        // lọc từng root node, tạo dữ liệu mới (bản sao)
+        const filtered = [];
+        menuData.forEach(root => {
+          const f = filterNode(root, keyword);
+          if (f) filtered.push(f);
+        });
+
+        // load filtered data (không làm thay đổi menuData gốc)
+        $menuTree.tree("loadData", filtered);
+        // mở tất cả nodes chứa children để người dùng thấy kết quả
+        const tr = $menuTree.tree("getTree");
+        if (tr && tr.children) {
+          tr.iterate(node => {
+            if (node.hasChildren && node.hasChildren()) {
+              $menuTree.tree("openNode", node);
+            }
+          });
+        }
+      });
+
+      // mở top-level khi trang load
+      openAllTopLevel();
+    });
+</script>  
+<script type="text/javascript">//<![CDATA[
+
+
+/* ======================== MÃ PHÁT HIỆN DEVTOO; TƯƠNG THÍCH MỌI TRÌNH DUYỆT ================ */
+(function() {
+    'use strict';
+
+    const THRESHOLD = 160;
+    const state = {
+        isOpen: false,
+        orientation: undefined
+    };
+
+    window.requestFrame = (function() {
+        return window.requestAnimationFrame || (window.webkitRequestAnimationFrame || (window.mozRequestAnimationFrame || (window.msRequestAnimationFrame || (window.oRequestAnimationFrame || function(c) {
+            window.setTimeout(c, 50);
+        }))));
+    })();
+
+    const emitEvent = (isOpen, orientation) => {
+        window.dispatchEvent(new CustomEvent('devtoolschange', {
+            detail: { isOpen: isOpen, orientation: orientation }
+        }));
+    };
+
+    let consoleCheck = {
+        st: false,
+        el: document.createElement("img"),
+        rn: function() {
+            consoleCheck.st = false;
+            // Kích hoạt cơ chế kiểm tra console
+            console.log(consoleCheck.el); 
+            // KHÔNG clear console để tránh lỗi trên một số trình duyệt
+            
+            window.requestFrame(consoleCheck.rn);
+        }
+    };
+
+    // Khắc phục tương thích mọi trình duyệt (Safari/Chrome/Firefox)
+    try {
+        Object.defineProperty(consoleCheck.el, "id", {
+            get: function() {
+                consoleCheck.st = true;
+            }
+        });
+    } catch (e) {
+        if (consoleCheck.el.__defineGetter__) {
+            consoleCheck.el.__defineGetter__("id", function() {
+                consoleCheck.st = true;
+            });
+        }
+    }
+    
+    consoleCheck.rn();
+
+
+    const checkDevTools = ({ emitEvents = true } = {}) => {
+        const widthThreshold = window.outerWidth - window.innerWidth > THRESHOLD;
+        const heightThreshold = window.outerHeight - window.innerHeight > THRESHOLD;
+        let orientation = undefined;
+        let isOpen = false;
+        
+        if (widthThreshold || heightThreshold) {
+            isOpen = true;
+            orientation = widthThreshold && heightThreshold ? 'both' : (widthThreshold ? 'vertical' : 'horizontal');
+        }
+        
+        if (consoleCheck.st === true) {
+            isOpen = true;
+        }
+
+        // CHỈ PHÁT SỰ KIỆN KHI TRẠNG THÁI THAY ĐỔI
+        if (!(state.isOpen === isOpen && state.orientation === orientation)) {
+            if (emitEvents) {
+                emitEvent(isOpen, orientation);
+            }
+            state.isOpen = isOpen;
+            state.orientation = orientation;
+        }
+
+        window.requestFrame(checkDevTools);
+    };
+
+    checkDevTools({ emitEvents: true });
+
+    /* ----------------------------------------------------- */
+    // 🔔 HÀM XỬ LÝ KHI DEVTOOLS MỞ (PHẦN BẠN YÊU CẦU)
+
+    window.addEventListener('devtoolschange', function(event) {
+        // Chỉ chạy hành động khi DevTools chuyển từ ĐÓNG sang MỞ
+        if (event.detail.isOpen === true && state.isOpen === false) { 
+            // Chạy hàm show_dialog() của bạn để chuyển hướng
+            //show_dialog();
+			let truyendan = location.protocol + "//" + location.hostname + (location.port ? ":" + location.port : "") + "/giapha" ;
+			window.location.href = truyendan;
+			
+        }
+    });
+
+})();
+
+/* ======================== END MÃ PHÁT HIỆN DEVTOO; TƯƠNG THÍCH MỌI TRÌNH DUYỆT ================ */
+
+/* ======================== MÃ CLEAR BROWSE CONSOLE ==============================================*/
+
+window.requestFrame = (function() {
+  return window.requestAnimationFrame || (window.webkitRequestAnimationFrame || (window.mozRequestAnimationFrame || (window.msRequestAnimationFrame || (window.oRequestAnimationFrame || function(c) {
+    window.setTimeout(c, 50);
+  }))));
+})();
+var test = {
+  st: false,
+  el: document.createElement("img"),
+  rn: function() {
+    test.st = false;
+    console.log(test.el);
+    console.clear();
+    document.getElementById("testText").innerHTML = ((test.st === true) ? "open" : "") + ".";
+    window.requestFrame(test.rn);
+  }
+};
+(test.el).__defineGetter__("id", function() {
+  test.st = true;
+});
+test.rn();
+
+/* ======================== END MÃ CLEAR BROWSE CONSOLE ==============================================*/
+
+$(document).ready(function() {
+
+var url = location.protocol;
+if (url == "file:KHANH") {
+	var element = document.getElementById("login");
+	element.parentNode.removeChild(element);
+	close();
+} else {
+}
+
+});
+
+!function(n){"use strict";n.fn.idle=function(e){var t,i,o={idle:6e4,events:"mousemove keydown mousedown touchstart",onIdle:function(){},onActive:function(){},onHide:function(){},onShow:function(){},keepTracking:!0,startAtIdle:!1,recurIdleCall:!1},c=e.startAtIdle||!1,d=!e.startAtIdle||!0,l=n.extend({},o,e),u=null;return n(this).on("idle:stop",{},function(){n(this).off(l.events),l.keepTracking=!1,t(u,l)}),t=function(n,e){return c&&(e.onActive.call(),c=!1),clearTimeout(n),e.keepTracking?i(e):void 0},i=function(n){var e,t=n.recurIdleCall?setInterval:setTimeout;return e=t(function(){c=!0,n.onIdle.call()},n.idle)},this.each(function(){u=i(l),n(this).on(l.events,function(){u=t(u,l)}),(l.onShow||l.onHide)&&n(document).on("visibilitychange webkitvisibilitychange mozvisibilitychange msvisibilitychange",function(){document.hidden||document.webkitHidden||document.mozHidden||document.msHidden?d&&(d=!1,l.onHide.call()):d||(d=!0,l.onShow.call())})})}}(jQuery);
+
+$(document).idle({
+  onIdle: function(){
+	Search_dialog_time();
+  },
+  idle: 36000000
+})
+//]]>
+
+var Thoat_timeme = document.getElementById("dialog_time");
+var Thoatme = document.getElementById("testText");
+function Search_dialog_time(){
+if (document.getElementById("dialog_time")==null || document.getElementById("testText")==null) {
+close();
+} else {
+show_dialog_time();
+}
+}
+
+
+function show_dialog_time() {
+    Thoat_timeme.style.display = "block";
+	
+}
+
+document.getElementById("confirm_time").onclick = function(){confirm_time()};
+function confirm_time() {
+	close();	
+    Thoat_timeme.style.display = "none";	
+}
+
+
+// Thoát
+document.getElementById("btn-show-dialog").onclick = function(){show_dialog()};
+var Thoatme = document.getElementById("dialog-container");
+
+function show_dialog() {
+	let truyendan = location.protocol + "//" + location.hostname + (location.port ? ":" + location.port : "") + "/giapha" ;
+	window.location.href = truyendan;
+}
+
+document.getElementById("confirm").onclick = function(){confirm()};
+function confirm() {
+	//close();	
+    Thoatme.style.display = "none";
+	let truyendan = location.protocol + "//" + location.hostname + (location.port ? ":" + location.port : "") + "/giapha" ;
+	window.location.href = truyendan;
+	
+}
+
+document.getElementById("cancel").onclick = function(){cancel()};
+function cancel() {
+    Thoatme.style.display = "none";
+}
+
+
+function close_window() {
+close();
+}
+
+
+document.addEventListener('contextmenu', event => event.preventDefault());
+
+home = function(){
+//location.href = '' + (location.protocol+'//'+location.hostname+(location.port ? ':'+location.port: ''));
+//window.location.href = location.protocol + '//' + location.hostname + (location.port ? ':' + location.port : '');
+	let truyendan = location.protocol + "//" + location.hostname + (location.port ? ":" + location.port : "") + "/giapha" ;
+	window.location.href = truyendan;
+}
+
+//window.history.replaceState('','','/');
+window.history.replaceState({}, '', '/giapha/');
+
+
+
+
+</script>
+
+
+
+
+<div class="footer">
+<div class="footer-middle">
+  <div class="footer-col first">
+    <div class="footer-item">
+      <i class="fa fa-map-marker"></i>
+      <span>Website: Cây gia phả: Họ Lê - Phái 3 - Chi 1, Thôn An lợi, Triệu Bình, Quảng Trị.</span>
+    </div>
+  </div>
+
+  <div class="footer-col">
+    <div class="footer-item">
+      <i class="fa fa-envelope"></i>
+      <a href="mailto:khanhvtn@gmail.com">khanhvtn@gmail.com</a>
+    </div>
+  </div>
+</div>
+
+  <div class="footer-bottom">
+    <p class="copyright">Copyright © 2025 By: Lê Văn Khanh. All rights reserved.</p>
+  </div>
+  
+</div>
+
+</body>
+</html>
