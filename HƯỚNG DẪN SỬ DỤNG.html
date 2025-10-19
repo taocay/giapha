@@ -37,46 +37,42 @@ html, body {
   height: 100%;
   display: flex;
   flex-direction: column;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+/* Phần nội dung chính */
 .main-content {
   flex: 1;
+  padding: calc(var(--header-bottom, 95px) + 20px) 10px 20px 36px;
 }
 
+/* Spacer để chống đè nội dung cuối cùng */
+.footer-spacer {
+  height: 90px; /* bằng hoặc lớn hơn tổng chiều cao footer */
+}
 
 /* Footer */
 .footer {
-  position: static;
+  position: fixed;
+  bottom: 0;
+  left: 0;
   width: 100%;
-}
-	
-.footer {
-  width: 100%;
-  font-family: sans-serif;
-  box-sizing: border-box;
-  margin-top: auto;
   display: flex;
   flex-direction: column;
-  position: fixed;   /* Giữ footer cố định */
-  bottom: 0;         /* Dính sát đáy */
+  font-family: sans-serif;
+  box-sizing: border-box;
+  z-index: 999;
 }
 
-.footer-top {
-  background-color: white;
-  color:#BB4D1A;
-  text-align: center;
-  padding: 5px 10px;
-  font-weight: bold;
-  font-size: 16px;
-}
-
+/* Phần giữa footer */
 .footer-middle {
-  background-color:#BB4D1A;
-  padding: 5px 10px;
+  background-color: #BB4D1A;
+  padding: 6px 10px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  text-align: left;
   gap: 5px;
   color: white;
 }
@@ -84,7 +80,6 @@ html, body {
 .footer-col {
   flex: 1 1 30%;
   min-width: 200px;
-  margin: 0;
 }
 
 .footer-col.first {
@@ -97,7 +92,6 @@ html, body {
   gap: 8px;
   font-size: 14px;
   color: white;
-  padding: 2px 0;
 }
 
 .footer-item i {
@@ -112,43 +106,35 @@ html, body {
   text-decoration: none;
 }
 
+/* Dòng cuối Footer */
 .footer-bottom {
-  background-color:#7E2A0C;
-  height: 30px;              /* chiều cao footer */
-  line-height: 30px;         /* canh giữa dọc */
-  text-align: center;
+  background-color: #7E2A0C;
+  height: 30px;
+  display: flex;
+  align-items: center;   /* Canh giữa theo chiều dọc */
+  justify-content: center; /* Canh giữa theo chiều ngang */
   font-size: 12px;
   font-weight: bold;
   color: white;
-  position: static !important;
+  text-align: center;
 }
+
 .footer-bottom .copyright {
-  color: white;
   margin: 0;
+  color: white;
 }
 
-
+/* 📱 Footer trên điện thoại */
 @media (max-width: 768px) {
-  /* Cột footer */
-  .footer-col,
-  .footer-col.first,
-  .footer .footer-left,
-  .footer .footer-center,
-  .footer .footer-right {
-    width: 100%;
+  .footer-middle {
+    flex-direction: column;
     text-align: left;
-    margin: 2px 0 10px;
-    display: block;
   }
 
-  /* Biểu tượng trong footer */
-  .footer .footer-center i {
-    margin-left: 3px;
-  }
-
-  /* Cỡ chữ chung trong footer */
-  .footer {
-    font-size: 14px;
+  .footer-col,
+  .footer-col.first {
+    width: 100%;
+    margin-bottom: 5px;
   }
 }
 
@@ -644,32 +630,42 @@ var _0x172c70=_0x5cd8;(function(_0x535d61,_0x14c0a2){var _0x43d009=_0x5cd8,_0x5b
 
 
 
-
-<div class="footer">
-<div class="footer-middle">
-  <div class="footer-col first">
-    <div class="footer-item">
-      <i class="fa fa-map-marker"></i>
-      <span>Website: Cây gia phả: Họ Lê - Phái 3 - Chi 1, Thôn An lợi, Triệu Bình, Quảng Trị.</span>
-    </div>
-  </div>
-
-  <div class="footer-col">
-    <div class="footer-item">
-      <i class="fa fa-envelope"></i>
-      <a href="mailto:khanhvtn@gmail.com">khanhvtn@gmail.com</a>
-    </div>
-  </div>
+<!-- Nội dung trang -->
+<div class="main-content">
+  <h2 id="export" class="fade-section">Xuất dữ liệu</h2>
+  <p class="fade-section">
+    Bạn có thể xuất cây gia phả ra hình ảnh hoặc file Excel để chia sẻ...
+  </p>
 </div>
+
+<!-- spacer chống footer che chữ -->
+<div class="footer-spacer"></div>
+
+<!-- Footer -->
+<div class="footer">
+  <div class="footer-middle">
+    <div class="footer-col first">
+      <div class="footer-item">
+        <i class="fa fa-map-marker"></i>
+        <span>Website: Cây gia phả: Họ Lê - Phái 3 - Chi 1, Thôn An Lợi, Triệu Bình, Quảng Trị.</span>
+      </div>
+    </div>
+    <div class="footer-col">
+      <div class="footer-item">
+        <i class="fa fa-envelope"></i>
+        <a href="mailto:khanhvtn@gmail.com">khanhvtn@gmail.com</a>
+      </div>
+    </div>
+  </div>
 
   <div class="footer-bottom">
     <p class="copyright">Copyright © 2025 By: Lê Văn Khanh. All rights reserved.</p>
   </div>
-  
 </div>
 
 </body>
 </html>
+
 
 
 
