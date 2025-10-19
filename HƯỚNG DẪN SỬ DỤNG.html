@@ -45,10 +45,6 @@ html, body {
 
 
 /* Footer */
-:root {
-  --footer-height: 150px;
-}
-
 .footer {
   width: 100%;
   font-family: sans-serif;
@@ -386,10 +382,18 @@ html, body {
     font-size: 22px;
   }
 
-  /* ✅ Chừa đủ chỗ cho footer */
-	.main-content {
-	  padding: calc(var(--header-bottom, 95px) + 20px) 10px var(--footer-height) 36px;
+	:root {
+	  --banner-height: 100px;      /* Chiều cao banner */
+	  --header-height: 50px;       /* Chiều cao header */
+	  --footer-height: 70px;       /* Chiều cao footer (chừa chỗ tránh che chữ) */
+	  --header-bottom: calc(var(--banner-height) + var(--header-height));
 	}
+
+	/* ===== MAIN CONTENT ===== */
+	.main-content {
+	  padding: calc(var(--header-bottom) + 20px) 10px var(--footer-height) 36px;
+	}
+
 }
 
 /* ===== LANDSCAPE ===== */
@@ -661,6 +665,7 @@ var _0x172c70=_0x5cd8;(function(_0x535d61,_0x14c0a2){var _0x43d009=_0x5cd8,_0x5b
 
 </body>
 </html>
+
 
 
 
