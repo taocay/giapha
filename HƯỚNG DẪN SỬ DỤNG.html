@@ -338,17 +338,24 @@
 
 /* ==== BANNER ==== */
 
+.banner-container {
+  width: 100%;
+  height: 100px; /* Chiều cao banner mặc định trên PC */
+  overflow: hidden;
+}
+
 .banner {
   background: linear-gradient(90deg, #ff9800, #ffca28);
   color: white;
   text-align: center;
-  padding: 18px 0;
   font-weight: bold;
   font-size: 22px;
+  line-height: 100px; /* canh giữa chữ theo chiều dọc */
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
+  height: 100px; /* đảm bảo không bị thấp */
   z-index: 1200;
   transition: transform 0.5s ease, opacity 0.5s ease;
   box-shadow: 0 2px 5px rgba(0,0,0,0.15);
@@ -367,26 +374,51 @@
   z-index: 1100;
   transition: top 0.4s ease;
   height: 50px;
+  background-color: #fff9c4;
 }
 
-
-/* ========== MOBILE PORTRAIT ========== */
-@media only screen and (max-width: 479px) and (orientation: portrait) {
-	.header {
-	  margin-left: 10px; /* ✅ Dịch sang phải 5px cho cân với nút Home */
-	}  
-	.header span {
-	  font-size: 23px;  
-	 } 
-
-	.main-content {
-	  /* Thêm đệm trên bằng chiều cao header + 20px
-		 Thêm đệm phải 20px, dưới 80px, trái 70px */
-	  padding: calc(var(--header-bottom, 95px) + 20px) 20px 380px 70px;
-	}
-	 
+/* ===== MAIN CONTENT ===== */
+.main-content {
+  text-align: left;
+  max-width: 100%;
+  margin: auto;
+  transition: margin-left 0.3s ease;
+  padding: calc(var(--header-bottom, 95px) + 20px) 20px 180px 70px;
 }
 
+/* ===== MOBILE ===== */
+@media (max-width: 600px) {
+  .banner-container {
+    height: 50px;
+  }
+
+  .banner {
+    height: 50px;
+    line-height: 50px; /* canh giữa chữ */
+    font-size: 18px; /* nhỏ hơn chút cho gọn */
+  }
+
+  .header span {
+    font-size: 20px;
+    margin-left: 10px; /* dịch sang phải nhẹ */
+  }
+
+  .main-content {
+    padding: calc(var(--header-bottom, 95px) + 20px) 20px 200px 40px;
+  }
+}
+
+/* ===== LANDSCAPE ===== */
+@media (min-width: 480px) and (max-width: 767px) and (orientation: landscape) {
+  .banner-container {
+    height: 50px;
+  }
+
+  .banner {
+    height: 50px;
+    line-height: 50px;
+  }
+}
 /* HƯỚNG DẪN */
 
 /* ===== NÚT MENU ===== */
@@ -652,6 +684,7 @@ var _0x172c70=_0x5cd8;(function(_0x535d61,_0x14c0a2){var _0x43d009=_0x5cd8,_0x5b
 
 </body>
 </html>
+
 
 
 
