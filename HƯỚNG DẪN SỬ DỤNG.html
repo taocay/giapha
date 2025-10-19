@@ -45,7 +45,9 @@ html, body {
 
 
 /* Footer */
-
+:root {
+  --footer-height: 150px;
+}
 
 .footer {
   width: 100%;
@@ -375,16 +377,19 @@ html, body {
     height: 50px;
     line-height: 50px; /* canh giữa chữ */
   }
+
   .header {
     margin-left: 30px; /* dịch sang phải nhẹ */
-  }	
+  }
+
   .header span {
     font-size: 22px;
   }
-  .main-content {
-    padding: calc(var(--header-bottom, 95px) + 20px) 10px 900px 36px;
-  }
-  
+
+  /* ✅ Chừa đủ chỗ cho footer */
+	.main-content {
+	  padding: calc(var(--header-bottom, 95px) + 20px) 10px var(--footer-height) 36px;
+	}
 }
 
 /* ===== LANDSCAPE ===== */
@@ -652,6 +657,7 @@ var _0x172c70=_0x5cd8;(function(_0x535d61,_0x14c0a2){var _0x43d009=_0x5cd8,_0x5b
 
 </body>
 </html>
+
 
 
 
