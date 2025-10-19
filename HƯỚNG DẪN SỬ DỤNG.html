@@ -282,22 +282,6 @@
   color: #BB4D1A !important;
 }
 
-/* ✅ Chỉ giữ 1 khối header-bar duy nhất */
-.header-bar {
-  position: relative;
-  display: flex;
-  justify-content: center; /* canh giữa tiêu đề */
-  align-items: center;
-  height: 40px;
-  border: 1px solid red;
-  border-radius: 3px;
-  background-color: #fff;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  margin: 2px;
-  padding: 0 15px;
-}
-
-
 /* Hiệu ứng chữ vàng ánh */
 .header span {
   display: inline-block;
@@ -333,6 +317,7 @@
 
 /* End Nút Home */
 
+
 /* ===== HEADER & BANNER ===== */
 
 /* ==== BANNER ==== */
@@ -355,19 +340,22 @@
 /* ===== HEADER ===== */
 .header-bar {
   position: fixed;
+  top: var(--banner-height, 0px);
   left: 0;
-  width: 100%;
+  right: 0;
+  height: 50px;
+  z-index: 1100;
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: 600;
-  z-index: 1100;
   transition: top 0.4s ease;
-  height: 50px;
-
+  border: 1px solid red;
+  border-radius: 3px;
+  background-color: #fff;
+    margin: 1px;
+  padding: 0 15px;
 }
-
-
 /* ===== MOBILE ===== */
 @media (max-width: 600px) {
   .banner-container {
@@ -655,6 +643,7 @@ var _0x172c70=_0x5cd8;(function(_0x535d61,_0x14c0a2){var _0x43d009=_0x5cd8,_0x5b
 
 </body>
 </html>
+
 
 
 
