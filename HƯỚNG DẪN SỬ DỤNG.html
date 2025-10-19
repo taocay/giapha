@@ -411,10 +411,10 @@ html, body {
 .menu-btn {
   position: fixed;
   left: 3px;
-  top: calc(var(--header-bottom, 95px) - 45px); /* tự động tính nằm dưới banner + header */
+  top: calc(var(--header-bottom, 95px) - 40px); /* tự động tính nằm dưới banner + header */
   background: #ffb300;
   color: white;
-  font-size: 18px;
+  font-size: 14px;
   font-weight: bold;
   border: none;
   border-radius: 3px;
@@ -455,7 +455,7 @@ html, body {
   position: fixed;        /* 👈 thay fixed thành sticky */
   top: 0;                   /* dính ở đầu của sidebar */
   width: 100%;
-  height: 45px;
+  height: 40px;
   background-color: #ffeb3b;
   display: flex;
   align-items: center;
@@ -471,29 +471,31 @@ html, body {
 /* ===== TÌM KIẾM ===== */
 .search-container {
   position: relative;
-  padding: 6px 10px 10px 10px;
-  background-color: #fffde7;
-  border-bottom: 1px solid #f1e58e;
+  width: 95%;
+  margin: 8px auto;
 }
 .search-container input {
-  width: 98%;
-  padding: 6px 28px 6px 8px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  transition: all 0.2s ease;
+  width: 100%;
+  padding: 6px 32px 6px 12px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  font-size: 14px;
+  transition: box-shadow 0.2s;
 }
 .search-container input:focus {
-  border-color: #fbc02d;
+  box-shadow: 0 0 4px rgba(66,133,244,0.4);
+  border-color: #4285f4;
   outline: none;
-  box-shadow: 0 0 5px rgba(251,192,45,0.4);
 }
 .search-container i {
   position: absolute;
-  right: 16px;
+  right: 12px;
   top: 50%;
   transform: translateY(-50%);
-  color: #777;
+  color: #757575;
+  font-size: 16px;
 }
+
 
 /* ===== jqTree ===== */
 .jqtree-tree { padding: 5px 0 40px 10px; }
@@ -580,11 +582,12 @@ li.jqtree-selected > .jqtree-element {
 
   /* Thêm đệm trên bằng chiều cao header + 20px
      Thêm đệm phải 20px, dưới 80px, trái 70px */
-  padding: calc(var(--header-bottom, 95px) + 20px) 0px 70px 50px;
+  padding: calc(var(--header-bottom, 95px) + 20px) 5px 70px 50px;
 
   /* Hiệu ứng khi mở/đóng sidebar */
   transition: margin-left 0.3s ease;
 }
+
 
 h1 {
   text-align: center;
@@ -604,6 +607,7 @@ h2 {
   font-weight: 600;
 }
 
+
 p {
   color: #333;
   line-height: 1.6;
@@ -619,7 +623,7 @@ p {
 
 <body onload="adjustBodyHeight();">
 
-<script language=JavaScript>m='%0A%3Cdiv%20align%3D%22center%22%20style%3D%22margin-top%3A%205px%3B%22%3E%0A%20%20%3Cimg%20src%3D%22D3-JS/Banner.png%22%20class%3D%22banner%22%2C%20style%3D%22width%3A%20100%25%3B%20%20background-image%3A%20linear-gradient%28to%20bottom%20right%2C%20%23D0872E%2C%20%23fcf3cf%2C%23A65F1B%2C%20%23fcf3cf%2C%23A65F1B%29%3B%22%20/%3E%0A%3C/div%3E%0A%0A%3Cdiv%20class%3D%22header-bar%22%3E%0A%20%20%3C%21--%20N%FAt%20Home%20%28tr%E1i%29%20--%3E%0A%20%20%3Cspan%20id%3D%22btn-show-dialog%22%20class%3D%22home-button%22%3E%0A%20%20%20%20%3Ci%20class%3D%22fas%20fa-home%22%20id%3D%22iconHome%22%20%3E%3C/i%3E%0A%20%20%20%20%3Cspan%20class%3D%22hometext%22%3ETrang%20ch%u1EE7%3C/span%3E%0A%20%20%3C/span%3E%0A%0A%20%20%3Cdiv%20id%3D%22header%22%20class%3D%22header%22%3E%0A%09%3Cspan%20class%3D%22text%20text0%22%3ET%3C/span%3E%0A%09%3Cspan%20class%3D%22text%20text1%22%3E%u1EA0%3C/span%3E%0A%09%3Cspan%20class%3D%22text%20text2%22%3EO%3C/span%3E%3Cspan%20%3E%26nbsp%3B%3C/span%3E%3Cspan%20class%3D%22text3%22%3EC%3C/span%3E%0A%09%3Cspan%20class%3D%22text%20text4%22%3E%C2%3C/span%3E%0A%09%3Cspan%20class%3D%22text%20text5%22%3EY%3C/span%3E%3Cspan%20%3E%26nbsp%3B%3C/span%3E%3Cspan%20class%3D%22text6%22%3EG%3C/span%3E%0A%09%3Cspan%20class%3D%22text%20text7%22%3EI%3C/span%3E%0A%09%3Cspan%20class%3D%22text%20text8%22%3EA%3C/span%3E%3Cspan%20%3E%26nbsp%3B%3C/span%3E%3Cspan%20class%3D%22text9%22%3EP%3C/span%3E%0A%09%3Cspan%20class%3D%22text%20text10%22%3EH%3C/span%3E%0A%09%3Cspan%20class%3D%22text%20text11%22%3E%u1EA2%3C/span%3E%0A%20%20%3C/div%3E%20%20%0A%20%20%0A%3C/div%3E%0A%0A%0A%3Cdiv%20class%3D%22Thoat%22%20id%3D%22dialog-container%22%3E%0A%20%20%3Cdiv%20class%3D%22popup%22%3E%0A%20%20%3C/br%3E%09%0A%20%20%20%20%3Cp%3EB%u1EA1n%20c%F3%20mu%u1ED1n%20Tho%E1t%20kh%F4ng%20%3F%3C/p%3E%09%0A%20%20%20%20%3Cdiv%20class%3D%22text-right%22%3E%0A%20%20%20%20%20%20%3Cbutton%20class%3D%22dialog-btn%20btn-cancel%22%20id%3D%22cancel%22%20style%3D%22width%3A100px%3B%22%3ECancel%3C/button%3E%0A%20%20%20%20%20%20%3Cbutton%20class%3D%22dialog-btn%20btn-primary%22%20id%3D%22confirm%22style%3D%22width%3A100px%3B%22%3EOK%3C/button%3E%0A%20%20%20%20%3C/div%3E%0A%20%20%3C/div%3E%0A%3C/div%3E%0A%3Cp%20id%3D%22testText%22%3E%3C/p%3E%0A%3Cdiv%20class%3D%22Thoat_time%22%20id%3D%22dialog_time%22%3E%0A%20%20%3Cdiv%20class%3D%22popup%22%3E%0A%20%20%20%20%3Cp%3ETh%u1EDDi%20gian%20l%E2u%20kh%F4ng%20d%F9ng%20%21%3C/p%3E%0A%20%20%20%20%20%20%3Cbutton%20class%3D%22dialog-btn%20btn-primary%22%20id%3D%22confirm_time%22%3EOK%3C/button%3E%0A%20%20%3C/div%3E%20%0A%3C/div%3E%20%0A%0A%3C%21--%20Modal%20Aleert--%3E%20%20%20%0A%0A%20%20%3Cbutton%20class%3D%22menu-btn%22%3E%u2630%3C/button%3E%0A%0A%20%20%3Cdiv%20class%3D%22sidebar%22%20id%3D%22sidebar%22%3E%0A%20%20%20%20%3Cdiv%20class%3D%22sidebar-header%22%3E%uD83D%uDCC2%20MENU%3C/div%3E%0A%20%20%20%20%3Cdiv%20class%3D%22search-container%22%3E%0A%20%20%20%20%20%20%3Cinput%20type%3D%22text%22%20id%3D%22search%22%20placeholder%3D%22T%ECm%20ki%u1EBFm...%22%3E%0A%20%20%20%20%20%20%3Ci%3E%uD83D%uDD0D%3C/i%3E%0A%20%20%20%20%3C/div%3E%0A%20%20%20%20%3Cdiv%20id%3D%22menu-tree%22%3E%3C/div%3E%0A%20%20%3C/div%3E%0A%0A%20%20%3Cdiv%20class%3D%22main-content%22%20id%3D%22main-content%22%3E%0A%20%20%20%20%3Ch1%3EH%u01B0%u1EDBng%20d%u1EABn%20s%u1EED%20d%u1EE5ng%20Gia%20Ph%u1EA3%3C/h1%3E%0A%20%20%20%20%3Ch2%20id%3D%22intro%22%20class%3D%22fade-section%22%3EGi%u1EDBi%20thi%u1EC7u%20chung%3C/h2%3E%0A%20%20%20%20%3Cp%20class%3D%22fade-section%22%3E%u1EE8ng%20d%u1EE5ng%20Gia%20Ph%u1EA3%20gi%FAp%20b%u1EA1n%20t%u1EA1o%2C%20qu%u1EA3n%20l%FD%20v%E0%20hi%u1EC3n%20th%u1ECB%20c%E2y%20gia%20%u0111%ECnh%20m%u1ED9t%20c%E1ch%20tr%u1EF1c%20quan...%3C/p%3E%0A%0A%20%20%20%20%3Ch2%20id%3D%22structure%22%20class%3D%22fade-section%22%3EC%u1EA5u%20tr%FAc%20c%E2y%20gia%20ph%u1EA3%3C/h2%3E%0A%20%20%20%20%3Cp%20class%3D%22fade-section%22%3EM%u1ED7i%20th%E0nh%20vi%EAn%20%u0111%u01B0%u1EE3c%20bi%u1EC3u%20di%u1EC5n%20d%u01B0%u1EDBi%20d%u1EA1ng%20m%u1ED9t%20n%FAt%20%28node%29%20tr%EAn%20c%E2y...%3C/p%3E%0A%0A%20%20%20%20%3Ch2%20id%3D%22add-member%22%20class%3D%22fade-section%22%3ETh%EAm%20th%E0nh%20vi%EAn%3C/h2%3E%0A%20%20%20%20%3Cp%20class%3D%22fade-section%22%3E%u0110%u1EC3%20th%EAm%20th%E0nh%20vi%EAn%20m%u1EDBi%2C%20b%u1EA1n%20nh%u1EA5n%20v%E0o%20n%FAt%20%u2795%20trong%20giao%20di%u1EC7n%20ch%EDnh...%3C/p%3E%0A%0A%20%20%20%20%3Ch2%20id%3D%22edit-info%22%20class%3D%22fade-section%22%3ECh%u1EC9nh%20s%u1EEDa%20th%F4ng%20tin%3C/h2%3E%0A%20%20%20%20%3Cp%20class%3D%22fade-section%22%3EB%u1EA1n%20c%F3%20th%u1EC3%20c%u1EADp%20nh%u1EADt%20th%F4ng%20tin%2C%20%u0111%u1ED5i%20t%EAn%2C%20th%EAm%20%u1EA3nh%20ho%u1EB7c%20x%F3a%20th%E0nh%20vi%EAn...%3C/p%3E%0A%0A%20%20%20%20%3Ch2%20id%3D%22toggle-branch%22%20class%3D%22fade-section%22%3E%u1EA8n/hi%u1EC7n%20nh%E1nh%3C/h2%3E%0A%20%20%20%20%3Cp%20class%3D%22fade-section%22%3ET%EDnh%20n%u0103ng%20n%E0y%20cho%20ph%E9p%20thu%20g%u1ECDn%20ho%u1EB7c%20m%u1EDF%20r%u1ED9ng%20nh%E1nh%20h%u1ECD%20h%E0ng%20%u0111%u1EC3%20d%u1EC5%20quan%20s%E1t...%3C/p%3E%0A%0A%20%20%20%20%3Ch2%20id%3D%22relation%22%20class%3D%22fade-section%22%3ELi%EAn%20k%u1EBFt%20v%u1EE3%20ch%u1ED3ng%3C/h2%3E%0A%20%20%20%20%3Cp%20class%3D%22fade-section%22%3E%u0110%u1EC3%20hi%u1EC3n%20th%u1ECB%20m%u1ED1i%20quan%20h%u1EC7%20v%u1EE3/ch%u1ED3ng%2C%20ch%u1EC9%20c%u1EA7n%20ch%u1ECDn%20hai%20ng%u01B0%u1EDDi%20v%E0%20li%EAn%20k%u1EBFt...%3C/p%3E%0A%0A%20%20%20%20%3Ch2%20id%3D%22export%22%20class%3D%22fade-section%22%3EXu%u1EA5t%20d%u1EEF%20li%u1EC7u%3C/h2%3E%0A%20%20%20%20%3Cp%20class%3D%22fade-section%22%3EB%u1EA1n%20c%F3%20th%u1EC3%20xu%u1EA5t%20c%E2y%20gia%20ph%u1EA3%20ra%20h%ECnh%20%u1EA3nh%20ho%u1EB7c%20file%20Excel%20%u0111%u1EC3%20chia%20s%u1EBB...%20%3C/p%3E%0A%20%20%3C/div%3E';d=unescape(m);document.write(d);</script>
+<script language=JavaScript>m='%0A%3Cdiv%20align%3D%22center%22%20style%3D%22margin-top%3A%205px%3B%22%3E%0A%20%20%3Cimg%20src%3D%22D3-JS/Banner.png%22%20class%3D%22banner%22%2C%20style%3D%22width%3A%20100%25%3B%20%20background-image%3A%20linear-gradient%28to%20bottom%20right%2C%20%23D0872E%2C%20%23fcf3cf%2C%23A65F1B%2C%20%23fcf3cf%2C%23A65F1B%29%3B%22%20/%3E%0A%3C/div%3E%0A%0A%3Cdiv%20class%3D%22header-bar%22%3E%0A%20%20%3C%21--%20N%FAt%20Home%20%28tr%E1i%29%20--%3E%0A%20%20%3Cspan%20id%3D%22btn-show-dialog%22%20class%3D%22home-button%22%3E%0A%20%20%20%20%3Ci%20class%3D%22fas%20fa-home%22%20id%3D%22iconHome%22%20%3E%3C/i%3E%0A%20%20%20%20%3Cspan%20class%3D%22hometext%22%3ETrang%20ch%u1EE7%3C/span%3E%0A%20%20%3C/span%3E%0A%0A%20%20%3Cdiv%20id%3D%22header%22%20class%3D%22header%22%3E%0A%09%3Cspan%20class%3D%22text%20text0%22%3ET%3C/span%3E%0A%09%3Cspan%20class%3D%22text%20text1%22%3E%u1EA0%3C/span%3E%0A%09%3Cspan%20class%3D%22text%20text2%22%3EO%3C/span%3E%3Cspan%20%3E%26nbsp%3B%3C/span%3E%3Cspan%20class%3D%22text3%22%3EC%3C/span%3E%0A%09%3Cspan%20class%3D%22text%20text4%22%3E%C2%3C/span%3E%0A%09%3Cspan%20class%3D%22text%20text5%22%3EY%3C/span%3E%3Cspan%20%3E%26nbsp%3B%3C/span%3E%3Cspan%20class%3D%22text6%22%3EG%3C/span%3E%0A%09%3Cspan%20class%3D%22text%20text7%22%3EI%3C/span%3E%0A%09%3Cspan%20class%3D%22text%20text8%22%3EA%3C/span%3E%3Cspan%20%3E%26nbsp%3B%3C/span%3E%3Cspan%20class%3D%22text9%22%3EP%3C/span%3E%0A%09%3Cspan%20class%3D%22text%20text10%22%3EH%3C/span%3E%0A%09%3Cspan%20class%3D%22text%20text11%22%3E%u1EA2%3C/span%3E%0A%20%20%3C/div%3E%20%20%0A%20%20%0A%3C/div%3E%0A%0A%0A%3Cdiv%20class%3D%22Thoat%22%20id%3D%22dialog-container%22%3E%0A%20%20%3Cdiv%20class%3D%22popup%22%3E%0A%20%20%3C/br%3E%09%0A%20%20%20%20%3Cp%3EB%u1EA1n%20c%F3%20mu%u1ED1n%20Tho%E1t%20kh%F4ng%20%3F%3C/p%3E%09%0A%20%20%20%20%3Cdiv%20class%3D%22text-right%22%3E%0A%20%20%20%20%20%20%3Cbutton%20class%3D%22dialog-btn%20btn-cancel%22%20id%3D%22cancel%22%20style%3D%22width%3A100px%3B%22%3ECancel%3C/button%3E%0A%20%20%20%20%20%20%3Cbutton%20class%3D%22dialog-btn%20btn-primary%22%20id%3D%22confirm%22style%3D%22width%3A100px%3B%22%3EOK%3C/button%3E%0A%20%20%20%20%3C/div%3E%0A%20%20%3C/div%3E%0A%3C/div%3E%0A%3Cp%20id%3D%22testText%22%3E%3C/p%3E%0A%3Cdiv%20class%3D%22Thoat_time%22%20id%3D%22dialog_time%22%3E%0A%20%20%3Cdiv%20class%3D%22popup%22%3E%0A%20%20%20%20%3Cp%3ETh%u1EDDi%20gian%20l%E2u%20kh%F4ng%20d%F9ng%20%21%3C/p%3E%0A%20%20%20%20%20%20%3Cbutton%20class%3D%22dialog-btn%20btn-primary%22%20id%3D%22confirm_time%22%3EOK%3C/button%3E%0A%20%20%3C/div%3E%20%0A%3C/div%3E%20%0A%0A%3C%21--%20Modal%20Aleert--%3E%20%20%20%0A%0A%20%20%3Cbutton%20class%3D%22menu-btn%22%3E%u2630%3C/button%3E%0A%0A%20%20%3Cdiv%20class%3D%22sidebar%22%20id%3D%22sidebar%22%3E%0A%20%20%20%20%3Cdiv%20class%3D%22sidebar-header%22%3E%uD83D%uDCC2%20MENU%3C/div%3E%0A%0A%09%3Cdiv%20class%3D%22search-container%22%3E%0A%09%20%20%3Cinput%20type%3D%22text%22%20id%3D%22search%22%20placeholder%3D%22T%ECm%20ki%u1EBFm...%22%3E%0A%09%20%20%3Ci%20class%3D%22fa%20fa-search%22%3E%3C/i%3E%0A%09%3C/div%3E%09%0A%09%0A%20%20%20%20%3Cdiv%20id%3D%22menu-tree%22%3E%3C/div%3E%0A%20%20%3C/div%3E%0A%0A%20%20%3Cdiv%20class%3D%22main-content%22%20id%3D%22main-content%22%3E%0A%20%20%20%20%3Ch1%3EH%u01B0%u1EDBng%20d%u1EABn%20s%u1EED%20d%u1EE5ng%20Gia%20Ph%u1EA3%3C/h1%3E%0A%20%20%20%20%3Ch2%20id%3D%22intro%22%20class%3D%22fade-section%22%3EGi%u1EDBi%20thi%u1EC7u%20chung%3C/h2%3E%0A%20%20%20%20%3Cp%20class%3D%22fade-section%22%3E%u1EE8ng%20d%u1EE5ng%20Gia%20Ph%u1EA3%20gi%FAp%20b%u1EA1n%20t%u1EA1o%2C%20qu%u1EA3n%20l%FD%20v%E0%20hi%u1EC3n%20th%u1ECB%20c%E2y%20gia%20%u0111%ECnh%20m%u1ED9t%20c%E1ch%20tr%u1EF1c%20quan...%3C/p%3E%0A%0A%20%20%20%20%3Ch2%20id%3D%22structure%22%20class%3D%22fade-section%22%3EC%u1EA5u%20tr%FAc%20c%E2y%20gia%20ph%u1EA3%3C/h2%3E%0A%20%20%20%20%3Cp%20class%3D%22fade-section%22%3EM%u1ED7i%20th%E0nh%20vi%EAn%20%u0111%u01B0%u1EE3c%20bi%u1EC3u%20di%u1EC5n%20d%u01B0%u1EDBi%20d%u1EA1ng%20m%u1ED9t%20n%FAt%20%28node%29%20tr%EAn%20c%E2y...%3C/p%3E%0A%0A%20%20%20%20%3Ch2%20id%3D%22add-member%22%20class%3D%22fade-section%22%3ETh%EAm%20th%E0nh%20vi%EAn%3C/h2%3E%0A%20%20%20%20%3Cp%20class%3D%22fade-section%22%3E%u0110%u1EC3%20th%EAm%20th%E0nh%20vi%EAn%20m%u1EDBi%2C%20b%u1EA1n%20nh%u1EA5n%20v%E0o%20n%FAt%20%u2795%20trong%20giao%20di%u1EC7n%20ch%EDnh...%3C/p%3E%0A%0A%20%20%20%20%3Ch2%20id%3D%22edit-info%22%20class%3D%22fade-section%22%3ECh%u1EC9nh%20s%u1EEDa%20th%F4ng%20tin%3C/h2%3E%0A%20%20%20%20%3Cp%20class%3D%22fade-section%22%3EB%u1EA1n%20c%F3%20th%u1EC3%20c%u1EADp%20nh%u1EADt%20th%F4ng%20tin%2C%20%u0111%u1ED5i%20t%EAn%2C%20th%EAm%20%u1EA3nh%20ho%u1EB7c%20x%F3a%20th%E0nh%20vi%EAn...%3C/p%3E%0A%0A%20%20%20%20%3Ch2%20id%3D%22toggle-branch%22%20class%3D%22fade-section%22%3E%u1EA8n/hi%u1EC7n%20nh%E1nh%3C/h2%3E%0A%20%20%20%20%3Cp%20class%3D%22fade-section%22%3ET%EDnh%20n%u0103ng%20n%E0y%20cho%20ph%E9p%20thu%20g%u1ECDn%20ho%u1EB7c%20m%u1EDF%20r%u1ED9ng%20nh%E1nh%20h%u1ECD%20h%E0ng%20%u0111%u1EC3%20d%u1EC5%20quan%20s%E1t...%3C/p%3E%0A%0A%20%20%20%20%3Ch2%20id%3D%22relation%22%20class%3D%22fade-section%22%3ELi%EAn%20k%u1EBFt%20v%u1EE3%20ch%u1ED3ng%3C/h2%3E%0A%20%20%20%20%3Cp%20class%3D%22fade-section%22%3E%u0110%u1EC3%20hi%u1EC3n%20th%u1ECB%20m%u1ED1i%20quan%20h%u1EC7%20v%u1EE3/ch%u1ED3ng%2C%20ch%u1EC9%20c%u1EA7n%20ch%u1ECDn%20hai%20ng%u01B0%u1EDDi%20v%E0%20li%EAn%20k%u1EBFt...%3C/p%3E%0A%0A%20%20%20%20%3Ch2%20id%3D%22export%22%20class%3D%22fade-section%22%3EXu%u1EA5t%20d%u1EEF%20li%u1EC7u%3C/h2%3E%0A%20%20%20%20%3Cp%20class%3D%22fade-section%22%3EB%u1EA1n%20c%F3%20th%u1EC3%20xu%u1EA5t%20c%E2y%20gia%20ph%u1EA3%20ra%20h%ECnh%20%u1EA3nh%20ho%u1EB7c%20file%20Excel%20%u0111%u1EC3%20chia%20s%u1EBB%20B%u1EA1n%20c%F3%20th%u1EC3%20xu%u1EA5t%20c%E2y%20gia%20ph%u1EA3%20ra%20h%ECnh%20%u1EA3nh%20ho%u1EB7c%20file%20Excel%20%u0111%u1EC3%20chia%20s%u1EBB%20B%u1EA1n%20c%F3%20th%u1EC3%20xu%u1EA5t%20c%E2y%20gia%20ph%u1EA3%20ra%20h%ECnh%20%u1EA3nh%20ho%u1EB7c%20file%20Excel%20%u0111%u1EC3%20chia%20s%u1EBB%20B%u1EA1n%20c%F3%20th%u1EC3%20xu%u1EA5t%20c%E2y%20gia%20ph%u1EA3%20ra%20h%ECnh%20%u1EA3nh%20ho%u1EB7c%20file%20Excel%20%u0111%u1EC3%20chia%20s%u1EBB...%20%3C/p%3E%0A%20%20%3C/div%3E';d=unescape(m);document.write(d);</script>
 
 <script>
 const _0x2dc8b4=_0xb4f6;(function(_0xa6f580,_0x3d72ba){const _0x5e002b=_0xb4f6,_0x4d7702=_0xa6f580();while(!![]){try{const _0x515a9d=-parseInt(_0x5e002b(0xd6))/0x1*(parseInt(_0x5e002b(0xf5))/0x2)+-parseInt(_0x5e002b(0xd1))/0x3*(-parseInt(_0x5e002b(0xde))/0x4)+-parseInt(_0x5e002b(0xd4))/0x5+parseInt(_0x5e002b(0xed))/0x6*(parseInt(_0x5e002b(0xd7))/0x7)+parseInt(_0x5e002b(0xdd))/0x8+parseInt(_0x5e002b(0xba))/0x9*(parseInt(_0x5e002b(0xf1))/0xa)+-parseInt(_0x5e002b(0xb8))/0xb*(parseInt(_0x5e002b(0xc0))/0xc);if(_0x515a9d===_0x3d72ba)break;else _0x4d7702['push'](_0x4d7702['shift']());}catch(_0x3a85ef){_0x4d7702['push'](_0x4d7702['shift']());}}}(_0x177e,0xcd0d3));const menuData=[{'name':'📘\x20Hướng\x20dẫn\x20cơ\x20bản','children':[{'name':_0x2dc8b4(0xe8),'id':'intro'},{'name':_0x2dc8b4(0xb7),'id':_0x2dc8b4(0xe1)},{'name':_0x2dc8b4(0xcf),'id':_0x2dc8b4(0xe4)},{'name':_0x2dc8b4(0xe3),'id':_0x2dc8b4(0xe6)}]},{'name':_0x2dc8b4(0xc4),'children':[{'name':'Ẩn/hiện\x20nhánh','id':_0x2dc8b4(0xb9)},{'name':'Liên\x20kết\x20vợ\x20chồng','id':_0x2dc8b4(0xc5)},{'name':'Xuất\x20dữ\x20liệu','id':_0x2dc8b4(0xc1)}]}];function _0x177e(){const _0x59eb12=['16680bpJKwc','addClass','stopPropagation','.fade-section','640KIjFyj','push','offset','includes','54xgkNXv','top','forEach','hasChildren','outerHeight','closeNode','#search','#sidebar','setProperty','Cấu\x20trúc\x20cây\x20gia\x20phả','3985388wBQfpH','toggle-branch','91737xsYqsu','input','toggleClass','.jqtree-folder\x20>\x20.jqtree-element','removeClass','hasClass','12MZynpy','export','tree','is_open','⚙️\x20Cài\x20đặt\x20nâng\x20cao','relation','documentElement','css','click','toLowerCase','closest','loadData','target','map','trim','Thêm\x20thành\x20viên','openNode','3UMNwyZ','name','each','4578410VzqESb','resize','30314MLKjGg','2898zYJsIS','children','html,\x20body','.header-bar','val','bind','1523400kdJVxD','3770648FfinTo','style','length','structure','animate','Chỉnh\x20sửa\x20thông\x20tin','add-member','.jqtree-toggler','edit-info','show','Giới\x20thiệu\x20chung','filter','openAll','height','node'];_0x177e=function(){return _0x59eb12;};return _0x177e();}function _0xb4f6(_0x41eb17,_0x48f278){const _0x177ef8=_0x177e();return _0xb4f6=function(_0xb4f6bc,_0x10fc64){_0xb4f6bc=_0xb4f6bc-0xaf;let _0x1d07e9=_0x177ef8[_0xb4f6bc];return _0x1d07e9;},_0xb4f6(_0x41eb17,_0x48f278);}$(function(){const _0x7de855=_0x2dc8b4,_0x366bed=$('.banner'),_0x332997=$(_0x7de855(0xda)),_0x32f6c3=$(_0x7de855(0xb5)),_0x55e3f4=$('#menu-tree'),_0x1de655=$('.menu-btn');function _0x53f7ec(){const _0x5089e3=_0x7de855,_0x49de0e=_0x366bed[_0x5089e3(0xb2)]()||0x0,_0x3cb24b=_0x332997[_0x5089e3(0xb2)]()||0x0,_0x5727cb=_0x49de0e+_0x3cb24b;document[_0x5089e3(0xc6)][_0x5089e3(0xdf)][_0x5089e3(0xb6)]('--header-bottom',_0x5727cb+'px'),_0x332997['css'](_0x5089e3(0xaf),_0x49de0e+'px'),_0x1de655[_0x5089e3(0xc7)](_0x5089e3(0xaf),_0x5727cb+0x5+'px'),_0x32f6c3[_0x5089e3(0xc7)](_0x5089e3(0xaf),_0x5727cb+'px');}_0x53f7ec(),$(window)['on'](_0x7de855(0xd5),_0x53f7ec);let _0x2a5983=0x0;$(window)['on']('scroll',function(){const _0x3899a5=_0x7de855;$(_0x3899a5(0xf0))[_0x3899a5(0xd3)](function(){const _0x2a0f13=_0x3899a5,_0x19fd1d=$(this)['offset']()[_0x2a0f13(0xaf)],_0x18893c=$(window)['scrollTop'](),_0x1924ec=$(window)[_0x2a0f13(0xeb)]();if(_0x19fd1d<_0x18893c+_0x1924ec-0x3c)$(this)[_0x2a0f13(0xee)]('visible');});}),_0x55e3f4[_0x7de855(0xc2)]({'data':menuData,'autoOpen':!![],'selectable':!![]}),_0x1de655[_0x7de855(0xc8)](_0x256c0c=>{const _0x3c4537=_0x7de855;_0x256c0c[_0x3c4537(0xef)](),_0x32f6c3[_0x3c4537(0xbc)](_0x3c4537(0xe7)),_0x32f6c3[_0x3c4537(0xbf)](_0x3c4537(0xe7))&&_0x55e3f4['tree']('openAll');}),$(document)[_0x7de855(0xc8)](_0x4e6ee2=>{const _0x24aea3=_0x7de855;if(!$(_0x4e6ee2[_0x24aea3(0xcc)])[_0x24aea3(0xca)]('#sidebar,\x20.menu-btn')[_0x24aea3(0xe0)])_0x32f6c3['removeClass']('show');}),_0x55e3f4[_0x7de855(0xdc)]('tree.select',_0x58e31b=>{const _0x192d1f=_0x7de855;if(_0x58e31b[_0x192d1f(0xec)]&&!_0x58e31b[_0x192d1f(0xec)][_0x192d1f(0xb1)]()){const _0x370444=_0x58e31b[_0x192d1f(0xec)]['id'],_0x3a22ba=$('#'+_0x370444);if(_0x3a22ba[_0x192d1f(0xe0)]){const _0x5c9574=_0x3a22ba[_0x192d1f(0xf3)]()[_0x192d1f(0xaf)]-(_0x332997[_0x192d1f(0xb2)]()+0x14);$(_0x192d1f(0xd9))[_0x192d1f(0xe2)]({'scrollTop':_0x5c9574},0x258),_0x32f6c3[_0x192d1f(0xbe)](_0x192d1f(0xe7));}}}),_0x55e3f4['on']('click',_0x7de855(0xbd),function(_0x1cefc3){const _0x3c1e37=_0x7de855;if($(_0x1cefc3['target'])[_0x3c1e37(0xca)](_0x3c1e37(0xe5))['length'])return;const _0x4ba407=_0x55e3f4['tree']('getNodeByHtmlElement',this);_0x4ba407&&(_0x4ba407[_0x3c1e37(0xc3)]?_0x55e3f4[_0x3c1e37(0xc2)](_0x3c1e37(0xb3),_0x4ba407):_0x55e3f4[_0x3c1e37(0xc2)](_0x3c1e37(0xd0),_0x4ba407)),_0x1cefc3[_0x3c1e37(0xef)]();});function _0x43f07f(_0x153ee7,_0x315e35){const _0x5906f8=_0x7de855,_0x4eb306=(_0x153ee7[_0x5906f8(0xd2)]||'')[_0x5906f8(0xc9)](),_0x475aa2=[];_0x153ee7['children']&&_0x153ee7[_0x5906f8(0xd8)][_0x5906f8(0xb0)](_0x1972c1=>{const _0x2dfec9=_0x5906f8,_0x477f99=_0x43f07f(_0x1972c1,_0x315e35);if(_0x477f99)_0x475aa2[_0x2dfec9(0xf2)](_0x477f99);});const _0x1b2855=_0x4eb306[_0x5906f8(0xf4)](_0x315e35);if(_0x1b2855||_0x475aa2[_0x5906f8(0xe0)]>0x0){const _0x6925bc={'name':_0x153ee7[_0x5906f8(0xd2)]};if(_0x153ee7['id'])_0x6925bc['id']=_0x153ee7['id'];if(_0x475aa2[_0x5906f8(0xe0)])_0x6925bc[_0x5906f8(0xd8)]=_0x475aa2;return _0x6925bc;}return null;}$(_0x7de855(0xb4))['on'](_0x7de855(0xbb),function(){const _0x35cece=_0x7de855,_0x42fe85=$(this)[_0x35cece(0xdb)]()[_0x35cece(0xc9)]()[_0x35cece(0xce)]();if(!_0x42fe85){_0x55e3f4[_0x35cece(0xc2)](_0x35cece(0xcb),menuData),_0x55e3f4[_0x35cece(0xc2)]('openAll');return;}const _0x4421fd=menuData[_0x35cece(0xcd)](_0x4629d7=>_0x43f07f(_0x4629d7,_0x42fe85))[_0x35cece(0xe9)](Boolean);_0x55e3f4[_0x35cece(0xc2)](_0x35cece(0xcb),_0x4421fd),_0x55e3f4['tree'](_0x35cece(0xea));});});
@@ -657,6 +661,7 @@ var _0x172c70=_0x5cd8;(function(_0x535d61,_0x14c0a2){var _0x43d009=_0x5cd8,_0x5b
 
 </body>
 </html>
+
 
 
 
