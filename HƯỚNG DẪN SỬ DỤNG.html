@@ -370,14 +370,6 @@
 
 }
 
-/* ===== MAIN CONTENT ===== */
-.main-content {
-  text-align: left;
-  max-width: 100%;
-  margin: auto;
-  transition: margin-left 0.3s ease;
-  padding: calc(var(--header-bottom, 95px) + 20px) 20px 180px 70px;
-}
 
 /* ===== MOBILE ===== */
 @media (max-width: 600px) {
@@ -397,8 +389,14 @@
   }
 
   .main-content {
-    padding: calc(var(--header-bottom, 95px) + 20px) 20px 250px 40px;
+    padding: calc(var(--header-bottom, 95px) + 20px) 0px 250px 36px;
   }
+  .menu-btn {
+    font-size: 20px;
+    padding: 4px 10px;
+    left: 5px;
+  }  
+  
 }
 
 /* ===== LANDSCAPE ===== */
@@ -413,7 +411,7 @@
   }
 }
 /* ===== END HEADER & BANNER ===== */
-	
+
 /* HƯỚNG DẪN */
 /* ===== NÚT MENU ===== */
 /* 🟨 Nút menu chính */
@@ -434,14 +432,6 @@
   transition: background 0.2s;
 }
 
-/* 📱 Tối ưu cho điện thoại */
-@media (max-width: 600px) {
-  .menu-btn {
-    font-size: 20px;
-    padding: 4px 10px;
-    left: 8px;
-  }
-}
 
 .menu-btn:hover {
   box-shadow: 0 0 8px rgba(255,193,7,0.8);
@@ -587,13 +577,22 @@ li.jqtree-selected > .jqtree-element {
 
 /* ===== MAIN CONTENT ===== */
 .main-content {
+  /* Căn trái, tự co theo màn hình */
   text-align: left;
   max-width: 100%;
   margin: auto;
-  margin-top: -50px; /* Kéo nội dung lên trên gần banner */
+
+  /* Kéo lên gần banner một chút */
+  margin-top: -50px;
+
+  /* Thêm đệm trên bằng chiều cao header + 20px
+     Thêm đệm phải 20px, dưới 80px, trái 70px */
+  padding: calc(var(--header-bottom, 95px) + 20px) 0px 80px 50px;
+
+  /* Hiệu ứng khi mở/đóng sidebar */
   transition: margin-left 0.3s ease;
-  padding: calc(var(--header-bottom, 95px) + 20px) 20px 80px 70px;
 }
+
 
 h1 {
   text-align: center;
@@ -619,6 +618,7 @@ p {
   line-height: 1.6;
   margin-bottom: 10px;
 }
+
 
 /* END HƯỚNG DẪN */
 
@@ -666,6 +666,7 @@ var _0x172c70=_0x5cd8;(function(_0x535d61,_0x14c0a2){var _0x43d009=_0x5cd8,_0x5b
 
 </body>
 </html>
+
 
 
 
