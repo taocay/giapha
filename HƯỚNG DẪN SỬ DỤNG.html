@@ -470,22 +470,24 @@ html, body {
 }
 
 /* Search cố định ngay dưới header */
+/* Container search */
 .search-container {
   position: sticky;
-  top: 40px; /* chiều cao của header */
+  top: 40px; /* vẫn dưới header */
   z-index: 9;
   width: 95%;
-  margin: 8px auto;
-  padding-bottom: 6px;
+  margin: 4px auto;       /* giảm margin trên/dưới */
+  padding: 2px 0;         /* giảm padding dưới/ trên */
   border-bottom: 1px solid #ddd;
 }
+
 /* Input tìm kiếm */
 .search-container input {
   width: 100%;
-  padding: 6px 32px 6px 12px;
+  padding: 4px 28px 4px 8px; /* giảm padding trên/dưới và hai bên */
+  font-size: 13px;           /* có thể giảm size chữ */
   border: 1px solid #ddd;
   border-radius: 3px;
-  font-size: 14px;
   transition: box-shadow 0.2s;
 }
 
@@ -670,6 +672,7 @@ var _0x172c70=_0x5cd8;(function(_0x535d61,_0x14c0a2){var _0x43d009=_0x5cd8,_0x5b
 
 </body>
 </html>
+
 
 
 
