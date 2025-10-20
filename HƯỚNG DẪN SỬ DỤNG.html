@@ -438,7 +438,7 @@ html, body {
   opacity: 0;
   transition: transform 0.35s ease, opacity 0.35s ease, top 0.4s ease;
   z-index: 1000;
-  padding-top: 45px;
+
 }
 .sidebar.show {
   transform: translateX(0);
@@ -446,10 +446,11 @@ html, body {
 }
 
 /* ===== TIÊU ĐỀ SIDEBAR ===== */
+/* Header luôn ở trên cùng */
 .sidebar-header {
-  position: sticky;
-  top: 0;
-  width: 100%;
+  position: sticky; 
+  top: 0;  /* luôn dính đầu sidebar */
+  z-index: 10;
   height: 40px;
   background-color: #ffeb3b;
   display: flex;
@@ -459,35 +460,25 @@ html, body {
   font-size: 16px;
   color: #444;
   border-bottom: 1px solid #f0d600;
-  z-index: 2;
   letter-spacing: 1px;
 }
 
-/* ===== TÌM KIẾM ===== */
-#sidebar {
-  position: fixed;
-  left: 0;
-  top: var(--header-bottom);
-  width: 250px;
-  height: calc(100vh - var(--header-bottom));
-  background-color: #fff;
-  border-right: 1px solid #ccc;
+/* Container scroll riêng cho nội dung */
+.sidebar-scroll {
   overflow-y: auto;
-  transition: transform 0.3s ease;
+  flex: 1 1 auto;
 }
 
-/* ✅ Cố định ô tìm kiếm khi cuộn */
+/* Search cố định ngay dưới header */
 .search-container {
   position: sticky;
-  top: 0;
-  background: #fff;
-  z-index: 10;
+  top: 40px; /* chiều cao của header */
+  z-index: 9;
   width: 95%;
   margin: 8px auto;
   padding-bottom: 6px;
   border-bottom: 1px solid #ddd;
 }
-
 /* Input tìm kiếm */
 .search-container input {
   width: 100%;
@@ -565,11 +556,12 @@ li.jqtree-folder li {
   padding: 2px 0;
 }
 
-/* Dòng cuối bỏ gạch */
+/* Dòng cuối bỏ gạch
 li.jqtree-folder li:last-child {
   border-bottom: none;
 }
-
+*/
+ 
 /* Khi di chuột qua */
 .jqtree-element:hover {
   background-color: #fff59d;
@@ -678,6 +670,7 @@ var _0x172c70=_0x5cd8;(function(_0x535d61,_0x14c0a2){var _0x43d009=_0x5cd8,_0x5b
 
 </body>
 </html>
+
 
 
 
