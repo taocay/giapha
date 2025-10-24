@@ -2565,29 +2565,25 @@ form .nhaplieu {
   }
 
 	/* ==== Fix font mo tren dien thoai ==== */
-	#nhaplieu textarea,
-	#nhaplieu input,
-	#nhaplieu label {
-	  font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-	  font-size: 16px; /* tối thiểu 16px để Safari không auto-zoom */
-	  line-height: 1.4;
-	  color: #111;
-	
-	  -webkit-font-smoothing: antialiased;
-	  text-rendering: optimizeLegibility;
-	  -webkit-text-size-adjust: 100%;
-	  transform: translateZ(0); /* Ép render rõ nét bằng GPU */
-	  backface-visibility: hidden;
-	}
-	
-	#nhaplieu textarea {
-	  background-color: #fff;
-	  border: 1px solid #ccc;
-	  border-radius: 4px;
-	  box-sizing: border-box;
-	}
-	
-	
+	    #nhaplieu textarea,
+		#nhaplieu input {
+		  font-family: 'Segoe UI', 'Noto Sans', Arial, sans-serif; /* Font dễ đọc, rõ nét hơn */
+		  font-size: 16px; /* tránh zoom và giúp render ổn định */
+		  color: #000; /* tăng tương phản */
+		  background-color: #fff;
+		  line-height: 1.5;
+		
+		  -webkit-font-smoothing: antialiased;
+		  text-rendering: optimizeLegibility;
+		  font-weight: 500; /* hơi đậm lên 1 chút để rõ nét hơn */
+		  transform: translateZ(0); /* ép render bằng GPU */
+		  backface-visibility: hidden;
+		}
+		
+		#nhaplieu textarea::placeholder {
+		  color: #666; /* giữ độ tương phản tốt */
+		}
+
 }
 /*  điện thoại xoay ngang  */
 @media (max-width: 980px) and (orientation: landscape) {
@@ -2676,26 +2672,24 @@ form .nhaplieu {
 
 /* ==== Fix font mo tren dien thoai ==== */
 	#nhaplieu textarea,
-	#nhaplieu input,
-	#nhaplieu label {
-	  font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-	  font-size: 16px; /* tối thiểu 16px để Safari không auto-zoom */
-	  line-height: 1.4;
-	  color: #111;
+	#nhaplieu input {
+	  font-family: 'Segoe UI', 'Noto Sans', Arial, sans-serif; /* Font dễ đọc, rõ nét hơn */
+	  font-size: 16px; /* tránh zoom và giúp render ổn định */
+	  color: #000; /* tăng tương phản */
+	  background-color: #fff;
+	  line-height: 1.5;
 	
 	  -webkit-font-smoothing: antialiased;
 	  text-rendering: optimizeLegibility;
-	  -webkit-text-size-adjust: 100%;
-	  transform: translateZ(0); /* Ép render rõ nét bằng GPU */
+	  font-weight: 500; /* hơi đậm lên 1 chút để rõ nét hơn */
+	  transform: translateZ(0); /* ép render bằng GPU */
 	  backface-visibility: hidden;
 	}
 	
-	#nhaplieu textarea {
-	  background-color: #fff;
-	  border: 1px solid #ccc;
-	  border-radius: 4px;
-	  box-sizing: border-box;
+	#nhaplieu textarea::placeholder {
+	  color: #666; /* giữ độ tương phản tốt */
 	}
+	
 	
 }
 
@@ -2766,6 +2760,7 @@ const _0x57160d=_0x4e2c;(function(_0x384f8b,_0x34e9bb){const _0x2d58cf=_0x4e2c,_
 
 </body>
 </html>
+
 
 
 
