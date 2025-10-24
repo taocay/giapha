@@ -2565,13 +2565,18 @@ form .nhaplieu {
   }
 
 	/* ==== Fix font mo tren dien thoai ==== */
-	#nhaplieu {
-	  font-family: Arial, sans-serif;
+	#nhaplieu textarea,
+	#nhaplieu input {
+	  font-family: "Arial", "Roboto", sans-serif;
 	  font-weight: 600;
-	  font-size: 17px;
-	  line-height: 1.5;
 	  color: #000;
-	  -webkit-text-stroke: 0.2px;
+	  -webkit-font-smoothing: subpixel-antialiased;
+	  text-rendering: geometricPrecision;
+	  -webkit-text-stroke: 0.2px; /* tăng độ nét */
+	  transform: translateZ(0);
+	  backface-visibility: hidden;
+	  will-change: transform;
+	  outline: none;
 	}
 
 }
@@ -2661,14 +2666,20 @@ form .nhaplieu {
   }
 
 	/* ==== Fix font mo tren dien thoai ==== */
-	#nhaplieu {
-	  font-family: Arial, sans-serif;
+	#nhaplieu textarea,
+	#nhaplieu input {
+	  font-family: "Arial", "Roboto", sans-serif;
 	  font-weight: 600;
-	  font-size: 17px;
-	  line-height: 1.5;
 	  color: #000;
-	  -webkit-text-stroke: 0.2px;
+	  -webkit-font-smoothing: subpixel-antialiased;
+	  text-rendering: geometricPrecision;
+	  -webkit-text-stroke: 0.2px; /* tăng độ nét */
+	  transform: translateZ(0);
+	  backface-visibility: hidden;
+	  will-change: transform;
+	  outline: none;
 	}
+
 	
 }
 
@@ -2739,12 +2750,3 @@ const _0x12d012=_0x276b;(function(_0x2f0cfd,_0x2e1389){const _0x319976=_0x276b,_
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
