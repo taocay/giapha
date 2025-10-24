@@ -2564,25 +2564,21 @@ form .nhaplieu {
     font-size: 12px;
   }
 
-	/* ==== Fix font mo tren dien thoai ==== */
-	    #nhaplieu textarea,
-		#nhaplieu input {
-		  font-family: 'Segoe UI', 'Noto Sans', Arial, sans-serif; /* Font dễ đọc, rõ nét hơn */
-		  font-size: 16px; /* tránh zoom và giúp render ổn định */
-		  color: #000; /* tăng tương phản */
-		  background-color: #fff;
-		  line-height: 1.5;
-		
-		  -webkit-font-smoothing: antialiased;
-		  text-rendering: optimizeLegibility;
-		  font-weight: 500; /* hơi đậm lên 1 chút để rõ nét hơn */
-		  transform: translateZ(0); /* ép render bằng GPU */
-		  backface-visibility: hidden;
-		}
-		
-		#nhaplieu textarea::placeholder {
-		  color: #666; /* giữ độ tương phản tốt */
-		}
+/* ==== Fix font mo tren dien thoai ==== */
+	#nhaplieu textarea {
+	  font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+	  font-weight: 500;
+	  line-height: 1.5;
+	  color: #000;
+	  background-color: #fff;
+	
+	  -webkit-font-smoothing: antialiased;
+	  -moz-osx-font-smoothing: grayscale;
+	  text-rendering: optimizeLegibility;
+	
+	  transform: translateZ(0);
+	  backface-visibility: hidden;
+	}
 
 }
 /*  điện thoại xoay ngang  */
@@ -2670,24 +2666,20 @@ form .nhaplieu {
     font-size: 14px;
   }
 
-/* ==== Fix font mo tren dien thoai ==== */
-	#nhaplieu textarea,
-	#nhaplieu input {
-	  font-family: 'Segoe UI', 'Noto Sans', Arial, sans-serif; /* Font dễ đọc, rõ nét hơn */
-	  font-size: 16px; /* tránh zoom và giúp render ổn định */
-	  color: #000; /* tăng tương phản */
-	  background-color: #fff;
+	/* ==== Fix font mo tren dien thoai ==== */
+	#nhaplieu textarea {
+	  font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+	  font-weight: 500;
 	  line-height: 1.5;
+	  color: #000;
+	  background-color: #fff;
 	
 	  -webkit-font-smoothing: antialiased;
+	  -moz-osx-font-smoothing: grayscale;
 	  text-rendering: optimizeLegibility;
-	  font-weight: 500; /* hơi đậm lên 1 chút để rõ nét hơn */
-	  transform: translateZ(0); /* ép render bằng GPU */
-	  backface-visibility: hidden;
-	}
 	
-	#nhaplieu textarea::placeholder {
-	  color: #666; /* giữ độ tương phản tốt */
+	  transform: translateZ(0);
+	  backface-visibility: hidden;
 	}
 	
 	
@@ -2760,6 +2752,7 @@ const _0x57160d=_0x4e2c;(function(_0x384f8b,_0x34e9bb){const _0x2d58cf=_0x4e2c,_
 
 </body>
 </html>
+
 
 
 
