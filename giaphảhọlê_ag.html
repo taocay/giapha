@@ -2563,6 +2563,31 @@ form .nhaplieu {
     padding: 4px 10px;
     font-size: 12px;
   }
+
+	/* ==== Fix font mo tren dien thoai ==== */
+	#nhaplieu textarea,
+	#nhaplieu input,
+	#nhaplieu label {
+	  font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+	  font-size: 16px; /* tối thiểu 16px để Safari không auto-zoom */
+	  line-height: 1.4;
+	  color: #111;
+	
+	  -webkit-font-smoothing: antialiased;
+	  text-rendering: optimizeLegibility;
+	  -webkit-text-size-adjust: 100%;
+	  transform: translateZ(0); /* Ép render rõ nét bằng GPU */
+	  backface-visibility: hidden;
+	}
+	
+	#nhaplieu textarea {
+	  background-color: #fff;
+	  border: 1px solid #ccc;
+	  border-radius: 4px;
+	  box-sizing: border-box;
+	}
+	
+	
 }
 /*  điện thoại xoay ngang  */
 @media (max-width: 980px) and (orientation: landscape) {
@@ -2648,6 +2673,30 @@ form .nhaplieu {
     padding: 6px 12px;
     font-size: 14px;
   }
+
+/* ==== Fix font mo tren dien thoai ==== */
+	#nhaplieu textarea,
+	#nhaplieu input,
+	#nhaplieu label {
+	  font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+	  font-size: 16px; /* tối thiểu 16px để Safari không auto-zoom */
+	  line-height: 1.4;
+	  color: #111;
+	
+	  -webkit-font-smoothing: antialiased;
+	  text-rendering: optimizeLegibility;
+	  -webkit-text-size-adjust: 100%;
+	  transform: translateZ(0); /* Ép render rõ nét bằng GPU */
+	  backface-visibility: hidden;
+	}
+	
+	#nhaplieu textarea {
+	  background-color: #fff;
+	  border: 1px solid #ccc;
+	  border-radius: 4px;
+	  box-sizing: border-box;
+	}
+	
 }
 
 
@@ -2717,6 +2766,7 @@ const _0x57160d=_0x4e2c;(function(_0x384f8b,_0x34e9bb){const _0x2d58cf=_0x4e2c,_
 
 </body>
 </html>
+
 
 
 
