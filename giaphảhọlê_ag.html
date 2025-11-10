@@ -38,23 +38,7 @@
 <script>
   if (document.location.search.match(/type=embed/gi)) {
     window.parent.postMessage("resize", "*");
-  }
-	
-// Khi người dùng đăng nhập thành công
-function saveLoginSession(userData) {
-  localStorage.setItem('sessionData', JSON.stringify(userData));
-}
-
-// Khi tải lại trang
-window.addEventListener('load', () => {
-  const session = localStorage.getItem('sessionData');
-  if (session) {
-    const user = JSON.parse(session);
-    autoLogin(user);
-  }
-});
-
-	
+  }	
 </script>
 
 <head>
@@ -2775,6 +2759,7 @@ const _0x2ef9f1=_0x1cd5;function _0x1ee2(){const _0x3f55dd=['filter','Colum_5','
 
 </body>
 </html>
+
 
 
 
