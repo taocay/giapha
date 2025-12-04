@@ -2495,13 +2495,23 @@ form .nhaplieu {
     -webkit-text-size-adjust: 100%;
   }	
 
-	#nhaplieu textarea {
-	  border-radius: 0 !important;
-	  -webkit-border-radius: 0 !important;
-	  appearance: none;
-	  -webkit-appearance: none;
-	  outline: none;
-	}
+  /* ✅ INPUT + TEXTAREA */
+  #nhaplieu input,
+  #nhaplieu textarea {
+    border-radius: 0 !important;
+    -webkit-border-radius: 0 !important;
+    appearance: none;
+    -webkit-appearance: none;
+    outline: none;
+  }
+
+  /* ✅ WRAPPER (dropdown, gender, tagify...) */
+  .dropdown-wrapper,
+  .nhaplieu,
+  .gender-wrapper {
+    border-radius: 0 !important;
+    overflow: hidden; /* ✅ chặn bo giả */
+  }
 	  	  
 }
 /*  điện thoại xoay ngang  */
@@ -2608,13 +2618,23 @@ form .nhaplieu {
     -webkit-text-size-adjust: 100%;
   }  
 
-	#nhaplieu textarea {
-	  border-radius: 0 !important;
-	  -webkit-border-radius: 0 !important;
-	  appearance: none;
-	  -webkit-appearance: none;
-	  outline: none;
-	}
+  /* ✅ INPUT + TEXTAREA */
+  #nhaplieu input,
+  #nhaplieu textarea {
+    border-radius: 0 !important;
+    -webkit-border-radius: 0 !important;
+    appearance: none;
+    -webkit-appearance: none;
+    outline: none;
+  }
+
+  /* ✅ WRAPPER (dropdown, gender, tagify...) */
+  .dropdown-wrapper,
+  .nhaplieu,
+  .gender-wrapper {
+    border-radius: 0 !important;
+    overflow: hidden; /* ✅ chặn bo giả */
+  }
 	  
 	  
 }
@@ -2689,6 +2709,7 @@ const _0x44807a=_0x3421;(function(_0x22d4f2,_0x5396a8){const _0x454b38=_0x3421,_
 
 </body>
 </html>
+
 
 
 
